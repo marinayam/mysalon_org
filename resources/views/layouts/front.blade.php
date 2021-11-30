@@ -30,7 +30,8 @@
     <div class="header_in">
         <!--サイトロゴでトップページへ-->
         <div class="logo hidden-sp">
-            <a href ="https:トップページ"><img src ="images/logo.png" width="160px"></a>
+               <a href ="https:トップページ"><img src ="images/logo.png" width="160px">
+               </a>
         </div>
         <!--ヘッダー範囲-->
         <div class="header_links">
@@ -76,8 +77,8 @@
                 </li>
             </ul>
             <!--左端予約部分-->
-            <a href="https:予約ページ"　class="appointment-btn visible-sp">
-                <img src="images/appointment.png" width="24px">
+            <a href="https:予約ページ"　class="appoint-btn visible-sp">
+                <img src="images/appoint.png" width="24px">
                 <span>予約</span>
             </a>
             <!--中央ロゴ-->
@@ -136,50 +137,64 @@
         {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
         @yield('content')
     </main>
-    <footer>
+    <article id="location">
         <!--LOCATION & INFORMATION-->
-        <div class="info">
-            <h1>LOCATION & INFORMATION</h1>
+        <div class="hgroup">
+            <h1>LOCATION</h1>
+            <h2 class="subttl">STORE INFORMATION</h2>
         </div>
-        <div id="info">
+        <div class="shop">
             <dl>
                 <dt>Lys.kichijoji</dt>
                 <dd>
-                    "住所番号"
+                    郵便番号
                     <br>
-                    "住所"
+                    住所
                 </dd>
-                <dd>TEL : </dd>
-                <dd>営業時間  </dd>
+                <dd>TEL :</dd>
+                <dd>営業時間</dd>
                 <dd>
-                    <a href="https::">Google Mapで見る</a>
+                    <a href="https::" target="_brank">Google Mapで見る</a>
                 </dd>
             </dl>
-            {{-- お店のGoogle map--}}
+            <!-- お店のGoogle map-->
             <div class="map_area">
-                <a href="https::"></a>
+                <a href="https::" target="_brank">
+                    <iframe src="https:Googleマップ" width="100%" height="auto" framborder="0" style="border:0;" allowfullscreen>
+                        #document
+                    </iframe>
+                    <div class="map"></div>
+                </a>
             </div>
-        </div>    
+        </div>
+    </article>
+    <footer>
         <nav id="footer_nav">
             <ul>
-                 {{-- お店情報 --}}
+                <!-- お店情報 -->
                 <li>
                     <a href="aboutus/">ABOUT US</a>
                 </li>
-                 {{-- Instagram --}}
+                <!-- Instagram -->
                 <li>
-                    <a href="https::" target="_blank"><img src="common/images/instagram.png" eidth="17" height="17">
-                    </a>
+                    <a href="https::" target="_blank"><img src="images/instagram.png" width="17" height="17"></a>
                 </li>
-                  {{-- 予約 --}}
+                <!-- 予約 -->
                 <li>
                     <a href="appointment/">予約</a>
                 </li>
             </ul>
         </nav>
-        {{-- お店のロゴ --}}
-        <div class="logo">
-            <img src="common/images/logo.png" alt="Lys.kichijoji ロゴ" wigth="85">
+        <!-- お店のロゴ -->
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Lys.kichijoji ロゴ" wigth="85">
+        </div>
+        <div class="copyright">
+            <small>
+                Copyright 2021.  Lys.kichijoji
+                <br>
+                "All Rights Reserved."
+            </small>
         </div>
     </footer>        
     </div>
