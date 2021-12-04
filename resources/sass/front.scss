@@ -7,29 +7,14 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-
-.header_in{
-  padding: 15px 80px;
-  display: flex;
-  justify-content: flex-end;
-  
-}
-.header_in {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    
-}
-
-.logo {
+.logo　hidden-sp{
     left: 30px;
     top: 30px;
     position: absolute;
     z-index: 1;
-}
-.hidden-sp {
-    display: block;
+    align-items: center;
+    margin: 0 auto;
+    
 }
 .header_links {
     width: 100%;
@@ -42,6 +27,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 a {
     color: inherit;
 }
@@ -72,11 +58,16 @@ ul li {
     width: 60px;
     height: 60px;
     display: block;
+    color: #fff;
     background: #977119;
+    font-size: 12px;
+    margin: 5px;
 }
 .appoint-btn {
     text-align: center;
     padding-top: 8px;
+    margin-right: auto;
+    
 }
 img {
     vertical-align: bottom;
@@ -87,11 +78,6 @@ img {
 }
 img {
     border-style: none;
-}
-.appoint-btn span {
-    display: block;
-    color: #fff;
-    font-size: 12px;
 }
 .menu-trigger {
     display: block;
@@ -156,6 +142,7 @@ header {
     position: relative;
     z-index: 2;
 }
+
 footer {
     margin-bottom: 0;
 }
