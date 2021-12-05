@@ -11,5 +11,5 @@ use App\Salon;
 
 class SalonController extends Controller
 {
-     // 
+  
 }
