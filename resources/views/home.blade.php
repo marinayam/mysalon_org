@@ -29,13 +29,13 @@
         
     </head>
     <body>
-        <header>
+        <header class="sticky-top">
             <!-- ヘッダー -->
             <div class="container-fluid">
                 <!-- ナビゲーション -->
                 <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
                     <!-- ヘッダーのロゴ -->
-                    <a class="navbar-brand" href="#"><img class="img-fluid" src="images/logo.png" width="300px"></a>
+                    <a class="navbar-brand" href="#"><img class="img-fluid" src="images/logo.png" width="180px"></a>
                     <!-- メニューバーアイコン -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -88,8 +88,73 @@
             {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             @yield('content')
         </main>
-        <footer>
-            
-        </footer>
-    </body>
-</html>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <h3>ABOUT</h3>
+                            <p>
+                                <a href="#">About Us</a>
+                            </p>
+                            <p>
+                                <a href="#">MENU</a>
+                            </p>
+                            <p>
+                                <a href="#">Staff</a>
+                            </p>
+                            <p>©︎ Lys. Company Inc.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                        <h3>Contact</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt">
+                                ::before
+                            </i>
+                            "東京都吉祥寺"
+                        </p>
+                        <p>
+                           <i class="fas fa-phone">
+                               ::before
+                           </i>
+                           "Phone:080"
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope">
+                                ::before
+                            </i>
+                            "Email: "
+                            <a href="mailto:xxx@gmail.com">xxx@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-line">
+                                ::before
+                            </i>
+                            "LINE: xxx"
+                        </p>
+                        <p>
+                            <a href="#">お問い合わせ</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-links wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="row">
+                            <div class="col">
+                                <h3>FOLLOW US</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <a href="#">Instagram</a>
+                                </p>
+                                <p>
+                                    <a href="#">Blog</a>
+                                </p>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+    </html>
