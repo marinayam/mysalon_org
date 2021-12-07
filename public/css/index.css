@@ -1,0 +1,29 @@
+body{
+    color: #8e7757;
+}
+.location{
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+    padding: 100px 0 0;
+}
+h3{
+    font-family: DidotLTPro-Bold,YuMincho,"游明朝",Hiragino Mincho ProN,"ＭＳ 明朝",serif;
+    font-size: 416.667%;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: .1em;
+}
+h4{
+    font-family: DidotLTPro-Bold,YuMincho,"游明朝",Hiragino Mincho ProN,"ＭＳ 明朝",serif;
+    font-size: 133.333%;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: .07em;
+}
+.location-mapArea {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
