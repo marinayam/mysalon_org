@@ -1,3 +1,4 @@
+<!--layout/front.bladeにコピー済み-->
 <!DOCTYPE html>
 <html lang="{{ app ()->getLocale() }}">
     <head>
