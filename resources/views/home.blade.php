@@ -88,73 +88,60 @@
             {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             @yield('content')
         </main>
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 footer-about wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                        <h3>ABOUT</h3>
-                            <p>
-                                <a href="#">About Us</a>
-                            </p>
-                            <p>
-                                <a href="#">MENU</a>
-                            </p>
-                            <p>
-                                <a href="#">Staff</a>
-                            </p>
-                            <p>©︎ Lys. Company Inc.</p>
-                        </div>
+        <footer>
+            <div class="fixedcontainer">
+                <div class="footer_in1">
+                    <div class="footer-menu">
+                        <p class="footer-title">ABOUT</p>
+                        <ul class="footer-list">
+                            <li><a href="#">About Us</a>
+                            </li>
+                            <li><a href="#">Menu</a>
+                            </li>
+                            <li><a href="#">Staff</a>
+                            </li>
+                        </ul>
+                   </div>
+                    <div class="footer-menu">
+                        <p class="footer-title">CONTACT</p>
+                        <ul>
+                           <li>
+                               郵便番号
+                               <br>
+                               東京都武蔵野市御殿山1-6-9
+                               <br>
+                               エルドラド吉祥寺304
+                               <br>
+                               Email: xxx@gmail.com
+                               <br>
+                               LINE: @xxx
+                            </li>
+                            <li class="footer_contact_btn">
+                                <a href="#">お問い合わせフォーム</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                        <h3>Contact</h3>
-                        <p>
-                            <i class="fas fa-map-marker-alt">
-                                ::before
-                            </i>
-                            "東京都吉祥寺"
-                        </p>
-                        <p>
-                           <i class="fas fa-phone">
-                               ::before
-                           </i>
-                           "Phone:080"
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope">
-                                ::before
-                            </i>
-                            "Email: "
-                            <a href="mailto:xxx@gmail.com">xxx@gmail.com</a>
-                        </p>
-                        <p>
-                            <i class="fab fa-line">
-                                ::before
-                            </i>
-                            "LINE: xxx"
-                        </p>
-                        <p>
-                            <a href="#">お問い合わせ</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 footer-links wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="row">
-                            <div class="col">
-                                <h3>FOLLOW US</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>
-                                    <a href="#">Instagram</a>
-                                </p>
-                                <p>
-                                    <a href="#">Blog</a>
-                                </p>        
-                            </div>
-                        </div>
+                    <div class="footer-menu">
+                        <p class="footer-title">FOLLOW US</p>
+                        <ul>
+                            <li>
+                                <a href="#" target="_brank">
+                                    <img src="images/instagram.png" width="24px">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">ブログへ</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
+                <div class="footer_in2">
+                    <div class="fixedcontainer">
+                        <p>©︎ Lys. Company Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         </body>
     </html>
