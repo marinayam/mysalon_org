@@ -1,0 +1,13 @@
+[33m6edddd8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m HEAD@{0}: revert: Revert "Location作成 index"
+[33m300c1db[m HEAD@{1}: commit: Location作成 index
+[33ma3fe6db[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{2}: commit: Location作成 index
+[33m81fcd8d[m HEAD@{3}: commit: レイアウト完成 layouts/front
+[33mc81761c[m HEAD@{4}: commit: フッター完成 home
+[33m164d5b2[m HEAD@{5}: commit: フッター作成 home
+[33m3fe4931[m HEAD@{6}: commit: ヘッダーのナビゲーション編集 home
+[33mc1cb6e9[m HEAD@{7}: commit: メンタリング1回目
+[33mccd2eb4[m HEAD@{8}: commit: トップページのフッター編集 layouts/front.blade.php
+[33m499b941[m HEAD@{9}: commit: ヘッダー編集　layouts/front
+[33me07cd11[m HEAD@{10}: commit: トップページメニューバー　layouts/front
+[33m1f40aca[m HEAD@{11}: commit: トップページヘッター　layouts/front
+[33m9df9078[m HEAD@{12}: commit (initial): first commit

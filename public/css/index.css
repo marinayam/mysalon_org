@@ -1,35 +1,39 @@
 body{
     color: #8e7757;
 }
-/*スライダー開始*/
-.carousel-item{
-    width: 100%;
-    height: 100%;
-    vertical-align: bottom;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    max-width: 100%;
-}
-.aboutSlider-h1 title{
-    font-family: DidotLTPro-Bold,YuMincho,"游明朝",Hiragino Mincho ProN,"ＭＳ 明朝",serif;
-    font-size: 416.667%;
-    letter-spacing: .1em;
-}
-.aboutSlider-titleGroup{
+/*スライダー*/
+.aboutSlider-titleGroup {
     margin-bottom: 35px;
 }
-.aboutSlider-information{
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100%;
-    font-family: inherit;
+.aboutSlider-titleGroup .title:first-child {
+    margin-bottom: 10px;
 }
-/*スライダー終了*/
-/*ロケーション開始*/
+.aboutSlider-h1 {
+    font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3","ヒラギノ角ゴ Pro W6", "Noto Sans JP", "メイリオ","Meiryo",Arial, sans-serif;
+    letter-spacing: .1em;
+}
+.aboutSlider-information p:last-child {
+    margin-bottom: 0;
+}
+.aboutSlider-information p {
+    font-family: YuGothic,"游ゴシック","ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,"メイリオ",ArialMT,Meiryo,Osaka,"ＭＳ Ｐゴシック",MS P Gothic,sans-serif;
+    font-size: 116.667%;
+    line-height: 2;
+    margin-bottom: 25px;
+    letter-spacing: .1em;
+}
+.aboutSlider-text {
+    position: relative;
+    color: #fff;
+    z-index: 101;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+/*スライダー*/
+/*ロケーション*/
 .location{
     background-color: #fff;
     position: relative;
@@ -56,4 +60,4 @@ h4{
     padding: 0px;
     text-align: center;
 }
-/*ロケーション終了*/
+/*ロケーション*/
