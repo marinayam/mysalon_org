@@ -1,5 +1,6 @@
 body{
     color: #8e7757;
+    background-color: #fff;
 }
 /*スライダー*/
 .aboutSlider-titleGroup {
@@ -33,6 +34,67 @@ body{
     text-align: center;
 }
 /*スライダー*/
+/*メニュー*/
+.menu-in{
+    width: 94%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.menu-in h1{
+    text-align: center;
+    padding: 50px 0 20px 0;
+}
+@media only screen and (min-width: 800px)
+{
+.col3 {
+    text-align: center;}
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width: 800px)
+{
+.col3 li {
+    display: inline-block;
+    width: 30%;
+    padding: 0 2%;
+    margin-bottom: 0;
+    vertical-align: top;
+    text-align: left;}
+}
+.col3 li {
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+@media only screen and (max-width: 1199px)
+{
+.menu-in h2 {
+    padding: 50px 0 20px 0;}
+}
+.menu-in h2 {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+}
+.col3 img {
+    max-width: 288px;
+    display: block;
+    margin: -5px auto 20px;
+    width: 100%;
+    height: auto;
+}
+.col3 p{
+    margin: 0;
+    padding: 0;
+}
+/*メニュー*/
 /*ロケーション*/
 .location{
     background-color: #fff;

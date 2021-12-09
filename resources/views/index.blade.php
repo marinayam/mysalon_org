@@ -107,6 +107,43 @@
     </div>
 </div>
 <!----Slideres------------------------------------->
+<!----Menu------------------------------------->
+<div class="menu-in">
+    <h1>MENU</h1>
+    <ul class="col3">
+        <li>
+            <h2>パーマ</h2>
+            <a href="#">
+            <img src="images/perm-round.png" width="288" height="288" alt></a>
+            <p>
+            根元から立ち上げ！
+            <br>
+            一重まぶたや逆さまつ毛などのお悩み解決   
+           </p>
+        </li>
+        <li>
+            <h2>マツエク</h2>
+            <a href="#">
+            <img src="images/extension-round.png" width="288" height="288" alt></a>
+            <p>
+            カラーエクステで流行りの抜け感！
+            <br>
+            肌の色に合わせて全5色からセレクト   
+           </p>
+        </li>
+        <li>
+            <h2>アイブロウ</h2>
+            <a href="#">
+            <img src="images/eyebrow-round.png" width="288" height="288" alt></a>
+            <p>
+            似合わせ美眉に
+            <br>
+            お一人お一人の輪郭・骨格・印象に合わせたデザインを提案   
+           </p>
+        </li>
+    </ul>  
+</div>
+<!----Menu------------------------------------->
 <!----LOCATION------------------------------------->
 <div class="location">
     <h3>LOCATION</h3>
