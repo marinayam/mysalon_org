@@ -6,103 +6,105 @@
 {{-- 作成したCSSを追記 --}}
 <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 <!----Slideres------------------------------------->
-<div class="carousel slide" id="sliders" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#sliders" data-slide-to="0" class="active"></li>
-        <li data-target="#sliders" data-slide-to="1"></li>
-        <li data-target="#sliders" data-slide-to="2"></li>
-        <li data-target="#sliders" data-slide-to="3"></li>
-        <li data-target="#sliders" data-slide-to="4"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <a href="#">
-            <img src="images/about.png" class="d-block w-100"></a>
-            <div class="carousel-caption d-none d-sm-block">
-                <div class="aboutSlider-titleGroup">
-                    <div class="aboutSlider-information">
-                        <h1 class="aboutSlider-h1 title">ABOUT</h1>
-                        <p>お客様のなりたいを叶えるサロン
-                        <br>
-                        丁寧なカウンセリングによりお客様一人一人に合う似合わせを提案
-                        <br>
-                        キャリア7年の熟練スタッフの為、幅広い提案が可能です。
-                        </p>
+<div class="container">
+    <div class="carousel slide" id="sliders" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#sliders" data-slide-to="0" class="active"></li>
+            <li data-target="#sliders" data-slide-to="1"></li>
+            <li data-target="#sliders" data-slide-to="2"></li>
+            <li data-target="#sliders" data-slide-to="3"></li>
+            <li data-target="#sliders" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#">
+                <img src="images/about.png" class="d-block w-100"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <div class="aboutSlider-titleGroup">
+                        <div class="aboutSlider-information">
+                            <h1 class="aboutSlider-h1 title">ABOUT</h1>
+                            <p>お客様のなりたいを叶えるサロン
+                            <br>
+                            丁寧なカウンセリングによりお客様一人一人に合う似合わせを提案
+                            <br>
+                            キャリア7年の熟練スタッフの為、幅広い提案が可能です。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <a href="#">
-            <img src="images/perm.png" class="d-block w-100"></a>
-            <div class="carousel-caption d-none d-sm-block">
-                <div class="aboutSlider-titleGroup">
-                    <div class="aboutSlider-information">
-                        <h1 class="aboutSlider-h1 title">パーマ</h1>
-                        <p>【人気のまつ毛パーマ】ラッシュリフト
-                        <br>
-                        根元から立ち上げ！一重まぶたや逆さまつ毛などのお悩み解決
-                        </p>
+            <div class="carousel-item">
+                <a href="#">
+                <img src="images/perm.png" class="d-block w-100"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <div class="aboutSlider-titleGroup">
+                        <div class="aboutSlider-information">
+                            <h1 class="aboutSlider-h1 title">パーマ</h1>
+                            <p>【人気のまつ毛パーマ】ラッシュリフト
+                            <br>
+                            根元から立ち上げ！一重まぶたや逆さまつ毛などのお悩み解決
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <a href="#">
-            <img src="images/extension.png" class="d-block w-100"></a>
-            <div class="carousel-caption d-none d-sm-block">
-                <div class="aboutSlider-titleGroup">
-                    <div class="aboutSlider-information">
-                        <h1 class="aboutSlider-h1 title">マツエク</h1>
-                        <p>【カラーエクステで流行りの抜け感】フラットラッシュ
-                        <br>
-                        肌馴染みの良いロイッシュカラー導入！肌の色に合わせて全5色からセレクト
-                        <br>
-                        フラットラッシュの為、モチも良く、初めての方にもおすすめ</p>
+            <div class="carousel-item">
+                <a href="#">
+                <img src="images/extension.png" class="d-block w-100"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <div class="aboutSlider-titleGroup">
+                        <div class="aboutSlider-information">
+                            <h1 class="aboutSlider-h1 title">マツエク</h1>
+                            <p>【カラーエクステで流行りの抜け感】フラットラッシュ
+                            <br>
+                            肌馴染みの良いロイッシュカラー導入！肌の色に合わせて全5色からセレクト
+                            <br>
+                            フラットラッシュの為、モチも良く、初めての方にもおすすめ</p>
+                        </div>
                     </div>
                 </div>
             </div>
-       </div>
-        <div class="carousel-item">
-            <a href="#">
-            <img src="images/eyebrow.png" class="d-block w-100"></a>
-            <div class="carousel-caption d-none d-sm-block">
-                <div class="aboutSlider-titleGroup">
-                    <div class="aboutSlider-information">
-                        <h1 class="aboutSlider-h1 title">アイブロウ</h1>
-                        <p>【韓国（オルチャン）眉毛を叶えるサロン】アイブロウWax
-                        <br>
-                        カウンセリングにより最適な美眉をご提案
-                        <br>
-                        お一人お一人の輪郭・骨格・印象に合わせた似合わせデザイン</p>
+            <div class="carousel-item">
+                <a href="#">
+                <img src="images/eyebrow.png" class="d-block w-100"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <div class="aboutSlider-titleGroup">
+                        <div class="aboutSlider-information">
+                            <h1 class="aboutSlider-h1 title">アイブロウ</h1>
+                            <p>【韓国（オルチャン）眉毛を叶えるサロン】アイブロウWax
+                            <br>
+                            カウンセリングにより最適な美眉をご提案
+                            <br>
+                            お一人お一人の輪郭・骨格・印象に合わせた似合わせデザイン</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <a href="#">
-            <img src="images/goods.png" class="d-block w-100"></a>
-            <div class="carousel-caption d-none d-sm-block">
-                <div class="aboutSlider-titleGroup">
-                    <div class="aboutSlider-information">
-                        <h1 class="aboutSlider-h1 title">おすすめ商品</h1>
-                        <p>今人気の商品や話題のアイテムも一緒にいかがでしょうか
-                        <br>
-                        プライベートサロンならではのこだわり抜いた商品のみ取り扱い！
-                        </p>
+            <div class="carousel-item">
+                <a href="#">
+                <img src="images/goods.png" class="d-block w-100"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <div class="aboutSlider-titleGroup">
+                        <div class="aboutSlider-information">
+                            <h1 class="aboutSlider-h1 title">おすすめ商品</h1>
+                            <p>今人気の商品や話題のアイテムも一緒にいかがでしょうか
+                            <br>
+                            プライベートサロンならではのこだわり抜いた商品のみ取り扱い！
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <a href="#sliders" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">前の画像へ</span>
+            </a>
+            <a href="#sliders" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">次の画像へ</span>
+            </a>
         </div>
     </div>
-    <a href="#sliders" class="carousel-control-prev" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="sr-only">前の画像へ</span>
-    </a>
-    <a href="#sliders" class="carousel-control-next" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="sr-only">次の画像へ</span>
-    </a>
 </div>
 <!----Slideres------------------------------------->
 <!----LOCATION------------------------------------->
