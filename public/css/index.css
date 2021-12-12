@@ -34,6 +34,94 @@ body{
     text-align: center;
 }
 /*スライダー*/
+/*こだわり*/
+#kodawari {
+    position: relative;
+}
+.section {
+    padding: 120px 0;
+}
+.section_ttl {
+    font-size: 20px;
+    color: #8e7757;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.section_ttl span {
+    display: block;
+    font-size: 36px;
+    color: #333;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.kodawari_in {
+    display: flex;
+    max-width: 1500px;
+    width: calc(100% - 120px);
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.kodawari_one {
+    width: 30%;
+    position: relative;
+}
+.kodawari_img {
+    margin-bottom: 80px;
+}
+.kodawari_in img {
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%;
+}
+.kodawari_ttl {
+    font-size: 24px;
+    margin: 20px 0px;
+    text-align: left;
+}
+.kodawari_txt {
+    text-align: left;
+}
+#kodawari:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background-color: #e1dad4;
+    z-index: -2;
+}
+@media screen and (max-width: 768px){
+.section {
+    padding: 50px 0;
+}}
+@media screen and (max-width: 768px){
+.section_ttl {
+    margin-bottom: 30px;
+}}
+@media screen and (max-width: 768px){
+.kodawari_in {
+    width: calc(100% - 80px);
+    display: block;
+}}
+@media screen and (max-width: 768px){
+.kodawari_one {
+    width: 100%;
+    margin-bottom: 40px;
+}}
+@media screen and (max-width: 768px){
+.kodawari_ttl {
+    margin: 15px 0;
+    font-size: 18px;
+}}
+@media screen and (max-width: 768px){
+#kodawari:after {
+    height: calc(100% - 300px);
+}}
+/*こだわり*/
 /*メニュー*/
 .menu-in{
     width: 94%;
