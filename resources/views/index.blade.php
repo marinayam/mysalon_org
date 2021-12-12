@@ -108,7 +108,7 @@
 </div>
 <!----Slideres------------------------------------->
 <!----こだわり------------------------------------->
-<div class="contant">
+<div class="content">
     <section class="section" id="kodawari">
         <h2 class="section_ttl">
             <span>Lys.がお客様に選ばれる理由</span>
@@ -202,6 +202,22 @@
     </ul>  
 </div>
 <!----Menu------------------------------------->
+<!----matching------------------------------------->
+<div id="matching" class="matching_contents">
+    <div class="check-box">
+        <div class="check-top">
+        <h1>
+            あなたにぴったりの
+            <br>
+            メニューをCHECK
+        </h1>
+        <p class="matching_logo">
+            <a href="#" class="btn-circle">START</a>
+        </p>
+        </div>        
+    </div>
+</div>
+<!----matching------------------------------------->
 <!----LOCATION------------------------------------->
 <div class="location">
     <h3>LOCATION</h3>
