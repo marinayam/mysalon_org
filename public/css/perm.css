@@ -1,0 +1,19 @@
+body{
+    color: #8e7757;
+    background-color: #fff;
+}
+.page-head img{
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%;
+}
+.page-head {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

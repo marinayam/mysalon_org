@@ -15,4 +15,5 @@ class SalonController extends Controller
   {
       return view('index');
   }
+
 }
