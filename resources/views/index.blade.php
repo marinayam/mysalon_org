@@ -171,7 +171,7 @@
     <ul class="col3">
         <li>
             <h2>パーマ</h2>
-            <a href="#">
+            <a href={{ route('perm') }}>
             <img src="images/perm-round.png" width="288" height="288" alt></a>
             <p>
             根元から立ち上げ！

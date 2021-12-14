@@ -44,16 +44,20 @@
                             <li class="nav-item">
                                 <a class="nav-link-appoint" href="#">ご予約</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link-karte" href="#">カルテ記入</a>
+                            </li>
                         </ul>
+                        
                         <!-- 右に表示させるメニュー -->
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    Menu
                                 </a>
                                 <!-- ドロップメニュー -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">パーマ</a>
+                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
                                     <a class="dropdown-item" href="#">マツエク</a>
                                     <a class="dropdown-item" href="#">眉毛</a>
                                 </div>

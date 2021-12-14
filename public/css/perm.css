@@ -2,18 +2,159 @@ body{
     color: #8e7757;
     background-color: #fff;
 }
-.page-head img{
-    vertical-align: bottom;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    max-width: 100%;
+p{
+    text-align: center;
 }
-.page-head {
-    height: 500px;
-    overflow: hidden;
+@media screen and (max-width: 640px){
+.perm_content {
+    padding-top: 60px;
+}}
+/*ページタイトル*/
+.perm_ttl {
+    margin-bottom: 0;
+}
+.perm_ttl h2 {
+    color: #C1B15D;
+    text-align: center;
+}
+.perm_ttl span {
+    display: block;
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0.125em;
+}
+.perm_ttl h2 small {
+    font-family: 'Noto Sans CJK JP Regular', sans-serif ;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.075em;
+}
+@media screen and (max-width: 640px){
+.perm_ttl {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}}
+/*ページタイトル*/
+/*パーマメニュー*/
+.perm_content_menu{
+    display: flex;
+    max-width: 1500px;
+    width: calc(100% - 120px);
+    justify-content: space-between;
+    margin: 0 auto;
+}
+@media screen and (max-width: 640px){
+section.perm_content_menu {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}}
+.container {
+    max-width: 1220px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
+.perm_price_item_table{
+    padding-left: 130px;
+    padding-right: 130px;
+}
+.col_right{
+    text-align: left;
+}
+.perm_content_price_list{
+    margin-bottom: 140px;
+}
+@media screen and (max-width: 640px){
+.perm_content_price_list, .menu-content-option-list {
+    margin-bottom: 40px;
+}}
+@media screen and (max-width: 640px){
+.perm_content_price_list .perm_price_item, .menu-content-option-list .perm_price_item {
+    margin-bottom: 50px;
+}}
+@media screen and (max-width: 640px){
+.perm_content_price_list .perm_price_item .perm_price_item_title, .menu-content-option-list .perm_price_item .perm_price_item_title {
+    padding-top: 30px;
+    min-height: 0px;
+}}
+.perm_content_price_list  .menu-content-option-list  {
+    padding-right: 30px;
+}
+.perm_content_price_list .perm_price_item .perm_price_item_title, .menu-content-option-list .perm_price_item .perm_price_item_title {
+    padding-top: 50px;
+    position: relative;
+    min-height: 150px;
+}
+.perm_content_price_list .perm_price_item .perm_price_item_title h5, .menu-content-option-list .perm_price_item .perm_price_item_title h5 {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+@media screen and (max-width: 640px){
+.perm_content_price_list .perm_price_item .perm_price_item_title h5, .menu-content-option-list .perm_price_item .perm_price_item_title h5 {
+    font-size: 22px;
+}}
+@media screen and (max-width: 640px){
+.perm_content_price_list .perm_price_item .perm_price_item_title .price_title_image, .menu-content-option-list .perm_price_item .perm_price_item_title .price_title_image{
+    width: 100px;
+}}
+.perm_content_price_list .perm_price_item .perm_price_item_title .price_title_image, .menu-content-option-list .perm_price_item .perm_price_item_title .price_title_image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+}
+.price_title_image img{
+    width: 100%;
+    height: auto;
+}
+p .recommend {
+    line-height: 1.875;
+}
+@media screen and (max-width: 640px){
+p.recommend {
+    line-height: 1.875;
+}}
+.color_table .row:nth-child(odd) {
+    background-color: #eeeeee;
+}
+.color_table .row {
+    padding: 10px 20px;
+    min-height: 48px;
+    text-align: left;
+}
+.color_table .row {
+    padding: 10px 20px;
+    min-height: 48px;
+    text-align: left;
+}
+@media screen and (max-width: 640px){
+.color_table .row {
+    padding: 10px 15px;
+}}
+@media screen and (max-width: 640px){
+.color_table .row .col {
+    font-size: 16px;
+}}
+.color_table .row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.perm_content_price_list .menu-price-item-compare, .menu-content-option-list .menu-price-item-compare {
+    margin-top: 40px;
+    border: 1px solid #4d4c4a;
+    padding: 20px 20px;
+    
+}
+@media screen and (max-width: 640px){
+.perm_content_price_list .menu-price-item-compare, .menu-content-option-list .menu-price-item-compare {
+    margin-top: 10px;
+    padding: 8px 16px;
+}}
+/*パーマメニュー*/
+

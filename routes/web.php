@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'SalonController@index');
+Route::get('/perm', function(){
+  return view('perm');
+})->name('perm');
