@@ -34,10 +34,7 @@ h1{
 }
 /*ページタイトル*/
 /*コンタクトフォーム*/
-.section{
-    padding: 120px 0;
-    background-color:#fff;
-}
+
 .contact-alert{
     text-align: right;
 }
@@ -47,19 +44,7 @@ small {
 .asterisk{
     color: #977119;
 }
-.contact-table {
-    width: 100%;
-}
-.contact-table td {
-    padding: 15px 0;
-}
-.wpcf7-form-control-wrap {
-    position: relative;
-}
-.contact-table td input {
+.container mt-5{
     background-color: #f5faf9;
-    height: 80px;
-    width: 100%;
-    border: none;
 }
 /*コンタクトフォーム*/
