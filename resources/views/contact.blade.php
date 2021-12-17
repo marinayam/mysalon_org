@@ -18,18 +18,27 @@
         <form class="needs-validation" action="" method="post" novalidate>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="firstName">名</label>
+                    <label for="firstName">
+                        <span class="badge bg-danger">必須</span>
+                        名
+                    </label>
                     <input class="form-control" type="text" name="customer[first_name]" id="firstName" placeholder="First name" autocomplete="given-name" required>
                     <p class="invalid-feedback">名を入力して下さい</p>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="lastName">姓</label>
+                    <label for="lastName">
+                        <span class="badge bg-danger">必須</span>
+                        姓
+                    </label>
                     <input class="form-control" type="text" name="customer[last_name]" id="lastName" placeholder="Last name" autocomplete="family-name" required>
                     <p class="invalid-feedback">姓を入力して下さい</p>
                 </div>
             </div>
             <div class="form-group">
-                <label for="email">メールアドレス</label>
+                <label for="email">
+                    <span class="badge bg-danger">必須</span>
+                    メールアドレス
+                </label>
                 <input class="form-control" type="email" name="email" id="email" placeholder="Email" autocomplete="email" autocomplete="email"required>
                 <p class="invalid-feedback">メールアドレスを入力して下さい</p>
             </div>
@@ -38,7 +47,10 @@
                 <input class="form-control" type="tel" name="tel" id="tel" placeholder="000-0000-0000" autocomplete="tel">
             </div>
             <div class="form-group">
-                <label for="comment">お問い合わせ内容</label>
+                <label for="comment">
+                    <span class="badge bg-danger">必須</span>
+                    お問い合わせ内容
+                </label>
                 <textarea class="form-control" type="text" name="comment" id="comment"rows="10" cols="30" minlength:10 maxlength:140 required></textarea>
                 <p class="invalid-feedback">お問い合わせ内容を入力して下さい</p>
             </div>
