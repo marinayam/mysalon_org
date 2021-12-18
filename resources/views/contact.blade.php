@@ -23,7 +23,7 @@
                         名
                     </label>
                     <input class="form-control" type="text" name="customer[first_name]" id="firstName" placeholder="First name" autocomplete="given-name" required>
-                    <p class="invalid-feedback">名を入力して下さい</p>
+                    
                 </div>
                 <div class="form-group col-md-6">
                     <label for="lastName">
@@ -54,7 +54,7 @@
                 <textarea class="form-control" type="text" name="comment" id="comment"rows="10" cols="30" minlength:10 maxlength:140 required></textarea>
                 <p class="invalid-feedback">お問い合わせ内容を入力して下さい</p>
             </div>
-            <button type="submit" class="btn btn-dark btn-lg">送信</button>
+            <button type="submit" class="btn btn-dark">確認画面へ</button>
         </form>   
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -81,5 +81,4 @@
           }, false);
         })();
     </script>
-    
 @endsection

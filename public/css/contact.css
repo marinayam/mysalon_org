@@ -33,18 +33,3 @@ h1{
     margin: 0px;
 }
 /*ページタイトル*/
-/*コンタクトフォーム*/
-
-.contact-alert{
-    text-align: right;
-}
-small {
-    font-size: 80%;
-}
-.asterisk{
-    color: #977119;
-}
-.container mt-5{
-    background-color: #f5faf9;
-}
-/*コンタクトフォーム*/
