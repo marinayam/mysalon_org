@@ -13,7 +13,7 @@ class SalonController extends Controller
 {
   public function index(Request $request)
   {
-      return view('index');
+      return view('salon/index');
   }
 
 }

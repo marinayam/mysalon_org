@@ -11,10 +11,30 @@
 |
 */
 
-Route::get('/', 'SalonController@index');
+// トップページ
+Route::get('/', function(){
+  return view('salon/index');
+})->name('/');
+
+// パーマメニュー
 Route::get('/perm', function(){
-  return view('perm');
+  return view('salon/perm');
 })->name('perm');
+
+// お問い合わせフォーム
 Route::get('/contact', function(){
-  return view('contact');
+  return view('salon/contact');
 })->name('contact');
+Auth::routes();
+
+// カルテ画面
+// ログインしていない状態でカルテにアクセスしたら、ログイン画面に戻す
+Route::get('/chart', 'ChartController@get')->name('chart')->middleware('auth');
+
+// Route::get('chart/create', 'ChartController@add')->middleware('auth');
+// Route::post('chart/create', 'ChartController@create')->middleware('auth');
+// Route::get('chart', 'ChartController@index')->middleware('auth'); 
+// Route::get('chart/edit', 'ChartController@edit')->middleware('auth');
+// Route::post('chart/edit', 'ChartController@update')->middleware('auth'); 
+// Route::get('chart/delete', 'ChartController@delete')->middleware('auth'); 
+  

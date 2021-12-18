@@ -24,73 +24,40 @@
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ asset('css/app.css') }}" rel ="stylesheet">
         {{-- 作成したCSSを追記 --}}
-        <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/chart.css') }}" rel="stylesheet">
     </head>
     <body>
+        <div class="container-fluid">
         <header class="sticky-top">
-            <!-- ヘッダー -->
-            <div class="container-fluid">
-                <!-- ナビゲーション -->
-                <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
-                    <!-- ヘッダーのロゴ -->
-                    <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a>
-                    <!-- メニューバーアイコン -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <!-- 左に表示させるメニュー -->
-                        <ul class="navbar-nav mr-auto">　
-                            <li class="nav-item">
-                                <a class="nav-link-appoint" href="#">ご予約</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-karte" href={{ route('chart') }}>カルテ記入</a>
-                            </li>
-                        </ul>
-                        
-                        <!-- 右に表示させるメニュー -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Menu
-                                </a>
-                                <!-- ドロップメニュー -->
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href="#">マツエク</a>
-                                    <a class="dropdown-item" href="#">眉毛</a>
-                                </div>
-                            <!-- ナビゲーション -->
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Instagram</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Staff</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href={{ route('contact') }}>Contact</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Information</a>
-                            </li>
-                          </ul>
-                    </div>
-                </nav>
-            </div>
+            <ul class="navbar-nav ml-auto" style=background-color: #e3f2fd;">
+                <!-- ヘッダーのロゴ -->
+                <li><a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a></li>
+                {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                @guest
+                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                @else
+                <div class="text-right">
+                <button type="button" class="btn btn-outline-info">
+                    <a  href="{{ route('logout') }}"onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">{{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </button>
+                </div>
+                <!--</div>-->
+                <!--</li>-->
+                @endguest
+            </ul>
         </header>
-        <main class="py-4">
+    </body>
+    <main class="py-4">
             {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             @yield('content')
-        </main>
-        <footer>
+    </main>
+    <footer>
             <div class="fixedcontainer">
                 <div class="footer_in1">
                     <div class="footer-menu">
@@ -145,5 +112,5 @@
                 </div>
             </div>
         </footer>
-        </body>
-    </html>
+    </div>
+</html>

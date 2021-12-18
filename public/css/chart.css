@@ -1,0 +1,77 @@
+body {
+    font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3","ヒラギノ角ゴ Pro W6", "Noto Sans JP", "メイリオ","Meiryo",Arial, sans-serif;
+    /* font-family: "Yu Mincho", "游明朝", "游明朝体", " Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", "MS Mincho", "ＭＳ 明朝", " MS PMincho", "ＭＳ Ｐ明朝", "Sawarabi Mincho"; */
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.sticky-top{
+    background-color:#fff;
+}
+
+/*フッター*/
+footer {
+    margin-bottom: 0;
+    background-color: #e1dad4;
+    color: #333;
+    padding: 50px 0;
+}
+
+/*フッター余白*/
+.fixedcontainer {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px;
+}
+/*フッター*/
+.footer_in1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+/*フッターABOUT部分*/
+.footer-menu{
+    width: 30%;
+    padding: 0;
+    margin: 0;
+}
+/*フッターのタイトル設定*/
+.footer-title {
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    margin: 0px;
+}
+/*フッター項目*/
+.footer-list {
+    font-size: 14px;
+    line-height: 2;
+    list-style: none;
+}
+a {
+    color: inherit;
+    background-color: transparent;
+}
+ul li {
+    list-style: none;
+}
+/*お問い合わせフォーム*/
+.footer_contact_btn {
+    margin-top: 20px;
+}
+ul {
+    font-size: 14px;
+    line-height: 2;
+}
+/*フッター著作権*/
+.footer_in2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
