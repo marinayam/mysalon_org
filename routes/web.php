@@ -28,13 +28,22 @@ Route::get('/contact', function(){
 Auth::routes();
 
 // カルテ画面
+// アカウント作成
+// Route::get('/register', function(){
+//   return view('auth/register');
+// })->name('register');
 // ログインしていない状態でカルテにアクセスしたら、ログイン画面に戻す
-Route::get('/chart', 'ChartController@get')->name('chart')->middleware('auth');
 
-// Route::get('chart/create', 'ChartController@add')->middleware('auth');
-// Route::post('chart/create', 'ChartController@create')->middleware('auth');
-// Route::get('chart', 'ChartController@index')->middleware('auth'); 
-// Route::get('chart/edit', 'ChartController@edit')->middleware('auth');
-// Route::post('chart/edit', 'ChartController@update')->middleware('auth'); 
-// Route::get('chart/delete', 'ChartController@delete')->middleware('auth'); 
+Route::get('/chart', function(){
+  return view('chart/create');
+})->name('chart')
+->middleware('auth');
+
+
+Route::group(['middleware' => 'auth'], function(){
+Route::get('/chart', 'ChartController@get')->name('chart');
+Route::get('chart/create','ChartController@add');
+Route::post('chart/create','ChartController@create'); 
+});
+
   

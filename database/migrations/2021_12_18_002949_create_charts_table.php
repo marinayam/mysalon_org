@@ -17,16 +17,18 @@ class CreateChartsTable extends Migration
         Schema::create('charts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigIncrements('user_id');
-            $table->date('birthday');
-            $table->varchar('address');
-            $table->varchar('phone_number');
-            $table->varchar('trigger');
-            $table->varchar('trouble');
-            $table->varchar('concern');
-            $table->varchar('allergy');
-            $table->varchar('record');
-            $table->varchar('body_concern');
-            $table->varchar('caution');
+            $table->string('name');//名前を保存するカラム
+            $table->date('birthday');//生年月日を保存するカラム
+            $table->string('email');//住所を保存するカラム
+            $table->string('address');//住所を保存するカラム
+            $table->string('tel');//電話番号を保存するカラム
+            $table->string('trigger');//来店きっかけを保存するカラム
+            $table->string('trouble');//お化粧品や施術でのトラブルの経験を保存するカラム
+            $table->string('concern');//目元・眉・肌で気になる点を保存するカラム
+            $table->string('allergy');//アレルギーを保存するカラム
+            $table->string('record');//今までの施術や手術のご経験を保存するカラム
+            $table->string('body_concern');//体調の問題を保存するカラム
+            $table->string('caution');//注意事項を保存するカラム
             $table->timestamps();
         });
     }

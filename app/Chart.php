@@ -8,8 +8,17 @@ class Chart extends Model
 {
     protected $guarded = array ('id');
     public static $rules = array(
-        'title' => 'required',
-        'body' => 'required',
+        'user_id' => 'required',
+        'birthday' => 'required',
+        'address' => 'required',
+        'phone_number' => 'required',
+        'trigger' => 'required',
+        'trouble' => 'required',
+        'concern' => 'required',
+        'allergy' => 'required',
+        'record' => 'required',
+        'body_concern' => 'required',
+        'caution' => 'required',
     );
     
     

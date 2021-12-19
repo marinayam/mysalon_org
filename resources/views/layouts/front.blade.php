@@ -143,7 +143,6 @@
                         <p>©︎ Lys. Company Inc.</p>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         </body>
     </html>
