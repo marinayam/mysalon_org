@@ -33,7 +33,7 @@ Route::get('/contact', function(){
 // })->name('chart');
 
 
-Route::get('chart/create', 'ChartController@add');
+Route::get('chart/create', 'ChartController@add')->name('chart/create');
 Route::post('chart/create', 'ChartController@create');
 
 

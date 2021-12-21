@@ -45,7 +45,7 @@
                                 <a class="nav-link-appoint" href="#">ご予約</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link-karte" href={{ route('chart') }}>カルテ記入</a>
+                                <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
                             </li>
                         </ul>
                         
