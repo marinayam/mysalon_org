@@ -7,23 +7,7 @@
     <div class="row">
         <div class ="col-md-8 mx-auto">
             <h2>カルテ記入</h2>
-            {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
-            @guest
-                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-            {{-- ログインしていたらログアウトボタンを表示 --}}
-            @else
-            <div class="text-right">
-            <button type="button" class="btn btn-outline-info">
-                <a  href="{{ route('logout') }}"onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">{{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </button>
-            </div>
-            @endguest
-            {{-- ログインしていたらログアウトボタンを表示終了 --}}
+        
             <form action="{{ action('ChartController@create') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
                 <ul>
@@ -80,16 +64,28 @@
             </div>
             <div class="form-group check">
                 <label class="col-md-2">ご来店きっかけ</label>
+                @foreach($chart_triggers as $chart_trigger)
                 <label class="form-check-label" for="flexCheckDefault">
-                    <input class="form-check-input" type="checkbox" name="trigger" value="{{ old('trigger') }}" id="flexCheckDefault">
-                    ホームページ
+                    <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $chart_trigger->id}}" id="flexCheckDefault">
+                    {{$chart_trigger->trigger}}
                 </label>
+                
+                
+                @endforeach
+                <!--<label class="form-check-label" for="flexCheckDefault">-->
+                <!--    <input class="form-check-input" type="checkbox" name="trigger" value="{{ old('trigger') }}" id="flexCheckDefault">-->
+                <!--    ホットペッパービューティー-->
+                <!--</label>-->
+                <!-- <label class="form-check-label" for="flexCheckDefault">-->
+                <!--    <input class="form-check-input" type="checkbox" name="trigger" value="{{ old('trigger') }}" id="flexCheckDefault">-->
+                <!--    ご友人からの紹介-->
+                <!--</label>-->
                 </div>
             
                             
         <div class="form-group">
             <div class="col-sm-12 col-md-12 col-lg-12">                
-                <i class="fa fa-search fa-2x pull-left searchicon"></i><input type="search" class="form-control" id="search" placeholder="その他">
+                <i class="fa fa-search fa-2x pull-left searchicon"></i><input type="search" class="form-control" id="search" placeholder="">
             </div>
         </div>
             

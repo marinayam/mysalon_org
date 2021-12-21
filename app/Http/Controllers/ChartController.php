@@ -7,13 +7,15 @@ use App\Http\Controllers\Controller;
 use App\Chart;
 use App\User;
 use Carbon\Carbon;
-use Storage; 
+use Storage;
+use App\ChartTrigger;
 
 class ChartController extends Controller
 {
-    public function get()
+    public function add()
     {
-        return view ('chart.create');
+        $chart_triggers=ChartTrigger::all();
+        return view ('chart.create', ['chart_triggers'=>$chart_triggers]);
     }
 
  
