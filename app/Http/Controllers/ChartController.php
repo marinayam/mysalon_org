@@ -10,19 +10,17 @@ use Carbon\Carbon;
 use Storage;
 use App\ChartTrigger;
 use App\ChartRecord;
+use App\ChartBodyConcern;
 
 class ChartController extends Controller
 {
     public function add()
     {
         $chart_triggers=ChartTrigger::all();
-        return view ('chart.create', ['chart_triggers'=>$chart_triggers]);
         $chart_records=ChartRecord::all();
-        return view ('chart.create', ['chart_records'=>$chart_records]);
+        $chart_body_concerns=ChartBodyConcern::all();
+        return view ('chart.create', ['chart_records'=>$chart_records,'chart_triggers'=>$chart_triggers,'chart_body_concerns'=>$chart_body_concerns]);
     }
-    
-
- 
     
     public function create(Request $request)
     {
