@@ -8,20 +8,24 @@ class Chart extends Model
 {
     protected $guarded = array ('id');
     public static $rules = array(
-        'user_id' => 'required',
+        'name01' => 'required',
+        'name02' => 'required',
+        'tel' => 'required',
+        'email' => 'required',
         'birthday' => 'required',
-        'address' => 'required',
-        'phone_number' => 'required',
-        'trigger' => 'required',
+        'zip' => 'required',
+        'pref' => 'required',
+        'addr01' => 'required',
+        // 'addr02' => 'required',
+        'chart_trigger_id' => 'required',
         'trouble' => 'required',
         'concern' => 'required',
         'allergy' => 'required',
-        'record' => 'required',
-        'body_concern' => 'required',
-        'caution' => 'required',
+        'chart_record_id' => 'required',
+        'chart_body_concern_id' => 'required',
+       
     );
-    
-    
+          
     // User Modelに関連付けを行う
     public function users(){
         return $this->belongsTo('App\User');

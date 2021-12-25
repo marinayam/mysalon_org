@@ -25,6 +25,7 @@
         <link href="{{ asset('css/app.css') }}" rel ="stylesheet">
         {{-- 作成したCSSを追記 --}}
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/chart.css') }}" rel="stylesheet">
     </head>
     <body>
         <header>

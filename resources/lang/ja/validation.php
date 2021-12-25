@@ -146,19 +146,21 @@ return [
     */
 
     'attributes' => [
-        'user_id' => 'ユーザーID',
-        'name' => '名前',
-        'birthday' => '生年月日',
+        'name01' => 'お名前（漢字）',
+        'name02' => '名前（ふりがな）',
+        'tel' => 'お電話番号',
         'email' => 'メールアドレス',
-        'address' => '住所',
-        'tel' => '電話番号',
+        'birthday' => '生年月日',
+        'zip' => '郵便番号',
+        'pref' => '都道府県',
+        'addr01' => '市区町村・番地',
+        // 'addr02' => '建物名・その他',
         'trigger' => 'ご来店きっかけ',
         'trouble' => '過去の施術トラブル',
         'concern' => 'お悩みや気になること',
         'allergy' => 'アレルギー',
         'record' => '施術経験',
         'body_concern' => '身体の疲れ',
-        'caution' => '注意事項',
         ],
 
 ];
