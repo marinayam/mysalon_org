@@ -159,8 +159,10 @@ return [
         'trouble' => '過去の施術トラブル',
         'concern' => 'お悩みや気になること',
         'allergy' => 'アレルギー',
-        'record' => '施術経験',
-        'body_concern' => '身体の疲れ',
+        'record' => '今までの施術経験',
+        'trigger' => 'ご来店きっかけ',
+        'record' => '過去の施術経験',
+        'body_concern' => '気になる身体の疲れ',
         ],
 
 ];

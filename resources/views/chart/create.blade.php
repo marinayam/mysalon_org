@@ -84,10 +84,10 @@
                 </div>
                 <div class="form-group check">
                     <label class="col-md-6">ご来店きっかけ</label>
-                    @foreach($chart_triggers as $chart_trigger)
-                    <label class="col-md-6 form-check-label" for="flexCheckDefault">
-                        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $chart_trigger->id}}" id="flexCheckDefault">
-                        {{$chart_trigger->trigger}}
+                    @foreach($triggers as $trigger)
+                    <label class="col-md-6 form-check-label" >
+                        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger') ? 'checked' : ''}}>
+                        {{$trigger->trigger}}
                     </label>
                    @endforeach
                 </div>
@@ -108,34 +108,22 @@
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="allergy"  value="{{ old('allergy') }}">
                     </div>
-                </div>   
-                <div class="form-group check">
-                    <label class="col-md-6">過去の施術経験</label>
-                    @foreach($chart_records as $chart_record)
-                    <label class="col-md-8 form-check-label" for="flexCheckDefault">
-                        <input class="form-check-input" type="checkbox" name="record[]" value="{{ $chart_record->id}}" id="flexCheckDefault">
-                        {{$chart_record->record}}
-                    </label>
-                    @endforeach
                 </div>
-                <div class="form-group check">
-                    <label class="col-md-5">気になる身体の疲れ</label>
-                    @foreach($chart_body_concerns as $chart_body_concern)
-                    <label class="col-md-8 form-check-label" for="flexCheckDefault">
-                        <input class="form-check-input" type="checkbox" name="body_concern[]" value="{{ $chart_body_concern->id}}" id="flexCheckDefault">
-                        {{$chart_body_concern->body_concern}}
-                    </label>
-                    @endforeach
+                <div class="form-group row">
+                    <label class="col-md-8">過去の施術経験</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control"  name="record"  value="{{ old('record') }}">
+                        <label class="example col-md-12">例：まつ毛パーマ・エクステ、眉パーマ、アートメイク、レーシック手術、お目元の整形、ピーリング・レーザー治療、ヒアルロン酸・ボトックス、お顔の脱毛等</label>
+                    </div>
                 </div>
-                <!--<div class="form-group check">-->
-                <!--    <label class="col-md-2">注意事項</label>-->
-                <!--    @foreach($chart_triggers as $chart_trigger)-->
-                <!--    <label class="form-check-label" for="flexCheckDefault">-->
-                <!--        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $chart_trigger->id}}" id="flexCheckDefault">-->
-                <!--        {{$chart_trigger->trigger}}-->
-                <!--    </label>-->
-                <!--    @endforeach-->
-                <!--</div>-->
+                <div class="form-group row">
+                    <label class="col-md-8">気になる身体の疲れ</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control"  name="body_concern"  value="{{ old('body_concern') }}">
+                        <label class="example col-md-12">例：肩こり 目の疲れ 疲れやすい 睡眠不足 頭痛 ストレス むくみ等</label>
+                    </div>
+                </div>
+                
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="登録">
             </form>

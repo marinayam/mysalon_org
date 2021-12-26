@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ChartBodyConcern extends Model
+class BodyConcern extends Model
 {
     protected $guarded = array ('id');
     
@@ -13,7 +13,7 @@ class ChartBodyConcern extends Model
     );
     
     // 以下を追記
-    // News Modelに関連付けを行う
+    // Chart Modelに関連付けを行う
     public function charts(){
         return $this->hasOne('App\Chart');
     }

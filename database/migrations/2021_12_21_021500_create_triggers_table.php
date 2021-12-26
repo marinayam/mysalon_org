@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChartRecordsTable extends Migration
+class CreateTriggersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateChartRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chart_records', function (Blueprint $table) {
+        Schema::create('triggers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('record');
+            $table->integer('trigger');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateChartRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chart_records');
+        Schema::dropIfExists('triggers');
     }
 }

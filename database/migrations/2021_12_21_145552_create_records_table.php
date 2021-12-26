@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChartBodyConcernsTable extends Migration
+class CreateRecordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateChartBodyConcernsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chart_body_concerns', function (Blueprint $table) {
+        Schema::create('records', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('body_concern');
+            $table->string('record');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateChartBodyConcernsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chart_body_concerns');
+        Schema::dropIfExists('records');
     }
 }

@@ -17,17 +17,19 @@ class Chart extends Model
         'pref' => 'required',
         'addr01' => 'required',
         // 'addr02' => 'required',
-        'chart_trigger_id' => 'required',
+        // 'trigger' => 'required',
         'trouble' => 'required',
         'concern' => 'required',
         'allergy' => 'required',
-        'chart_record_id' => 'required',
-        'chart_body_concern_id' => 'required',
+        'record' => 'required',
+        'body_concern' => 'required',
        
     );
+    // Trigger Modelに関連付けを行う
+    public function triggers()
+  {
+    return $this->belongsToMany('App\Trigger');
+  }
           
-    // User Modelに関連付けを行う
-    public function users(){
-        return $this->belongsTo('App\User');
-    }
+    
 }
