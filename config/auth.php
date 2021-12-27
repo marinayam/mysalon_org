@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'user',
         'passwords' => 'users',
     ],
 
@@ -46,6 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+         //追加
+        'admin' => [ 
+            'driver' => 'session', 
+            'provider' => 'admins', 
+        ],
+        //追加
     ],
 
     /*
@@ -70,12 +76,19 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
+        //追加
+        'admins' => [ 
+            'driver' => 'eloquent', 
+            'model' => App\Admin::class, 
+        ],
+        //追加
+        
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
     ],
+   
 
     /*
     |--------------------------------------------------------------------------
@@ -98,6 +111,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+        //追加
+        'admins' => [ 
+            'provider' => 'admins', 
+            'table' => 'password_resets', 
+            'expire' => 60, 
+        ],
+        //追加
     ],
 
 ];
