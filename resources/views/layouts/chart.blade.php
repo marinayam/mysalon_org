@@ -56,7 +56,7 @@
                                 <!-- ドロップメニュー -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href="#">マツエク</a>
+                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
                                     <a class="dropdown-item" href="#">眉毛</a>
                                 </div>
                             <!-- ナビゲーション -->

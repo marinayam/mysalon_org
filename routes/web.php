@@ -21,6 +21,11 @@ Route::get('/perm', function(){
   return view('salon/perm');
 })->name('perm');
 
+// マツエクメニュー
+Route::get('/extension', function(){
+  return view('salon/extension');
+})->name('extension');
+
 // お問い合わせフォーム
 Route::get('/contact', function(){
   return view('salon/contact');

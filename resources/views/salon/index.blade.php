@@ -181,7 +181,7 @@
         </li>
         <li>
             <h2>マツエク</h2>
-            <a href="#">
+            <a href={{ route('extension') }}>
             <img src="images/extension-round.png" width="288" height="288" alt></a>
             <p>
             カラーエクステで流行りの抜け感！
