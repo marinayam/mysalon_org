@@ -126,7 +126,7 @@
                 
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="登録">
-            </form>
+             </form>
         </div>
         <!-- 郵便番号から住所自動入力 -->
         <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>

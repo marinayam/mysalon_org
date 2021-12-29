@@ -24,7 +24,7 @@ class CreateChartsTable extends Migration
             $table->string('zip');//郵便番号を保存するカラム
             $table->string('pref');//都道府県を保存するカラム
             $table->string('addr01');//市区町村を保存するカラム
-            $table->string('addr02');//建物名・その他を保存するカラム
+            $table->string('addr02')->nullable();//建物名・その他を保存するカラム
             // $table->integer('chart_trigger_id');//来店きっかけを保存するカラム
             $table->string('trouble');//お化粧品や施術でのトラブルの経験を保存するカラム
             $table->string('concern');//目元・眉・肌で気になる点を保存するカラム
