@@ -1,6 +1,6 @@
 
 @extends('layouts.chart')
-@section('title','タイトル')
+@section('title','カルテ記入')
 @section('content')
 <body>
 <div class ="container">

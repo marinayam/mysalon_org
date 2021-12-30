@@ -1,35 +1,43 @@
-body{
-    font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3","ヒラギノ角ゴ Pro W6", "Noto Sans JP", "メイリオ","Meiryo",Arial, sans-serif;
-    background-color:#fff;
+@charset "UTF-8";
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
+  background-color: #fff;
 }
-    
-.content{
-    text-align: center;
-    padding: 80px 0;
-    width: 100%;
-    margin: 0 auto; 
-    max-width: 900px; 
-    background-color: #f5faf9;
-    color: #977119;
+
+.content {
+  text-align: center;
+  padding: 80px 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: #f5faf9;
+  color: #977119;
 }
+
 /*ページタイトル*/
-h1{
-    margin-bottom: 20px;
-    margin: 0px;
-    font-size: 2em;
+
+h1 {
+  margin-bottom: 20px;
+  margin: 0px;
+  font-size: 2em;
 }
-.content-ttl{
-    font-size: 60px;
-    letter-spacing: 4px;
-    font-family: 'BebasNeue';
-    font-weight: normal;
-    line-height: 1;
+
+.content-ttl {
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-family: "BebasNeue";
+  font-weight: normal;
+  line-height: 1;
 }
-.content-subttl{
-    font-size: 20px;
-    letter-spacing: 2px;
-    line-height: 1.8;
-    font-weight: 500;
-    margin: 0px;
+
+.content-subttl {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  font-weight: 500;
+  margin: 0px;
 }
+
 /*ページタイトル*/
+

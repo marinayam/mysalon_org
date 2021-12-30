@@ -1,5 +1,5 @@
 @extends('layouts.chart')
-@section('title','タイトル')
+@section('title','カルテ記入完了')
 @section('content')
 {{-- Laravel標準で用意されているCSSを読み込みます --}}
 <link href="{{ asset('css/app.css') }}" rel ="stylesheet">

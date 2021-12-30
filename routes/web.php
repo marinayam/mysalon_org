@@ -38,10 +38,18 @@ Route::get('chart/index', 'ChartController@index');
 
 
 // 管理者認証必要
+// Auth::routes();
+// Route::get('/register', function(){
+//   return redirect('/');
+// });
+
+
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('admin/index', 'Admin\SalonController@index')->middleware('auth');
-    // Auth::routes();
+    Route::get('salon/index', 'Admin\SalonController@index');
+    
 });
+
+
 
 // Route::get('/admin/salon/index', function () {
 //     return view('admin/index');
