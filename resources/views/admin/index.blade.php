@@ -31,18 +31,19 @@
                                 <th width="2%">名前（漢字）</th>
                                 <th width="3%">名前（ふりがな）</th>
                                 <th width="4%">電話番号</th>
-                                <th width="1%">メールアドレス</th>
+                                <th width="5%">メールアドレス</th>
                                 <th width="5%">生年月日</th>
                                 <th width="5%">郵便番号</th>
                                 <th width="5%">都道府県</th>
                                 <th width="5%">市区町村・番地</th>
                                 <th width="5%">建物名</th>
-                                <th width="50%">過去に化粧品が合わなかった等、施術トラブル</th>
+                                <th width="5%">過去に化粧品が合わなかった等、施術トラブル</th>
                                 <th width="5%">お目元・眉周りのお悩み</th>
                                 <th width="5%">アレルギー</th>
                                 <th width="5%">過去の施術経験</th>
                                 <th width="5%">気になる身体の疲れ</th>
                                 <th width="5%">来店きっかけ</th>
+                                <th width="30%">コメント</th>
                                 
                             </tr>
                         </thead>
@@ -68,6 +69,12 @@
                                       @foreach($chart->triggers as $trigger)
                                         <div>{{$trigger->trigger}}</div>
                                       @endforeach
+                                    </td>
+                                    <td>{{ \Str::limit($chart->comment, 500) }}</td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\SalonController@edit', ['id' => $chart->id]) }}">編集</a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

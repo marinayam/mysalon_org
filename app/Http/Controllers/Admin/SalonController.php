@@ -23,14 +23,31 @@ class SalonController extends Controller
       }
       return view('admin.index', ['posts' => $posts, 'cond_name' => $cond_name]);
     }
+    //クライエント情報の編集画面
+    public function edit(Request $request)
+    {
+        // Chart Modelからデータを取得する
+        $chart= Chart::find($request->id);
+        if (empty($chart)) {
+            abort(404);    
+        }
+        return view('admin.edit', ['chart_form' => $chart]);
+    }
+
+    //編集画面から送信されたフォームデータを処理
+    public function update(Request $request)
+        {
+          // Validationをかける
+          $this->validate($request, Chart::$rules);
+          // News Modelからデータを取得する
+          $chart = Chart::find($request->id);
+          // 送信されてきたフォームデータを格納する
+          $chart_form = $request->all();
+          unset($chart_form['_token']);
+    
+          // 該当するデータを上書きして保存する
+          $chart->fill($chart_form)->save();
+    
+          return redirect('admin/salon/index');
+        }
 }
-    // public function edit()
-    // {
-    //     return view('admin.edit');
-    // }
-
-    // public function update()
-    // {
-    //     return redirect('admin/edit');
-    // }
-

@@ -46,9 +46,9 @@ Route::get('chart/index', 'ChartController@index');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('salon/index', 'Admin\SalonController@index');
-    
+    Route::get('salon/edit', 'Admin\SalonController@edit');
+    Route::post('salon/edit', 'Admin\SalonController@update');
 });
-
 
 
 // Route::get('/admin/salon/index', function () {

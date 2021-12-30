@@ -31,6 +31,7 @@ class CreateChartsTable extends Migration
             $table->string('allergy');//アレルギーを保存するカラム
             $table->string('record');//今までの施術や手術のご経験を保存するカラム
             $table->string('body_concern');//体調の問題を保存するカラム
+            $table->string('comment')->nullable();;//管理者がコメントを保存するカラム
             // $table->string('chart_caution_id');//注意事項を保存するカラム
             $table->timestamps();
         });
