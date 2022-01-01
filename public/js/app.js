@@ -49761,6 +49761,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/menu.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/menu.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/perm.scss":
 /*!**********************************!*\
   !*** ./resources/sass/perm.scss ***!
@@ -49773,9 +49784,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/front.scss ./resources/sass/chart.scss ./resources/sass/contact.scss ./resources/sass/index.scss ./resources/sass/perm.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/front.scss ./resources/sass/chart.scss ./resources/sass/contact.scss ./resources/sass/index.scss ./resources/sass/perm.scss ./resources/sass/menu.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49786,7 +49797,8 @@ __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/front.
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/chart.scss */"./resources/sass/chart.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/contact.scss */"./resources/sass/contact.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/index.scss */"./resources/sass/index.scss");
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/perm.scss */"./resources/sass/perm.scss");
+__webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/perm.scss */"./resources/sass/perm.scss");
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/menu.scss */"./resources/sass/menu.scss");
 
 
 /***/ })
