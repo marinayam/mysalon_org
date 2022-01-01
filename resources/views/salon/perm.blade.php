@@ -15,15 +15,15 @@
         </h2>
     <!--</div>-->
     </div>
-    <section class="perm_menu">
+    <section class="menu">
         <div class="inner inner--sm inner-padding--lg">
             <h3>ラッシュリフト</h3>
             <p class="recommend_ttl">
                 根元から立ち上げでナチュラルに瞳を大きく
             </p>
-            <div class="perm_price">
-                <ul class="perm_price_table">
-                    <li class="perm_price_item">
+            <div class="price">
+                <ul class="table">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="perm_price_item">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="perm_price_item">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="perm_price_item">
+                    <li class="tem">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
@@ -100,5 +100,83 @@
             </ul>
         </div>
     </section>
-</div>
+    <section class="menu">
+        <div class="inner inner--sm inner-padding--lg">
+            <h3>セットメニュー</h3>
+            <p class="recommend_ttl">
+                お得なおすすめセット
+            </p>
+            <div class="price">
+                <ul class="table">
+                    <li class="item">
+                        <div class="c_flex_column_half">
+                            <div class="left c_flex_column__item">
+                                <p class="item_name">
+                                    ラッシュリフト＋
+                                    <br>
+                                    ブロウラミネーション（眉毛パーマ）＋
+                                    <br>
+                                    眉WAX（1回）
+                                </p>
+                                <p class="item_detail">所要時間：120分</p>
+                            </div>
+                            <div class="right c_flex_column__item">
+                                <p class="item_price">16,500
+                                <i>円（税込）</i>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-price-item-recommend">
+            <ul class="recommend-point">
+                <li>
+                    ○眉毛のお手入れを簡単にしたい方
+                </li>
+                <li>
+                    ○自分の骨格に合った眉毛を手に入れたい方
+                </l>
+            </ul>
+        </div>
+    </section>
+    <section class="menu">
+        <div class="inner inner--sm inner-padding--lg">
+            <h3>オプションメニュー</h3>
+            <p class="recommend_ttl">
+                お目元ケア
+            </p>
+            <div class="option">
+                <ul class="option_price_table">
+                    <li class="option_price_item">
+                        <div class="c_flex_column_half">
+                            <div class="left c_flex_column__item">
+                                <p class="item_name">
+                                    シャンプー、トリートメント、ケア
+                                </p>
+                                <p class="item_detail">所要時間：5分</p>
+                            </div>
+                            <div class="right c_flex_column__item">
+                                <p class="item_price">1,100
+                                <i>円（税込）</i>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-price-item-recommend">
+            <ul class="recommend-point">
+                <li>
+                    ○マツエクやまつ毛パーマの持続力を高めたい方
+                </li>
+                <li>
+                    ○まつ毛ダニ予防をしたい方
+                </l>
+            </ul>
+        </div>
+    </section>
+
 @endsection

@@ -18,63 +18,83 @@
                 {{-- カルテ項目開始 --}}
                 
                 <div class="form-group row">
-                    <label class="col-md-5">必須　お名前（漢字）</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        お名前（漢字）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name01" value="{{ old('name01') }}">
                     </div>
                     <label class="example col-md-5">例:山田花子</label>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">必須　お名前（ふりがな）</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        お名前（ふりがな）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name02" value="{{ old('name02') }}">
                     </div>
                     <label class="example col-md-5">例:やまだはなこ</label>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">お電話番号</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        お電話番号</label>
                     <div class="col-md-10">
                         <input type="tel" class="form-control"  name="tel"  value="{{ old('tel') }}">
                     </div>
                     <label class="example col-md-5">例：090-0000-0000</label>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">必須　メールアドレス</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        メールアドレス</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                     </div>
                     <label class="example col-md-5">例：example@example.com</label>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">生年月日</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        生年月日</label>
                     <div class="col-md-10">
                         <input type="date" name="birthday" value="{{ old('birthday') }}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">住所</label>
+                    <label class="col-md-5">
+                        <span class="badge bg-danger">必須</span>
+                        住所</label>
                     <div class="col-md-10">
                         <!--住所-->
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
-                                <label for="inputAddress01">郵便番号(7桁)</label>
+                                <label for="inputAddress01">
+                                    <span class="badge bg-danger">必須</span>
+                                    郵便番号(7桁)</label>
                                 <input type="text" name="zip" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','addr01');" class="form-control" id="inputAddress01" value="{{ old('zip') }}">
                                 <label class="example col-md-6">例：180-0005</label>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 mb-4">
-                                <label for="inputAddress02">都道府県</label>
+                                <label for="inputAddress02">
+                                    <span class="badge bg-danger">必須</span>
+                                    都道府県</label>
                                 <input type="text" name="pref" id="inputAddress02" class="form-control" value="{{ old('pref') }}">
                                 <label class="example col-md-6">例：東京都</label>
                             </div>
                             <div class="col-md-7 mb-3">
-                                <label for="inputAddress03">市区町村・番地</label>
+                                <label for="inputAddress03">
+                                    <span class="badge bg-danger">必須</span>
+                                    市区町村・番地</label>
                                 <input type="text" name="addr01" class="form-control" id="inputAddress03"  value="{{ old('addr01') }}">
                                 <label class="example col-md-7">例：武蔵野市御殿山１-６-９</label>
                             </div>
                             <div class="col-md-8 mb-3">
-                                <label for="inputAddress03">建物名・その他</label>
+                                <label for="inputAddress03">
+                                    <span class="badge bg-danger">必須</span>
+                                    建物名・その他</label>
                                 <input type="text" name="addr02" class="form-control" id="inputAddress04" value="{{ old('addr02') }}">
                                 <label class="example col-md-8">例：エルドラド吉祥寺304</label>
                             </div>
@@ -83,7 +103,9 @@
                     </div>
                 </div>
                 <div class="form-group check">
-                    <label class="col-md-6">ご来店きっかけ</label>
+                    <label class="col-md-6">
+                        <span class="badge bg-danger">必須</span>
+                        ご来店きっかけ</label>
                     @foreach($triggers as $trigger)
                     <label class="col-md-6 form-check-label" >
                         <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger') ? 'checked' : ''}}>
@@ -92,32 +114,42 @@
                    @endforeach
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-8">過去に化粧品が合わなかった等、施術トラブル</label>
+                    <label class="col-md-8">
+                        <span class="badge bg-danger">必須</span>
+                        過去に化粧品が合わなかった等、施術トラブル</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="trouble"  value="{{ old('trouble') }}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-8">お目元・眉周りのお悩み</label>
+                    <label class="col-md-8">
+                        <span class="badge bg-danger">必須</span>
+                        お目元・眉周りのお悩み</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="concern"  value="{{ old('concern') }}">
                     </div>
                 </div>
                  <div class="form-group row">
-                    <label class="col-md-8">アレルギー</label>
+                    <label class="col-md-8">
+                        <span class="badge bg-danger">必須</span>
+                        アレルギー</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="allergy"  value="{{ old('allergy') }}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-8">過去の施術経験</label>
+                    <label class="col-md-8">
+                        <span class="badge bg-danger">必須</span>
+                        過去の施術経験</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="record"  value="{{ old('record') }}">
                         <label class="example col-md-12">例：まつ毛パーマ・エクステ、眉パーマ、アートメイク、レーシック手術、お目元の整形、ピーリング・レーザー治療、ヒアルロン酸・ボトックス、お顔の脱毛等</label>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-8">気になる身体の疲れ</label>
+                    <label class="col-md-8">
+                        <span class="badge bg-danger">必須</span>
+                        気になる身体の疲れ</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="body_concern"  value="{{ old('body_concern') }}">
                         <label class="example col-md-12">例：肩こり 目の疲れ 疲れやすい 睡眠不足 頭痛 ストレス むくみ等</label>

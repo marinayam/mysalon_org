@@ -84,13 +84,13 @@ body {
   background: transparent;
 }
 
-.perm_menu {
+.menu {
   padding: 50px 0;
   width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .perm_menu {
+  .menu {
     padding: 0;
   }
 }
@@ -139,7 +139,7 @@ body {
 
 /*パーマ金額テーブル*/
 
-.perm_price_table {
+.table {
   border-top: 1px solid #ab939d;
   margin: 0;
   padding: 0;
@@ -147,7 +147,7 @@ body {
   background: transparent;
 }
 
-.perm_price_item {
+.item {
   padding: 30px 10px;
   line-height: 1.4;
   border-bottom: 1px solid #ab939d;
@@ -157,7 +157,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .perm_price_item {
+  .item {
     padding: 20px 10px;
   }
 }

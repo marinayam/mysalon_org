@@ -30,6 +30,14 @@ Route::get('/extension', function(){
 Route::get('/contact', function(){
   return view('salon/contact');
 })->name('contact');
+// Route::get('/contact', 'ContactController@index')->name('contact.index');
+
+// //確認ページ
+// Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
+
+// //送信完了ページ
+// Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
+
 
 // カルテ画面
 Route::get('chart/create', 'ChartController@add')->name('chart/create');
@@ -43,12 +51,13 @@ Route::get('chart/index', 'ChartController@index');
 //   return redirect('/');
 // });
 
-
+// 管理者画面
 Route::group(['prefix' => 'admin'], function() {
     Route::get('salon/index', 'Admin\SalonController@index');
     Route::get('salon/edit', 'Admin\SalonController@edit');
     Route::post('salon/edit', 'Admin\SalonController@update');
 });
+
 
 
 // Route::get('/admin/salon/index', function () {
