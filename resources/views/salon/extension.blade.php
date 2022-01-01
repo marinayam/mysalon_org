@@ -8,28 +8,26 @@
 <div class="container">
     <div class="menu_page_head">
         <img src="images/perm.png" class="d-block w-100">
-        <!--<div class="contents_ttl">-->
         <h2>
             <span>MENU & PRICE</span>
             <small>マツエク</small>
         </h2>
-    <!--</div>-->
     </div>
-    <section class="perm_menu">
+    <section class="menu">
         <div class="inner inner--sm inner-padding--lg">
-            <h3>ラッシュリフト</h3>
+            <h3>フラットラッシュ</h3>
             <p class="recommend_ttl">
-                根元から立ち上げでナチュラルに瞳を大きく
+                軽い付け心地　＆　持続力
             </p>
-            <div class="perm_price">
-                <ul class="perm_price_table">
-                    <li class="perm_price_item">
+            <div class="price">
+                <ul class="table">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
-                                    上まつげのみ(初回限定)
+                                    フラットラッシュ60分つけ放題（初回限定）
                                 </p>
-                                <p class="item_detail">所要時間：45分</p>
+                                <p class="item_detail">所要時間：65分</p>
                             </div>
                             <div class="right c_flex_column__item">
                                 <p class="item_price">5,500
@@ -68,7 +66,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="perm_price_item">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">

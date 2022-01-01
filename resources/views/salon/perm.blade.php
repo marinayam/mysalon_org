@@ -8,12 +8,10 @@
 <div class="container">
     <div class="menu_page_head">
         <img src="images/perm.png" class="d-block w-100">
-        <!--<div class="contents_ttl">-->
         <h2>
             <span>MENU & PRICE</span>
             <small>パーマ</small>
         </h2>
-    <!--</div>-->
     </div>
     <section class="menu">
         <div class="inner inner--sm inner-padding--lg">
@@ -47,7 +45,7 @@
                                 <p class="item_detail">所要時間：45分</p>
                             </div>
                             <div class="right c_flex_column__item">
-                                <p class="item_price">5,500
+                                <p class="item_price">6,600
                                 <i>円（税込）</i>
                                 </p>
                             </div>
@@ -77,7 +75,7 @@
                                 <p class="item_detail">所要時間：80分</p>
                             </div>
                             <div class="right c_flex_column__item">
-                                <p class="item_price">11,000
+                                <p class="item_price">9,900
                                 <i>円（税込）</i>
                                 </p>
                             </div>
@@ -112,11 +110,30 @@
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
-                                    ラッシュリフト＋
+                                    (初回限定)
                                     <br>
-                                    ブロウラミネーション（眉毛パーマ）＋
+                                    ラッシュリフト＋眉WAX（1回）
                                     <br>
-                                    眉WAX（1回）
+                                    ブロウラミネーション（眉毛パーマ）
+                                    <br>
+                                </p>
+                                <p class="item_detail">所要時間：120分</p>
+                            </div>
+                            <div class="right c_flex_column__item">
+                                <p class="item_price">12,480
+                                <i>円（税込）</i>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="c_flex_column_half">
+                            <div class="left c_flex_column__item">
+                                <p class="item_name">
+                                    ラッシュリフト＋眉WAX（1回）
+                                    <br>
+                                    ブロウラミネーション（眉毛パーマ）
+                                    <br>
                                 </p>
                                 <p class="item_detail">所要時間：120分</p>
                             </div>
@@ -148,8 +165,8 @@
                 お目元ケア
             </p>
             <div class="option">
-                <ul class="option_price_table">
-                    <li class="option_price_item">
+                <ul class="table">
+                    <li class="item">
                         <div class="c_flex_column_half">
                             <div class="left c_flex_column__item">
                                 <p class="item_name">
