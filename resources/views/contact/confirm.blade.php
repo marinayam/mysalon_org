@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.contact')
 @section('title','Contact')
 @section('content')
 <div class="content">

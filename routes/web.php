@@ -16,6 +16,11 @@ Route::get('/', function(){
   return view('salon/index');
 })->name('/');
 
+// AboutUS
+Route::get('/service', function(){
+  return view('salon/service');
+})->name('service');
+
 // パーマメニュー
 Route::get('/perm', function(){
   return view('salon/perm');

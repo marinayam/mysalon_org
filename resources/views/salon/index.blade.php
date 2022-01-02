@@ -1,10 +1,6 @@
 @extends('layouts.front')
 @section('title','Lys.kichijoji')
 @section('content')
-{{-- Laravel標準で用意されているCSSを読み込みます --}}
-<link href="{{ asset('css/app.css') }}" rel ="stylesheet">
-{{-- 作成したCSSを追記 --}}
-<link href="{{ asset('css/index.css') }}" rel="stylesheet">
 <!----Slideres------------------------------------->
 <div class="container">
     <div class="carousel slide" id="sliders" data-ride="carousel">

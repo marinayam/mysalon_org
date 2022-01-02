@@ -25,7 +25,8 @@
         <link href="{{ asset('css/app.css') }}" rel ="stylesheet">
         {{-- 作成したCSSを追記 --}}
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+        {{-- 作成したCSSを追記 --}}
+        <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     </head>
     <body>
         <header class="sticky-top">
@@ -59,13 +60,13 @@
                                 <!-- ドロップメニュー -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
-                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
+                                    <a class="dropdown-item" href="#">マツエク</a>
+                                    <a class="dropdown-item" href="#">眉毛</a>
                                 </div>
                             <!-- ナビゲーション -->
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
+                              <a class="nav-link" href="#">About Us</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Instagram</a>
@@ -93,24 +94,10 @@
                 <div class="footer_in1">
                     <div class="footer-menu">
                         <p class="footer-title">ABOUT</p>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Menu
-                                </a>
-                                <!-- ドロップメニュー -->
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
-                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
-                                </div>
+                        <ul class="footer-list">
                             <li><a href="#">About Us</a>
                             </li>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
-                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
-                                </div>
+                            <li><a href="#">Menu</a>
                             </li>
                             <li><a href="#">Staff</a>
                             </li>
