@@ -32,10 +32,10 @@ class ChartController extends Controller
         $chart->save();
         $chart->triggers()->attach($triggers);
         
-        return redirect('chart/index');
+        return redirect('chart/send');
     }
     public function index(Request $request)
   {
-      return view('chart/index');
+      return view('chart/send');
   }
 }

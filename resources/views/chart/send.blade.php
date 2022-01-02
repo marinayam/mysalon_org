@@ -1,10 +1,6 @@
 @extends('layouts.chart')
 @section('title','カルテ記入完了')
 @section('content')
-{{-- Laravel標準で用意されているCSSを読み込みます --}}
-<link href="{{ asset('css/app.css') }}" rel ="stylesheet">
-{{-- 作成したCSSを追記 --}}
-<link href="{{ asset('css/front.css') }}" rel="stylesheet">
 <!--メッセージ-->
 <div class="container">
     <div class="row justify-content-center">

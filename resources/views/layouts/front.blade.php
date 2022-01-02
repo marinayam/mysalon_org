@@ -25,6 +25,8 @@
         <link href="{{ asset('css/app.css') }}" rel ="stylesheet">
         {{-- 作成したCSSを追記 --}}
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
+        {{-- 作成したCSSを追記 --}}
+        <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     </head>
     <body>
         <header class="sticky-top">
@@ -76,7 +78,7 @@
                               <a class="nav-link" href="#">Staff</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href={{ route('contact') }}>Contact</a>
+                              <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Information</a>

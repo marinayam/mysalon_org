@@ -31,23 +31,18 @@ Route::get('/eyebrow', function(){
   return view('salon/eyebrow');
 })->name('eyebrow');
 
+//入力ページ
+Route::get('/contact', 'ContactController@index')->name('contact.index');
+//確認ページ
+Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
+//送信完了ページ
+Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 // お問い合わせフォーム
-Route::get('/contact', function(){
-  return view('salon/contact');
-})->name('contact');
-// Route::get('/contact', 'ContactController@index')->name('contact.index');
-
-// //確認ページ
-// Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
-
-// //送信完了ページ
-// Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
-
 
 // カルテ画面
 Route::get('chart/create', 'ChartController@add')->name('chart/create');
 Route::post('chart/create', 'ChartController@create');
-Route::get('chart/index', 'ChartController@index');
+Route::get('chart/send', 'ChartController@index');
 
 
 // 管理者認証必要
