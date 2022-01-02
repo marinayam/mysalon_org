@@ -26,6 +26,11 @@ Route::get('/extension', function(){
   return view('salon/extension');
 })->name('extension');
 
+// 眉メニュー
+Route::get('/eyebrow', function(){
+  return view('salon/eyebrow');
+})->name('eyebrow');
+
 // お問い合わせフォーム
 Route::get('/contact', function(){
   return view('salon/contact');

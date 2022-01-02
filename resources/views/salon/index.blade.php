@@ -191,7 +191,7 @@
         </li>
         <li>
             <h2>アイブロウ</h2>
-            <a href="#">
+            <a href={{ route('eyebrow') }}>
             <img src="images/eyebrow-round.png" width="288" height="288" alt></a>
             <p>
             似合わせ美眉に
