@@ -99,9 +99,12 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="trigger">来店きっかけ</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="trigger" value="{{ $chart_form->trigger }}">
-                        </div>
+                        @foreach($triggers as $trigger)
+                    <label class="col-md-6 form-check-label" >
+                        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ in_array($trigger->id,$selected_triggers)? 'checked' : ''}}>
+                        {{$trigger->trigger}}
+                    </label>
+                   @endforeach
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="comment">コメント</label>

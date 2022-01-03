@@ -62,9 +62,6 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
-                        住所</label>
                     <div class="col-md-10">
                         <!--住所-->
                         <div class="form-row">
@@ -93,7 +90,6 @@
                             </div>
                             <div class="col-md-8 mb-3">
                                 <label for="inputAddress03">
-                                    <span class="badge bg-danger">必須</span>
                                     建物名・その他</label>
                                 <input type="text" name="addr02" class="form-control" id="inputAddress04" value="{{ old('addr02') }}">
                                 <label class="example col-md-8">例：エルドラド吉祥寺304</label>
