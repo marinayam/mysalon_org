@@ -14,6 +14,10 @@
         <!-- Scripts -->
         {{--Laravel標準で用意されているJavascriptを読み込みます--}}
         <script src ="{{ secure_asset('js/app.js') }}" defer></script>
+        <script src ="{{ secure_asset('js/index.js') }}" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        
         
         <!-- Fonts-->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -26,6 +30,8 @@
         {{-- 作成したCSSを追記 --}}
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
         <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/match.css') }}" rel="stylesheet">
+        
     </head>
     <body>
         <header class="sticky-top">
