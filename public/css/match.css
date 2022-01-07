@@ -79,7 +79,7 @@ ul {
     text-align: center;
   }
 
-.result_type0 h4 {
+.result_type h4 {
     width: 50%;
     margin: auto;
     padding: 20px;
@@ -88,22 +88,8 @@ ul {
     font-weight: 600;
     color: #fff;
     text-align: center;
-  background-color: #10c010;
+  background-color: #8e7757;
   }
-
-.result_type1 h4 {
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-  background-color: #8e7757;;
-  }
-
-
 
 .result_theme p  {
     margin-top: 5%;
@@ -160,27 +146,38 @@ ul {
     border-radius: 5px;
   }
 
-.return-btn {
+.appoint-btn {
+  display: flex;
   margin-top: 5%;
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 30%;
-    margin-bottom: 100px;
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+  margin-bottom: 100px;
 }
-.return {
+.appoint {
   display: inline-block;
   text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #8e7757;;
+    background-color: #8e7757;
     width: 100%;
     padding: 10px 10px;
-    border: 1px solid #8e7757; ;
+    border: 1px solid #8e7757;
 }
 
-.return:hover {
-    border: 1px solid #8e7757; ;
+.appoint:hover {
+    border: 1px solid #8e7757; 
     background-color: #fff;
-    color: #8e7757;;
+    color: #8e7757;
     transition: 0.5s;
+}
+.card-group{
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.card-title{
+  text-align: center;
+}
+.card-text{
+  color: #8e7757;
 }

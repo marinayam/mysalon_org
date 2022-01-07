@@ -57,14 +57,41 @@
             <div class="result_theme ">
                 <p>あなたにおすすめメニューは</p>
             </div>
-            <div class="result_type0 ">
-                <h4>カラー60分 or フラット60分 or ボリュームラッシュ300本</h4>
+            <div class="result_type ">
+                <h4>カラー120本 or フラット120本 or ボリュームラッシュ300本</h4>
             </div>
-            <div class="result_discription0">
-                <h2></h2>
-                <p>
-                  　
-                </p>
+            <div class="card-group">
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">フラットラッシュ・カラー120本</h5>
+                        <p class="card-text">よりナチュラルで
+                        <br>
+                        透明感のある目元へ</p>
+                        <p class="card-text"><small class="text-muted">8,800円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">フラットラッシュ120本</h5>
+                        <p class="card-text">自然に生える目元へ</p>
+                        <p class="card-text"><small class="text-muted">7,700円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">ボリュームラッシュ300本</h5>
+                        <p class="card-text">アイライン効果が欲しい方に
+                        <br>
+                        おすすめ</p>
+                        <p class="card-text"><small class="text-muted">8,800円(税込)</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="appoint-btn">
+                <a class="appoint" href="#">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>
@@ -75,14 +102,41 @@
             <div class="result_theme ">
                 <p>あなたにおすすめメニューは</p>
             </div>
-            <div class="result_type1 ">
-                <h4>カラー90分 or フラット90分 or ボリュームラッシュ300本　</h4>
+            <div class="result_type ">
+                <h4>カラー160本 or フラット160本 or ボリュームラッシュ400本　</h4>
             </div>
-            <div class="result_discription1">
-                <h2></h2>
-                <p>
-                  　
-                </p>
+            <div class="card-group">
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">フラットラッシュ・カラー160本</h5>
+                        <p class="card-text">透明感のある
+                        <br>
+                        パッチリした目元へ</p>
+                        <p class="card-text"><small class="text-muted">11,000円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">フラットラッシュ160本</h5>
+                        <p class="card-text">自然にパッチリした目元へ</p>
+                        <p class="card-text"><small class="text-muted">9,900円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">ボリュームラッシュ400本</h5>
+                        <p class="card-text">アイライン効果が欲しい方に
+                        <br>
+                        おすすめ</p>
+                        <p class="card-text"><small class="text-muted">11,000円(税込)</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="appoint-btn">
+                <a class="appoint" href="#">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>
@@ -93,14 +147,40 @@
             <div class="result_theme ">
                 <p>あなたにおすすめメニューは</p>
             </div>
-            <div class="result_type2 ">
-                <h4>フラット90分 or ボリュームラッシュ 400本 or バインンドロック100束</h4>
+            <div class="result_type ">
+                <h4>フラット160本 or ボリュームラッシュ 400本 or バインンドロック100束</h4>
             </div>
-            <div class="result_discription2">
-                <h2></h2>
-                <p>
-                  　
-                </p>
+            <div class="card-group">
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">フラットラッシュ・160本</h5>
+                        <p class="card-text">透明感のある
+                        <br>
+                        パッチリした目元へ</p>
+                        <p class="card-text"><small class="text-muted">9,900円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">ボリュームラッシュ 400本</h5>
+                        <p class="card-text">アイライン効果が欲しい方に
+                        <br>
+                        おすすめ</p>
+                        <p class="card-text"><small class="text-muted">11,000円(税込)</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/perm.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">バインンドロック100束</h5>
+                        <p class="card-text">モチ重視の方におすすめ</p>
+                        <p class="card-text"><small class="text-muted">12,100円(税込)</small></p>
+                    </div>
+                </div>
+            <div class="appoint-btn">
+                <a class="appoint" href="#">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>
