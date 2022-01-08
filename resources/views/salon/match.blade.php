@@ -8,7 +8,8 @@
         </div>
         <!-- ここから５つ質問 -->
         <!-- 質問1 -->
-        <div id="q_01" class="fit">
+        <div class="fit">
+        <div id="q_01">
             <p>質問1: なりたいイメージは？</p>
             <ul>
                 <li><a class="btn" href="#q_02" data-value="a">ナチュラル</a></li>
@@ -52,6 +53,7 @@
                 <li><a class="btn end" data-value="c">ほとんどしない</a></li>
             </ul>
         </div>
+        </div>
         <!-- 回答の答え1 -->
         <div id="answer_01" class="result" style="display: none;">
             <div class="result_theme ">
@@ -91,7 +93,7 @@
                 </div>
             </div>
             <div class="appoint-btn">
-                <a class="appoint" href="#">予約する</a>
+                <a class="appoint" href="">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>
@@ -136,7 +138,7 @@
                 </div>
             </div>
             <div class="appoint-btn">
-                <a class="appoint" href="#">予約する</a>
+                <a class="appoint" href="">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>
@@ -179,8 +181,9 @@
                         <p class="card-text"><small class="text-muted">12,100円(税込)</small></p>
                     </div>
                 </div>
+            </div>
             <div class="appoint-btn">
-                <a class="appoint" href="#">予約する</a>
+                <a class="appoint" href="">予約する</a>
             </div>
             <div class="return-btn">
                 <a class="return" href={{ route('/') }}>もどる</a>

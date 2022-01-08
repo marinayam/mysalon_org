@@ -35,6 +35,7 @@
         
     </head>
     <body>
+        <div class="app">
         <header class="sticky-top">
             <!-- ヘッダー -->
             <div class="container-fluid">
@@ -163,5 +164,6 @@
                     </div>
                 </div>
             </footer>
+            </div>
         </body>
     </html>

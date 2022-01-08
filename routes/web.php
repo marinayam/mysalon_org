@@ -37,9 +37,9 @@ Route::get('/eyebrow', function(){
 })->name('eyebrow');
 
 // マッチング
-Route::get('/match', function(){
-  return view('salon/match');
-})->name('match');
+Route::get('/match2', function(){
+  return view('salon/match2');
+})->name('match2');
 
 //入力ページ
 Route::get('/contact', 'ContactController@index')->name('contact.index');

@@ -1,10 +1,78 @@
-.service-ttl h2{
-    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif ;
-    font-size: 50px;
-    font-weight: 500;
-    letter-spacing: 0.125em;
+.service-content {
     text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    background-color: white;
 }
-section .color{
-    background-color: #e1dad4;
+.service-content h2{
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-weight: 700;
+    color: #977119;
+}
+.service-content p{
+    color: black;
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.service-content-color {
+    text-align: center;
+    padding: 80px 0;
+    width: 100%;
+    background-color: #f5faf9;
+    letter-spacing: 2px;
+    color: black;
+}
+.service-content-color h3{
+    font-size: 30px;
+}
+.notice-list{
+    text-align: left;
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.service-content h3{
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-weight: 600;
+    color: #977119;
+}
+.service-step h4{
+    padding-bottom: 30px;
+    font-weight: 500;
+    color: #977119;
+}
+.service-step p{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.service-content-notice{
+    color: black;
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    background-color: #FFFACD;
+    letter-spacing: 2px;
+}
+.service-content-notice p{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+.service-content-notice li{
+    font-size: 18px;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+.large{
+    font-size: 110%;
+}
+.section-inner-appoint p{
+    text-align: center;
+    padding-bottom: 20px;
 }
