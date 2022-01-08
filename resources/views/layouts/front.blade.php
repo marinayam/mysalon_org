@@ -31,6 +31,7 @@
         <link href="{{ asset('css/front.css') }}" rel="stylesheet">
         <link href="{{ asset('css/index.css') }}" rel="stylesheet">
         <link href="{{ asset('css/match.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/service.css') }}" rel="stylesheet">
         
     </head>
     <body>
