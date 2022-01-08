@@ -9,5 +9,6 @@
     <p class="content-subttl">お問い合わせ</p>
 </div>
 <div class="container mt-5">
-    <h1>{{ __('送信完了') }}</h1>
+    <h1>{{ __('お問い合わせありがとうございました') }}</h1>
 </div
+@endsection('content')
