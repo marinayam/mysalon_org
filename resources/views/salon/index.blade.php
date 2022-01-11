@@ -208,7 +208,7 @@
             メニューをCHECK
         </h1>
         <p class="matching_logo">
-            <a href={{ route('match2') }} class="btn-circle">START</a>
+            <a href={{ route('match') }} class="btn-circle">START</a>
         </p>
         </div>        
     </div>

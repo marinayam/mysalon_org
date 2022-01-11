@@ -32,7 +32,7 @@
         <link href="{{ asset('css/index.css') }}" rel="stylesheet">
         <link href="{{ asset('css/match.css') }}" rel="stylesheet">
         <link href="{{ asset('css/service.css') }}" rel="stylesheet">
-        
+        <link href="{{ asset('css/staff.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="app">
@@ -51,7 +51,7 @@
                         <!-- 左に表示させるメニュー -->
                         <ul class="navbar-nav mr-auto">　
                             <li class="nav-item">
-                                <a class="nav-link-appoint" href="#">ご予約</a>
+                                <a class="nav-link-appoint" href="">ご予約</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
@@ -61,7 +61,7 @@
                         <!-- 右に表示させるメニュー -->
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Menu
                                 </a>
                                 <!-- ドロップメニュー -->
@@ -76,13 +76,13 @@
                               <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Instagram</a>
+                              <a class="nav-link" href="">Instagram</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Blog</a>
+                              <a class="nav-link" href="">Blog</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Staff</a>
+                              <a class="nav-link" href={{ route('staff') }}>Staff</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
@@ -120,7 +120,7 @@
                                     <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
                                 </div>
                             </li>
-                            <li><a href="#">Staff</a>
+                            <li><a href="">Staff</a>
                             </li>
                         </ul>
                    </div>
@@ -139,7 +139,7 @@
                                LINE: @xxx
                             </li>
                             <li class="footer_contact_btn">
-                                <a href="#">お問い合わせフォーム</a>
+                                <a href="">お問い合わせフォーム</a>
                             </li>
                         </ul>
                     </div>
@@ -147,13 +147,13 @@
                         <p class="footer-title">FOLLOW US</p>
                         <ul>
                             <li>
-                                <a href="#" target="_brank">
+                                <a href="" target="_brank">
                                     <img src="images/instagram.png" width="24px">
                                     Instagram
                                 </a>
                             </li>
                             <li>
-                                <a href="#">ブログへ</a>
+                                <a href="">ブログへ</a>
                             </li>
                         </ul>
                     </div>
@@ -163,7 +163,8 @@
                         <p>©︎ Lys. Company Inc.</p>
                     </div>
                 </div>
+                </div>
             </footer>
             </div>
-        </body>
+         </body>
     </html>
