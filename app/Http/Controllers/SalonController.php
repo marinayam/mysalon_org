@@ -15,15 +15,10 @@ class SalonController extends Controller
     {
         $posts = Staff::all()->sortByDesc('updated_at');
 
-        if (count($posts) > 0) {
-            $staff = $posts->shift();
-        } else {
-            $staff = null;
-        }
-
+        
         
         // また View テンプレートに staff、 posts、という変数を渡している
-        return view('salon.staff', ['staff' => $staff, 'posts' => $posts]);
+        return view('salon.staff', [ 'posts' => $posts]);
     }
 
 }

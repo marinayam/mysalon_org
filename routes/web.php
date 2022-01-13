@@ -13,38 +13,36 @@
 
 // トップページ
 Route::get('/', function(){
-  return view('salon/index');
+  return view('salon.index');
 })->name('/');
 
 // AboutUS
 Route::get('/service', function(){
-  return view('salon/service');
+  return view('salon.service');
 })->name('service');
 
 // パーマメニュー
 Route::get('/perm', function(){
-  return view('salon/perm');
+  return view('salon.perm');
 })->name('perm');
 
 // マツエクメニュー
 Route::get('/extension', function(){
-  return view('salon/extension');
+  return view('salon.extension');
 })->name('extension');
 
 // 眉メニュー
 Route::get('/eyebrow', function(){
-  return view('salon/eyebrow');
+  return view('salon.eyebrow');
 })->name('eyebrow');
 
 // マッチング
 Route::get('/match', function(){
-  return view('salon/match');
+  return view('salon.match');
 })->name('match');
 
 // スタッフ紹介
-Route::get('/staff', function(){
-  return view('salon/staff');
-})->name('staff');
+Route::get('/staff', 'SalonController@index')->name('staff');
 
 //入力ページ
 Route::get('/contact', 'ContactController@index')->name('contact.index');

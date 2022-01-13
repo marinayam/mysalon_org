@@ -8,8 +8,7 @@
         </div>
         <!-- ここから５つ質問 -->
         <!-- 質問1 -->
-        <div class="fit">
-        <div id="q_01">
+        <div id="q_01" class="fit">
             <p>質問1: なりたいイメージは？</p>
             <ul>
                 <li><a class="btn" href="#q_02" data-value="a">ナチュラル</a></li>
@@ -52,7 +51,6 @@
                 <li><a class="btn end" data-value="b">たまにする</a></li>
                 <li><a class="btn end" data-value="c">ほとんどしない</a></li>
             </ul>
-        </div>
         </div>
         <!-- 回答の答え1 -->
         <div id="answer_01" class="result" style="display: none;">
@@ -190,5 +188,5 @@
             </div>
         </div>
      </div>
- </div>
+</div>
 @endsection
