@@ -1,21 +1,56 @@
 @extends('layouts.front')
 @section('title','Staff')
 @section('content')
-<div class="container">
-    <div class="staff-ttl">
-        <h2>Staff紹介</h2>
-    </div>
-    <div class="staff">
-        <div class="staff-item">
-            <img class="staff-photo" src="images/logo.png" width="200">
-            <div class="profile">
-                <h3>山田</h3>
-                <p>施術歴：10年
-                <br>
-                ラッシュリフト、眉毛メニュー、カラーエクステが得意です＊
-                </P>
+    <div class="container">
+        <hr color="#c0c0c0">
+        @if (!is_null($staff))
+            <div class="row">
+                <div class="headline col-md-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="caption mx-auto">
+                                <div class="image">
+                                    @if ($staff->image_path)
+                                        <img src="{{ asset('storage/image/' . $staff->image_path) }}">
+                                    @endif
+                                </div>
+                                <div class="title p-2">
+                                    <h1>{{ str_limit($staff->name, 70) }}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="body mx-auto">{{ str_limit($staff->body, 650) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+        <hr color="#c0c0c0">
+        <div class="row">
+            <div class="posts col-md-8 mx-auto mt-3">
+                @foreach($posts as $post)
+                    <div class="post">
+                        <div class="row">
+                            <div class="text col-md-6">
+                                <div class="name">
+                                    {{ str_limit($post->name, 150) }}
+                                </div>
+                                <div class="body mt-3">
+                                    {{ str_limit($post->body, 1500) }}
+                                </div>
+                            </div>
+                            <div class="image col-md-6 text-right mt-4">
+                                @if ($post->image_path)
+                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <hr color="#c0c0c0">
+                @endforeach
             </div>
         </div>
     </div>
-</div>
+    </div>
 @endsection

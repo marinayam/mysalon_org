@@ -163,6 +163,9 @@ return [
         'trigger' => 'ご来店きっかけ',
         'record' => '過去の施術経験',
         'body_concern' => '気になる身体の疲れ',
+        'name' => '名前',
+        'body' => '自己紹介',
+        'image_path' => '画像',
         ],
 
 ];

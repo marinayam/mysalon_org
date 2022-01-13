@@ -16,8 +16,8 @@ class CreateStaffTable extends Migration
         Schema::create('staff', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');//名前を保存するカラム
-            $table->string('profile');//自己紹介を保存するカラム
-            $table->string('image'); // 画像を保存するカラム
+            $table->string('body');//自己紹介を保存するカラム
+            $table->string('image_path')->nullable(); // 画像を保存するカラム
             $table->timestamps();
         });
     }

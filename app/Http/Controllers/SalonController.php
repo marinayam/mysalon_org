@@ -6,14 +6,24 @@ use Illuminate\Http\Request;
 //追記。ファサード継承。
 use Illuminate\Support\Facades\HTML;
 
-// 追記。 以下を追記することでSalon Modelが扱えるようになる。
-use App\Salon;
+// Model取り込み
+use App\Staff;
 
 class SalonController extends Controller
 {
-  public function index(Request $request)
-  {
-      return view('salon/index');
-  }
+   public function index(Request $request)
+    {
+        $posts = Staff::all()->sortByDesc('updated_at');
+
+        if (count($posts) > 0) {
+            $staff = $posts->shift();
+        } else {
+            $staff = null;
+        }
+
+        
+        // また View テンプレートに staff、 posts、という変数を渡している
+        return view('salon.staff', ['staff' => $staff, 'posts' => $posts]);
+    }
 
 }

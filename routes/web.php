@@ -68,9 +68,17 @@ Route::get('chart/send', 'ChartController@index');
 
 // 管理者画面
 Route::group(['prefix' => 'admin'], function() {
+    // カルテ顧客情報
     Route::get('salon/index', 'Admin\SalonController@index');
     Route::get('salon/edit', 'Admin\SalonController@edit');
     Route::post('salon/edit', 'Admin\SalonController@update');
+    // スタッフ紹介
+    Route::get('staff/create', 'Admin\StaffController@add');
+    Route::post('staff/create', 'Admin\StaffController@create');
+    Route::get('staff/index', 'Admin\StaffController@index');
+    Route::get('staff/edit', 'Admin\StaffController@edit');
+    Route::post('staff/edit', 'Admin\StaffController@update');
+    Route::get('staff/delete', 'Admin\StaffController@delete');
 });
 
 
