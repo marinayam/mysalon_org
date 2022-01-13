@@ -14,9 +14,7 @@
         <!-- Scripts -->
         {{--Laravel標準で用意されているJavascriptを読み込みます--}}
         <script src ="{{ secure_asset('js/app.js') }}" defer></script>
-        <script src ="{{ secure_asset('js/index.js') }}" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="index.js"></script>
         
         
         <!-- Fonts-->
@@ -36,62 +34,61 @@
     </head>
     <body>
         <div class="app">
-        <header class="sticky-top">
-            <!-- ヘッダー -->
-            <div class="container-fluid">
-                <!-- ナビゲーション -->
-                <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
-                    <!-- ヘッダーのロゴ -->
-                    <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a>
-                    <!-- メニューバーアイコン -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <!-- 左に表示させるメニュー -->
-                        <ul class="navbar-nav mr-auto">　
-                            <li class="nav-item">
-                                <a class="nav-link-appoint" href="">ご予約</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
-                            </li>
-                        </ul>
-                        
-                        <!-- 右に表示させるメニュー -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Menu
-                                </a>
-                                <!-- ドロップメニュー -->
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
-                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
-                                </div>
-                            <!-- ナビゲーション -->
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="">Instagram</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href={{ route('staff') }}>Staff</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
-                            </li>
-                          </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
+            <header class="sticky-top">
+                <!-- ヘッダー -->
+                <div class="container-fluid">
+                    <!-- ナビゲーション -->
+                    <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
+                        <!-- ヘッダーのロゴ -->
+                        <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a>
+                        <!-- メニューバーアイコン -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <!-- 左に表示させるメニュー -->
+                            <ul class="navbar-nav mr-auto">　
+                                <li class="nav-item">
+                                    <a class="nav-link-appoint" href="">ご予約</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
+                                </li>
+                            </ul>
+                            <!-- 右に表示させるメニュー -->
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Menu
+                                    </a>
+                                    <!-- ドロップメニュー -->
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
+                                        <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
+                                        <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
+                                    </div>
+                                </li>
+                                <!-- ナビゲーション -->
+                                <li class="nav-item">
+                                  <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="">Instagram</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href={{ route('staff') }}>Staff</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
         <main class="py-4">
             {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             @yield('content')
@@ -112,9 +109,9 @@
                                     <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
                                     <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
                                 </div>
-                            <li><a href="#">About Us</a>
-                            </li>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="">About Us</a>
+                                </li>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
                                     <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
                                     <a class="dropdown-item" href={{ route('eyebrow') }}>眉デザイン</a>
@@ -123,12 +120,12 @@
                             <li><a href="">Staff</a>
                             </li>
                         </ul>
-                   </div>
+                    </div>
                     <div class="footer-menu">
                         <p class="footer-title">CONTACT</p>
                         <ul>
-                           <li>
-                               郵便番号
+                            <li>
+                                郵便番号
                                <br>
                                東京都武蔵野市御殿山1-6-9
                                <br>
@@ -148,8 +145,8 @@
                         <ul>
                             <li>
                                 <a href="" target="_brank">
-                                    <img src="images/instagram.png" width="24px">
-                                    Instagram
+                                <img src="images/instagram.png" width="24px">
+                                Instagram
                                 </a>
                             </li>
                             <li>
@@ -163,8 +160,8 @@
                         <p>©︎ Lys. Company Inc.</p>
                     </div>
                 </div>
-                </div>
-            </footer>
             </div>
-         </body>
-    </html>
+        </footer>
+    </div>
+</body>
+</html>
