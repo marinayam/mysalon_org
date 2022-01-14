@@ -8,16 +8,17 @@
         </div>
         <!-- 質問 -->
         <div class="question">
-            <p>質問: 自まつ毛が多い？</p>
+            <p>質問:マスカラをいつもする？</p>
             <div class="d-grid gap-2">
                 <ul>
-                    <li><a class="btn-answer" href={{ route('match2') }}>YES</a></li>
-                    <li><a class="btn-answer" href={{ route('match2') }}>NO</a></li>
+                    <li><a class="btn-answer" href={{ route('answer1') }}>YES</a></li>
+                    <li><a class="btn-answer" href={{ route('answer2') }}>NO</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="return-btn">
+                <a class="return" href={{ route('match4') }}>もどる</a>
         </div>
     </div>
 </div>
 @endsection
-
-
