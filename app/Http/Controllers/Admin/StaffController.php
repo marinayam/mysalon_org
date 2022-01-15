@@ -47,7 +47,7 @@ class StaffController extends Controller
             // 検索されたら検索結果を取得する
             $posts = Staff ::where('name', $cond_name)->get();
             } else {
-                // それ以外はすべてのニュースを取得する
+                // それ以外はすべてのスタッフを取得する
                 $posts =Staff::all();
             }
         return view ('admin.staff.index', ['posts' => $posts, 'cond_name' => $cond_name]);

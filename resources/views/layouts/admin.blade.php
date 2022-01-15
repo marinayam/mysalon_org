@@ -42,6 +42,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href={{ route('salon.index') }}>顧客一覧
                             </a>
+                            <a class="dropdown-item" href={{ route('trigger.index') }}>カルテの来店きっかけ一覧
+                            </a>
                             <a class="dropdown-item" href={{ route('staff.index') }}>スタッフ一覧
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"

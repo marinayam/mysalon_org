@@ -97,6 +97,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('salon/index', 'Admin\SalonController@index')->name('salon.index');;
     Route::get('salon/edit', 'Admin\SalonController@edit');
     Route::post('salon/edit', 'Admin\SalonController@update');
+    // カルテのご来店きっかけ編集
+    Route::get('trigger/create', 'Admin\TriggerController@add');
+    Route::post('trigger/create', 'Admin\TriggerController@create');
+    Route::get('trigger/index', 'Admin\TriggerController@index')->name('trigger.index');;
+    Route::get('trigger/edit', 'Admin\TriggerController@edit');
+    Route::post('trigger/edit', 'Admin\TriggerController@update');
+    Route::get('trigger/delete', 'Admin\TriggerController@delete');
     // スタッフ紹介
     Route::get('staff/create', 'Admin\StaffController@add');
     Route::post('staff/create', 'Admin\StaffController@create');
