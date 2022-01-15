@@ -151,7 +151,29 @@
                         <label class="example col-md-12">例：肩こり 目の疲れ 疲れやすい 睡眠不足 頭痛 ストレス むくみ等</label>
                     </div>
                 </div>
-                
+                <div class="chart-notice">
+                    <h1>注意事項</h1>
+                    <ul>
+                        <li>
+                            ・はじめての方は、ご予約時間の10分前にご来店下さい。<br>
+                            初回ご来店の際、施術前にカウンセリングを行っておりますので、<br>
+                            施術時間の他に約10分お時間を頂きますので余裕を持ってご来店ください。<br>
+                            <br>
+                        </li>
+                        <li>
+                            ・ご予約変更について<br>
+                            日時変更は予約日前日までにご連絡をお願い致します。<br>
+                            直前のキャンセル、もしくはキャンセルを頂けなかった場合については、<br>
+                            キャンセル料を頂戴致しますので、あらかじめご了承ください。<br>
+                        </li>
+                    </ul>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            同意します
+                         </label>
+                    </div>
+                </div>
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="登録">
              </form>

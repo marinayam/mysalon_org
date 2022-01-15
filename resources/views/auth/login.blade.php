@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -56,13 +56,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="checkbox">
-                                        <a  href={{ route('register') }}>アカウント作成</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             
                         </form>
                     </div>

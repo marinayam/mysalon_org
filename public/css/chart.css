@@ -99,4 +99,6 @@ ul {
 .example {
   font-size: 12px;
 }
-
+.chart-notice{
+padding: 5px; border: solid 1px
+}

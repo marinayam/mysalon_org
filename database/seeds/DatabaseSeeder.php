@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TriggerTableSeeder::class);
         $this->call(RecordTableSeeder::class);
         $this->call(BodyConcernTableSeeder::class);
+        $this->call(AdminsTableSeeder::class);
     }
 }

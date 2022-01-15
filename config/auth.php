@@ -14,7 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'user',
+        'guard' => 'web',
+        // 'guard' => 'user',
         'passwords' => 'users',
     ],
 
@@ -46,12 +47,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-         //追加
-        'admin' => [ 
-            'driver' => 'session', 
-            'provider' => 'admins', 
-        ],
-        //追加
+        //  //追加
+        // 'admin' => [ 
+        //     'driver' => 'session', 
+        //     'provider' => 'admins', 
+        // ],
+        // //追加
     ],
 
     /*
