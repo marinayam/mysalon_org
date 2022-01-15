@@ -36,6 +36,15 @@
                 <label for="tel">電話番号</label>
                 <input class="form-control" value="{{ old('tel') }}" type="tel" name="tel" placeholder="090-0000-0000">
             </div>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>選択してください</option>
+                <option value="1">予約について</option>
+                <option value="2">サロンについて</option>
+                <option value="3">その他</option>
+            </select>
+            <div>
+                <p>※予約の際は、第3希望までご連絡頂けますとスムーズです。</p>
+            </div>
             <div class="form-group">
                 <label for="body">
                     <span class="badge bg-danger">必須</span>
