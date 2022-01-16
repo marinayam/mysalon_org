@@ -9,7 +9,6 @@
             <li data-target="#sliders" data-slide-to="1"></li>
             <li data-target="#sliders" data-slide-to="2"></li>
             <li data-target="#sliders" data-slide-to="3"></li>
-            <li data-target="#sliders" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -63,7 +62,7 @@
             </div>
             <div class="carousel-item">
                 <a href={{ route('eyebrow') }}>
-                <img src="images/eyebrow2.png" class="d-block w-100"></a>
+                <img src="images/eyebrow.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
                         <div class="aboutSlider-information">
@@ -73,20 +72,6 @@
                             カウンセリングにより最適な美眉をご提案
                             <br>
                             お一人お一人の輪郭・骨格・印象に合わせた似合わせデザイン
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/goods.png" class="d-block w-100">
-                <div class="carousel-caption d-none d-sm-block">
-                    <div class="aboutSlider-titleGroup">
-                        <div class="aboutSlider-information">
-                            <h1 class="aboutSlider-h1 title">おすすめ商品</h1>
-                            <p>今人気の商品や話題のアイテムも一緒にいかがでしょうか
-                            <br>
-                            プライベートサロンならではのこだわり抜いた商品のみ取り扱い！
                             </p>
                         </div>
                     </div>
@@ -105,62 +90,62 @@
 </div>
 <!----スライドショー------------------------------------->
 <!----サロンのこだわり------------------------------------->
-<div class="content">
+<div class="container-fluid">
     <section class="section" id="kodawari">
-        <h2 class="section_ttl">
+        <h2 class="section-ttl">
             <span>Lys.がお客様に選ばれる理由</span>
             こだわり
         </h2>
-        <div class="kodawari_in">
-            <div class="kodawari_one">
-                <div class="kodawari_img">
+        <div class="kodawari-in">
+            <div class="kodawari-one">
+                <div class="kodawari-img">
                     <img src="images/extension.png">
                 </div>
-                <h3 class="kodawari_ttl">
-                    今、なりたい目元を叶える
+                <h3 class="kodawari-ttl">
+                    なりたい目元を叶える
                     <br>
                     プロフェッショナルな技術を提供
                 </h3>
-                <p class="kodawari_txt">
-                    マツエクのバリエーション多数用意
+                <p class="kodawari-txt">
+                    マツエクのバリエーションを多数用意
                     <br>
-                    プロのアイリストがあなたを変身させます
+                    しております
                 </p>
             </div>
-            <div class="kodawari_one">
-                <div class="kodawari_img">
+            <div class="kodawari-one">
+                <div class="kodawari-img">
                     <img src="images/eyebrow.png">
                 </div>
-               <h3 class="kodawari_ttl">
-                    自然なまつ毛エクステ
+               <h3 class="kodawari-ttl">
+                    美眉スタイリングでさらに美しいお目元へ
                     <br>
-                    マツエクと気付かれなくて嬉しいと喜ばれる
                 </h3>
-                <p class="kodawari_txt">
-                    不自然な目元になるのではと不安に思っていらっしゃる方も多いのではないでしょうか？
+                <p class="kodawari-txt">
+                    骨格・イメージにあった美眉スタイリング
                     <br>
-                    『自然だから美しい』それがLys.のこだわりです。
+                    プロにお任せください
                 </p>
             </div>
-            <div class="kodawari_one">
-                <div class="kodawari_img">
+            <div class="kodawari-one">
+                <div class="kodawari-img">
                     <img src="images/perm.png">
                 </div>
-                <h3 class="kodawari_ttl">
+                <h3 class="kodawari-ttl">
+                    丁寧なカウンセリング
+                    <br>
                     まつ毛の状態に合わせた施術
-                    <br>
-                    施術前にはお客様が納得できるまでじっくりカウンセリング
                 </h3>
-                <p class="kodawari_txt">
-                    プライベートサロンならではのお客様に合わせた徹底カウンセリング
+                <p class="kodawari-txt">
+                    プライベートサロンならではの
                     <br>
-                    まつ毛の状態に合わせてエクステによるダメージを最小限に抑えた施術をいたします。
+                    お客様に合わせた徹底カウンセリング
+                    <br>
+                    まつ毛の状態に合わせて施術を致します
                 </p>
             </div>
         </div>
     </section>
 </div>
-
 <!----サロンのこだわり------------------------------------->
 <!----Menu------------------------------------->
 <div class="menu-in">
@@ -193,14 +178,17 @@
             <p>
             似合わせ美眉に
             <br>
-            お一人お一人の輪郭・骨格・印象に合わせたデザインを提案   
+            輪郭・骨格・印象に合わせた
+            <br>
+            デザインを提案   
            </p>
         </li>
     </ul>  
 </div>
 <!----Menu------------------------------------->
 <!----おすすめメニュー診断------------------------------------->
-<div id="matching" class="matching_contents">
+<div class="container-fluid">
+<div id="matching" class="matching-contents">
     <div class="check-box">
         <div class="check-top">
         <h1>
@@ -208,22 +196,25 @@
             <br>
             メニューをCHECK
         </h1>
-        <p class="matching_logo">
+        <p class="matching-logo">
             <a href={{ route('match') }} class="btn-circle">START</a>
         </p>
         </div>        
     </div>
 </div>
+</div>
 <!----おすすめメニュー診断------------------------------------->
 <!----サロンの地図------------------------------------->
+<div class="container-fluid">
 <div class="location">
     <h3>LOCATION</h3>
     <h4>STORE INFORMATION</h4>
     <div class="location-mapArea">
         <a href="https::" target="_brank">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.948129464338!2d139.57338941520095!3d35.70289403639105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ef66b826b691%3A0x559cc192cb003bd3!2z44Ki44Kk44Op44OD44K344Ol77yG44OY44OD44OJ44K544ORIEx5cy4g5ZCJ56Wl5a-6IOOAkOODquODvOOCueOAkQ!5e0!3m2!1sen!2sjp!4v1638548357176!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.948129464338!2d139.57338941520095!3d35.70289403639105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ef66b826b691%3A0x559cc192cb003bd3!2z44Ki44Kk44Op44OD44K344Ol77yG44OY44OD44OJ44K544ORIEx5cy4g5ZCJ56Wl5a-6IOOAkOODquODvOOCueOAkQ!5e0!3m2!1sen!2sjp!4v1638548357176!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </a>
     </div>
+</div>
 </div>
 <!----Lサロンの地図------------------------------------->
 @endsection
