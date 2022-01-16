@@ -15,28 +15,33 @@
 Route::get('/', function(){
   return view('salon.index');
 })->name('/');
+// トップページ
 
 // 初めての方へ
 Route::get('/service', function(){
   return view('salon.service');
 })->name('service');
+// 初めての方へ
 
 // パーマメニュー
 Route::get('/perm', function(){
   return view('salon.perm');
 })->name('perm');
+// パーマメニュー
 
 // マツエクメニュー
 Route::get('/extension', function(){
   return view('salon.extension');
 })->name('extension');
+// マツエクメニュー
 
 // 眉メニュー
 Route::get('/eyebrow', function(){
   return view('salon.eyebrow');
 })->name('eyebrow');
+// 眉メニュー
 
-// マッチング
+// おすすめメニュー診断
 // 質問：自まつ毛が多い
 Route::get('/match', function(){
   return view('salon.match');
@@ -66,9 +71,11 @@ Route::get('/answer2', function(){
 Route::get('/answer3', function(){
   return view('salon.answer3');
 })->name('answer3');
+// おすすめメニュー診断
 
 // スタッフ紹介
 Route::get('/staff', 'SalonController@index')->name('staff');
+// スタッフ紹介
 
 // お問い合わせフォーム
 //入力ページ
@@ -83,15 +90,13 @@ Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 Route::get('chart/create', 'ChartController@add')->name('chart/create');
 Route::post('chart/create', 'ChartController@create');
 Route::get('chart/send', 'ChartController@index');
+// カルテ画面
 
-
-// 管理者認証必要
+// // 管理者画面
 Auth::routes([
     'register' => false,
     'reset'    => false
 ]);
-
-// 管理者画面
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     // カルテ顧客情報
     Route::get('salon/index', 'Admin\SalonController@index')->name('salon.index');;
@@ -112,25 +117,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('staff/edit', 'Admin\StaffController@update');
     Route::get('staff/delete', 'Admin\StaffController@delete');
 });
-
-
-
-// Route::get('/admin/salon/index', function () {
-//     return view('admin/index');
-// })->name('login');
-
-// // 管理者認証不要
-// Route::group(['prefix' => 'admin'], function() {
-//     Route::get('/',function () { return redirect('/admin/home'); });
-//     Route::get('login','Admin\LoginController@showLoginForm')->name('admin.login');
-//     Route::post('login','Admin\LoginController@login');
-// });
-
-
-// // 管理者認証必要
-// Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
-//     Route::post('logout','Admin\LoginController@logout')->name('admin.logout');
-//     Route::get('home','Admin\HomeController@index')->name('admin.home');
-    
-// });
-
+// 管理者画面

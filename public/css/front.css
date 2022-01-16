@@ -9,15 +9,22 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+a {
+  color: inherit;
+  background-color: transparent;
+}
+
+ul li {
+  list-style: none;
+}
 
 /*ヘッター*/
-
 .sticky-top {
   background-color: #fff;
 }
+/*ヘッター*/
 
 /*予約アイコン開始*/
-
 .nav-link-appoint {
   padding: 15px 30px;
   position: relative;
@@ -26,17 +33,14 @@ body {
   display: inline-block;
   border-radius: 5px;
 }
-
 .nav-link-appoint:hover {
   color: inherit;
   text-decoration: none;
   opacity: 0.5;
 }
-
 /*予約アイコン終了*/
 
 /*カルテアイコン開始*/
-
 .nav-link-karte {
   padding: 15px 30px;
   position: relative;
@@ -45,61 +49,48 @@ body {
   display: inline-block;
   border-radius: 5px;
 }
-
 .nav-link-karte:hover {
   color: inherit;
   text-decoration: none;
   opacity: 0.5;
 }
-
 /*カルテアイコン終了*/
 
 /*ナビゲーション設定*/
-
 .nav-item {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 4px;
 }
-
 /*ナビゲーション終了*/
 
 /*ハンバーガーメニューデザイン開始*/
-
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
 }
-
 /*ハンバーガーメニューデザイン終了*/
 
 /*ショップロゴ設定*/
-
 .navbar-brand:hover {
   opacity: 0.5;
 }
-
 /*ショップロゴ設定*/
 
-/*フッター*/
-
+/*フッター開始*/
 footer {
   margin-bottom: 0;
   background-color: #e1dad4;
   color: #333;
   padding: 50px 0;
 }
-
 /*フッター余白*/
-
 .fixedcontainer {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
   padding: 0px;
 }
-
-/*フッター*/
 
 .footer_in1 {
   display: flex;
@@ -109,7 +100,6 @@ footer {
 }
 
 /*フッターABOUT部分*/
-
 .footer-menu {
   width: 30%;
   padding: 0;
@@ -117,7 +107,6 @@ footer {
 }
 
 /*フッターのタイトル設定*/
-
 .footer-title {
   font-weight: normal;
   letter-spacing: 2px;
@@ -128,38 +117,21 @@ footer {
 }
 
 /*フッター項目*/
-
 .footer-list {
   font-size: 14px;
   line-height: 2;
   list-style: none;
 }
 
-a {
-  color: inherit;
-  background-color: transparent;
-}
-
-ul li {
-  list-style: none;
-}
-
 /*お問い合わせフォーム*/
-
-.footer_contact_btn {
+.btn-outline-dark{
   margin-top: 20px;
 }
 
-ul {
-  font-size: 14px;
-  line-height: 2;
-}
-
 /*フッター著作権*/
-
 .footer_in2 {
   text-align: center;
   margin-top: 30px;
   font-size: 14px;
 }
-
+/*フッター終了*/

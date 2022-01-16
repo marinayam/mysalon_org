@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('title','Lys.kichijoji')
 @section('content')
-<!----Slideres------------------------------------->
+<!----スライドショー------------------------------------->
 <div class="container">
     <div class="carousel slide" id="sliders" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -13,7 +13,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href="#">
+                <a href={{ route('service') }}>
                 <img src="images/about.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#">
+                <a href={{ route('perm') }}>
                 <img src="images/perm.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#">
+                <a href={{ route('extension') }}>
                 <img src="images/extension.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
@@ -55,14 +55,15 @@
                             <br>
                             肌馴染みの良いロイッシュカラー導入！肌の色に合わせて全5色からセレクト
                             <br>
-                            フラットラッシュの為、モチも良く、初めての方にもおすすめ</p>
+                            フラットラッシュの為、モチも良く、初めての方にもおすすめ
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#">
-                <img src="images/eyebrow.png" class="d-block w-100"></a>
+                <a href={{ route('eyebrow') }}>
+                <img src="images/eyebrow2.png" class="d-block w-100"></a>
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
                         <div class="aboutSlider-information">
@@ -71,14 +72,14 @@
                             <br>
                             カウンセリングにより最適な美眉をご提案
                             <br>
-                            お一人お一人の輪郭・骨格・印象に合わせた似合わせデザイン</p>
+                            お一人お一人の輪郭・骨格・印象に合わせた似合わせデザイン
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <a href="#">
-                <img src="images/goods.png" class="d-block w-100"></a>
+                <img src="images/goods.png" class="d-block w-100">
                 <div class="carousel-caption d-none d-sm-block">
                     <div class="aboutSlider-titleGroup">
                         <div class="aboutSlider-information">
@@ -102,8 +103,8 @@
         </div>
     </div>
 </div>
-<!----Slideres------------------------------------->
-<!----こだわり------------------------------------->
+<!----スライドショー------------------------------------->
+<!----サロンのこだわり------------------------------------->
 <div class="content">
     <section class="section" id="kodawari">
         <h2 class="section_ttl">
@@ -160,7 +161,7 @@
     </section>
 </div>
 
-<!----こだわり------------------------------------->
+<!----サロンのこだわり------------------------------------->
 <!----Menu------------------------------------->
 <div class="menu-in">
     <h1>MENU</h1>
@@ -198,7 +199,7 @@
     </ul>  
 </div>
 <!----Menu------------------------------------->
-<!----matching------------------------------------->
+<!----おすすめメニュー診断------------------------------------->
 <div id="matching" class="matching_contents">
     <div class="check-box">
         <div class="check-top">
@@ -213,8 +214,8 @@
         </div>        
     </div>
 </div>
-<!----matching------------------------------------->
-<!----LOCATION------------------------------------->
+<!----おすすめメニュー診断------------------------------------->
+<!----サロンの地図------------------------------------->
 <div class="location">
     <h3>LOCATION</h3>
     <h4>STORE INFORMATION</h4>
@@ -224,5 +225,5 @@
         </a>
     </div>
 </div>
-<!----LOCATION------------------------------------->
+<!----Lサロンの地図------------------------------------->
 @endsection
