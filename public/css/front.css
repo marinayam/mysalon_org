@@ -85,25 +85,18 @@ footer {
   padding: 50px 0;
 }
 /*フッター余白*/
-.fixedcontainer {
-  max-width: 1280px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0px;
-}
 
-.footer_in1 {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-}
 
-/*フッターABOUT部分*/
+/*.footer_in1 {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*}*/
+
+/*フッター3箇所の部分*/
 .footer-menu {
-  width: 30%;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 50px;
 }
 
 /*フッターのタイトル設定*/
