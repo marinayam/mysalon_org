@@ -39,8 +39,10 @@ class TriggerController extends Controller
     
     public function edit(Request $request)
     {
+    // dd($request);
     // Modelからデータを取得する
-    $trigger = Trigger::find ($request->id);
+    $trigger = Trigger::find($request->id);
+    // dd($trigger);
     if (empty ($trigger))
     { 
     abort(404);
@@ -53,7 +55,7 @@ class TriggerController extends Controller
         // Validationをかける
       $this->validate($request, Trigger::$rules);
       // Modelからデータを取得する
-      $staff = Trigger::find($request->id);
+      $trigger = Trigger::find($request->id);
       // 送信されてきたフォームデータを格納する
       $trigger_form = $request->all();
 
