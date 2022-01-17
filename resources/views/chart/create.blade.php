@@ -5,7 +5,7 @@
 <body>
 <div class ="container">
     <div class="row">
-        <div class ="col-md-8 mx-auto">
+        <div class ="col-md-8 mx-auto chart">
             <h2>カルテ記入</h2>
             <form action="{{ action('ChartController@create') }}" method="post" enctype="multipart/form-data">
                 @if (count($errors) > 0)
@@ -16,10 +16,9 @@
                     </ul>
                 @endif
                 {{-- カルテ項目開始 --}}
-                
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         お名前（漢字）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name01" value="{{ old('name01') }}">
@@ -28,7 +27,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         お名前（ふりがな）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name02" value="{{ old('name02') }}">
@@ -37,7 +36,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         お電話番号</label>
                     <div class="col-md-10">
                         <input type="tel" class="form-control"  name="tel"  value="{{ old('tel') }}">
@@ -46,7 +45,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         メールアドレス</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="email" value="{{ old('email') }}">
@@ -55,7 +54,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         生年月日</label>
                     <div class="col-md-10">
                         <input type="date" name="birthday" value="{{ old('birthday') }}">
@@ -63,11 +62,11 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10">
-                        <!--住所-->
+                        <!--住所　開始-->
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="inputAddress01">
-                                    <span class="badge bg-danger">必須</span>
+                                    <span class="badge badge-danger">必須</span>
                                     郵便番号(7桁)</label>
                                 <input type="text" name="zip" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','addr01');" class="form-control" id="inputAddress01" value="{{ old('zip') }}">
                                 <label class="example col-md-6">例：180-0005</label>
@@ -76,14 +75,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-4">
                                 <label for="inputAddress02">
-                                    <span class="badge bg-danger">必須</span>
+                                    <span class="badge badge-danger">必須</span>
                                     都道府県</label>
                                 <input type="text" name="pref" id="inputAddress02" class="form-control" value="{{ old('pref') }}">
                                 <label class="example col-md-6">例：東京都</label>
                             </div>
                             <div class="col-md-7 mb-3">
                                 <label for="inputAddress03">
-                                    <span class="badge bg-danger">必須</span>
+                                    <span class="badge badge-danger">必須</span>
                                     市区町村・番地</label>
                                 <input type="text" name="addr01" class="form-control" id="inputAddress03"  value="{{ old('addr01') }}">
                                 <label class="example col-md-7">例：武蔵野市御殿山１-６-９</label>
@@ -95,12 +94,12 @@
                                 <label class="example col-md-8">例：エルドラド吉祥寺304</label>
                             </div>
                         </div>
-                        <!--/住所-->
+                        <!--/住所　終了-->
                     </div>
                 </div>
                 <div class="form-group check">
                     <label class="col-md-6">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         ご来店きっかけ</label>
                     @foreach($triggers as $trigger)
                     <label class="col-md-6 form-check-label" >
@@ -111,7 +110,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-8">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         過去に化粧品が合わなかった等、施術トラブル</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="trouble"  value="{{ old('trouble') }}">
@@ -119,7 +118,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-8">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         お目元・眉周りのお悩み</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="concern"  value="{{ old('concern') }}">
@@ -127,7 +126,7 @@
                 </div>
                  <div class="form-group row">
                     <label class="col-md-8">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         アレルギー</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="allergy"  value="{{ old('allergy') }}">
@@ -135,7 +134,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-8">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         過去の施術経験</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="record"  value="{{ old('record') }}">
@@ -144,13 +143,14 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-8">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         気になる身体の疲れ</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="body_concern"  value="{{ old('body_concern') }}">
                         <label class="example col-md-12">例：肩こり 目の疲れ 疲れやすい 睡眠不足 頭痛 ストレス むくみ等</label>
                     </div>
                 </div>
+                <!---注意事項　開始-->
                 <div class="chart-notice">
                     <h1>注意事項</h1>
                     <ul>
@@ -174,6 +174,7 @@
                          </label>
                     </div>
                 </div>
+                <!---注意事項　終了-->
                 {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="登録">
              </form>
