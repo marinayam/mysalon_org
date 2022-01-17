@@ -22,7 +22,7 @@
                             <br>
                             丁寧なカウンセリングによりお客様一人一人に合う似合わせを提案
                             <br>
-                            キャリア7年の熟練スタッフの為、幅広い提案が可能です。
+                            熟練スタッフ在籍の為、幅広い提案が可能です。
                             </p>
                         </div>
                     </div>
@@ -117,11 +117,13 @@
                     <img src="images/eyebrow.png">
                 </div>
                <h3 class="kodawari-ttl">
-                    美眉スタイリングでさらに美しいお目元へ
+                    美眉スタイリングで
+                    <br>
+                    理想のお目元へ
                     <br>
                 </h3>
                 <p class="kodawari-txt">
-                    骨格・イメージにあった美眉スタイリング
+                    一人ひとりの骨格に合わせたデザインを提案
                     <br>
                     プロにお任せください
                 </p>
@@ -176,11 +178,9 @@
             <a href={{ route('eyebrow') }}>
             <img src="images/eyebrow-round.png" width="288" height="288" alt></a>
             <p>
-            似合わせ美眉に
+            似合わせ美眉に！
             <br>
-            輪郭・骨格・印象に合わせた
-            <br>
-            デザインを提案   
+            骨格や印象に合わせたデザインを提案   
            </p>
         </li>
     </ul>  
@@ -188,30 +188,29 @@
 <!----Menu------------------------------------->
 <!----おすすめメニュー診断------------------------------------->
 <div class="container-fluid">
-<div id="matching" class="matching-contents">
-    <div class="check-box">
-        <div class="check-top">
-        <h1>
-            あなたにぴったりの
-            <br>
-            メニューをCHECK
-        </h1>
-        <p class="matching-logo">
-            <a href={{ route('match') }} class="btn-circle">START</a>
-        </p>
-        </div>        
+    <div id="matching" class="matching-contents">
+        <div class="match-box">
+            <div class="match-top">
+            <h1>
+                あなたにぴったりのメニューを
+                <br>
+                CHECK
+            </h1>
+            <p class="match-logo">
+                <a href={{ route('match') }} class="btn-circle">START</a>
+            </p>
+            </div>        
+        </div>
     </div>
-</div>
 </div>
 <!----おすすめメニュー診断------------------------------------->
 <!----サロンの地図------------------------------------->
 <div class="container-fluid">
 <div class="location">
     <h3>LOCATION</h3>
-    <h4>STORE INFORMATION</h4>
     <div class="location-mapArea">
         <a href="https::" target="_brank">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.948129464338!2d139.57338941520095!3d35.70289403639105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ef66b826b691%3A0x559cc192cb003bd3!2z44Ki44Kk44Op44OD44K344Ol77yG44OY44OD44OJ44K544ORIEx5cy4g5ZCJ56Wl5a-6IOOAkOODquODvOOCueOAkQ!5e0!3m2!1sen!2sjp!4v1638548357176!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.948129468268!2d139.57338405053963!3d35.702894036294346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ef66b826b691%3A0x559cc192cb003bd3!2z44Ki44Kk44Op44OD44K344Ol77yG44OY44OD44OJ44K544ORIEx5cy4g5ZCJ56Wl5a-6IOOAkOODquODvOOCueOAkQ!5e0!3m2!1sen!2sjp!4v1642436546944!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </a>
     </div>
 </div>
