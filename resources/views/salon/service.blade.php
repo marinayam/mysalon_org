@@ -184,7 +184,7 @@
                 お問い合わせフォームよりご連絡お願い致します。</p>
              </div>
         </div>
-        <a class="nav-link-appoint" href="#">ご予約</a>
+        <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
     </section>
 </div>
 
