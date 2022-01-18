@@ -6,7 +6,15 @@
     <div class="row">
         <div class ="col-md-8 mx-auto chart">
             <h2>カルテ確認画面</h2>
-            <form method="POST" action="{{ route('chart.send') }}">
+            <!--<form method="POST" action="{{ route('chart.send') }}">-->
+            <form action="{{ action('ChartController@create') }}" method="post" enctype="multipart/form-data">
+                @if (count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
+                @endif
                 @csrf
                 <div class="form-group row">
                     <label class="col-md-5">お名前（漢字）</label>
@@ -56,12 +64,12 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-4">
                                 <label for="inputAddress02">都道府県</label>
-                                
+                                {{ $inputs['pref'] }}
                                 <input type="hidden" name="pref" id="inputAddress02" class="form-control" value="{{ $inputs['pref'] }}" >
                             </div>
                             <div class="col-md-7 mb-3">
                                 <label for="inputAddress03">市区町村・番地</label>
-                                
+                                {{ $inputs['addr01'] }}
                                 <input type="hidden" name="addr01" class="form-control" id="inputAddress03"  value="{{ $inputs['addr01'] }}" >
                             </div>
                             <div class="col-md-8 mb-3">
@@ -76,7 +84,8 @@
                     <label class="col-md-6">ご来店きっかけ</label>
                     @foreach($triggers as $trigger)
                     <label class="col-md-6 form-check-label" >
-                        <input type="hidden" class="form-check-input"  name="trigger[]" value="{{ $trigger->id }}">
+                        {{-- <input type="hidden" class="form-check-input"  name="trigger[]" value="{{ $trigger->id }}"> --}}
+                        <input type="hidden" class="form-check-input"  name="trigger[{{ $trigger->id }}]" value="{{ $trigger->id }}">
                         {{$trigger->trigger}}
                     </label>
                    @endforeach

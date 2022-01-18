@@ -8,14 +8,7 @@
         <div class ="col-md-8 mx-auto chart">
             <h2>カルテ記入</h2>
             <form method="POST" action="{{ route('chart.confirm') }}">
-            <!--<form action="{{ action('ChartController@create') }}" method="post" enctype="multipart/form-data">-->
-            <!--    @if (count($errors) > 0)-->
-            <!--        <ul>-->
-            <!--            @foreach($errors->all() as $e)-->
-            <!--                <li>{{ $e }}</li>-->
-            <!--            @endforeach-->
-            <!--        </ul>-->
-            <!--    @endif-->
+            
                 {{-- カルテ項目開始 --}}
                 <div class="form-group row">
                     <label class="col-md-5">
@@ -104,7 +97,8 @@
                         ご来店きっかけ</label>
                     @foreach($triggers as $trigger)
                     <label class="col-md-6 form-check-label" >
-                        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger') ? 'checked' : ''}}>
+                        {{-- <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger') ? 'checked' : ''}}> --}}
+                        <input class="form-check-input" type="checkbox" name="trigger[{{ $trigger->id}}]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger.'.$trigger->id) ? 'checked' : ''}}>
                         {{$trigger->trigger}}
                     </label>
                    @endforeach
@@ -178,7 +172,7 @@
                 <!---注意事項　終了-->
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-dark">入力内容確認</button>
-                <input type="submit" class="btn btn-primary" value="登録">
+                <!--<input type="submit" class="btn btn-primary" value="登録">-->
              </form>
         </div>
         <!-- 郵便番号から住所自動入力 -->

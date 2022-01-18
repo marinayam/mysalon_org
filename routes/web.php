@@ -87,11 +87,14 @@ Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 // お問い合わせフォーム
 
 // カルテ画面
-Route::get('chart/create', 'ChartController@add')->name('chart/create');
-Route::post('chart/create', 'ChartController@create');
+//入力ページ
+Route::get('chart/create', 'ChartController@add')->name('chart.create');
+Route::post('chart/create', 'ChartController@create')->name('chart.create');
+//確認ページ
 Route::post('chart/confirm', 'ChartController@confirm')->name('chart.confirm');
-Route::post('/chart/send', 'ContactController@send')->name('chart.send');
-Route::get('chart/send', 'ChartController@index');
+//送信完了ページ
+Route::post('chart/send', 'ChartController@send')->name('chart.send');
+// Route::get('chart/send', 'ChartController@index');
 // カルテ画面
 
 // // 管理者画面

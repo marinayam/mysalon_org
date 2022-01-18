@@ -18,22 +18,6 @@ class ChartController extends Controller
         return view ('chart.create', ['charts'=>$charts,'triggers'=>$triggers]);
     }
     
-    public function create(Request $request)
-    {
-        
-        // chartモデルVaridationとカルテテーブルへ保存を行う
-        $this->validate($request, Chart::$rules);
-        $chart = new Chart;
-        $chart_form = $request->all();
-        $triggers = $chart_form['trigger'];
-        unset($chart_form['_token']);
-        unset($chart_form['trigger']);
-        $chart->fill($chart_form);
-        $chart->save();
-        $chart->triggers()->attach($triggers);
-        
-        return redirect('chart/send');
-    }
     public function confirm(Request $request)
     {
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
@@ -65,8 +49,47 @@ class ChartController extends Controller
             'triggers' => $triggers,
         ]);
     }
-    public function index(Request $request)
+    
+    public function create(Request $request)
+    {
+        //フォームから受け取ったactionの値を取得
+        $action = $request->input('action');
+        
+        
+        //actionの値で分岐
+        if($action !== 'submit'){
+            //フォームから受け取ったactionを除いたinputの値を取得
+            $inputs = $request->except('action');
+            
+            return redirect()
+                ->route('chart.create')
+                ->withInput($inputs);
+
+        } else {
+            
+            // chartモデルVaridationとカルテテーブルへ保存を行う
+            $this->validate($request, Chart::$rules);
+            $chart = new Chart;
+            $chart_form = $request->all();
+            $triggers = $chart_form['trigger'];
+            unset($chart_form['_token']);
+            unset($chart_form['trigger']);
+            unset($chart_form['action']);
+            $chart->fill($chart_form);
+            $chart->save();
+            $chart->triggers()->attach($triggers);
+
+            //再送信を防ぐためにトークンを再発行
+            $request->session()->regenerateToken();
+
+            //送信完了ページのviewを表示
+            return view('chart.send');
+            
+        }
+    }
+    
+    public function send(Request $request)
   {
-      return view('chart/send');
+      return view('chart.send');
   }
 }
