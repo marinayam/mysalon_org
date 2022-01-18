@@ -28,3 +28,8 @@ body {
   font-size:24px;
   text-align: center;
 }
+/*カルテ送信完了ページ*/
+.chart-send{
+  text-align: center;
+  padding: 30px 0; 
+}

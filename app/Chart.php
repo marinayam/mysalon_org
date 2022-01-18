@@ -16,7 +16,6 @@ class Chart extends Model
         'zip' => 'required',
         'pref' => 'required',
         'addr01' => 'required',
-        // 'addr02' => 'required',
         'trigger' => 'required',
         'trouble' => 'required',
         'concern' => 'required',

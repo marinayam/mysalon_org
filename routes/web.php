@@ -89,6 +89,8 @@ Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 // カルテ画面
 Route::get('chart/create', 'ChartController@add')->name('chart/create');
 Route::post('chart/create', 'ChartController@create');
+Route::post('chart/confirm', 'ChartController@confirm')->name('chart.confirm');
+Route::post('/chart/send', 'ContactController@send')->name('chart.send');
 Route::get('chart/send', 'ChartController@index');
 // カルテ画面
 
