@@ -171,8 +171,9 @@
                 </div>
                 <!---注意事項　終了-->
                 {{ csrf_field() }}
-                <button type="submit" class="btn btn-dark">入力内容確認</button>
-                <!--<input type="submit" class="btn btn-primary" value="登録">-->
+                <div class="text-right">
+                    <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
+                </div>
              </form>
         </div>
         <!-- 郵便番号から住所自動入力 -->

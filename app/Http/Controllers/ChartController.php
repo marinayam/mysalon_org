@@ -20,6 +20,7 @@ class ChartController extends Controller
     
     public function confirm(Request $request)
     {
+            
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
             'name01' => 'required',

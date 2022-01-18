@@ -10,6 +10,8 @@ body {
 
 .chart h2{
   font-size:24px;
+  padding:30px 0;
+  font-weight: 550;
 }
 
 
@@ -32,4 +34,21 @@ body {
 .chart-send{
   text-align: center;
   padding: 30px 0; 
+}
+.check-button{
+  padding: 30px 0; 
+}
+.border-dark{
+  padding: 0.5em 1em;
+}
+@media screen and (max-width: 768px) {
+  .chart-answer{
+    margin-bottom: 2rem;
+}
+}
+@media screen and (max-width: 768px) {
+  .chart-answer u{
+    padding:0 50px;
+    
+}
 }

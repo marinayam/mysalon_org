@@ -47,7 +47,7 @@
                                 <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
+                                <a class="nav-link-karte" href={{ route('chart.create') }}>カルテ記入</a>
                             </li>
                         </ul>
                         <!-- 右に表示させるメニュー -->
