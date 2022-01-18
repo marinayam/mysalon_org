@@ -94,6 +94,6 @@ class StaffController extends Controller
     {
         $staff = Staff::find($request->id);
         $staff->delete();
-        return redirect('admin/staff/index');
+        return redirect('admin.staff.index');
     }
 }
