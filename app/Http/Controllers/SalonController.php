@@ -13,7 +13,7 @@ class SalonController extends Controller
 {
    public function index(Request $request)
     {
-        $posts = Staff::all()->sortByDesc('updated_at');
+        $posts = Staff::all();
 
         
         

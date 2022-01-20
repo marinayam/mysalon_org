@@ -30,58 +30,56 @@
     </head>
     <body>
         <div class="app">
-            <header>
-                <!-- ヘッダー -->
-                <div class="container-fluid">
-                    <!-- ナビゲーション -->
-                    <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
-                        <!-- ヘッダーのロゴ -->
-                        <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a>
-                        <!-- メニューバーアイコン -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <!-- 左に表示させるメニュー -->
-                            <ul class="navbar-nav mr-auto">　
-                                <li class="nav-item">
-                                    <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
-                                </li>
-                            </ul>
-                            
-                            <!-- 右に表示させるメニュー -->
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Menu
-                                    </a>
-                                    <!-- ドロップメニュー -->
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                        <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
-                                        <a class="dropdown-item" href={{ route('eyebrow') }}>眉毛</a>
-                                    </div>
-                                <!-- ナビゲーション -->
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="https://www.instagram.com/lys.kichijoji/?r=nametag">Instagram</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="https://beauty.hotpepper.jp/kr/slnH000540479/blog/">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href={{ route('staff') }}>Staff</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+            <!-- ヘッダー -->
+            <header class="container-fluid">
+                <!-- ナビゲーション -->
+                <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
+                <!-- ヘッダーのロゴ -->
+                    <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="{{asset('images/logo.png')}}" width="180px"></a>
+                    <!-- メニューバーアイコン -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <!-- 左に表示させるメニュー -->
+                        <ul class="navbar-nav mr-auto">　
+                            <li class="nav-item">
+                                <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- 右に表示させるメニュー -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                </a>
+                                <!-- ドロップメニュー -->
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
+                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
+                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉毛</a>
+                                </div>
+                            <!-- ナビゲーション -->
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="https://www.instagram.com/lys.kichijoji/?r=nametag">Instagram</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="https://beauty.hotpepper.jp/kr/slnH000540479/blog/">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href={{ route('staff') }}>Staff</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </header>
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
@@ -138,7 +136,7 @@
                                 <ul>
                                     <li>
                                         <a href="https://www.instagram.com/lys.kichijoji/?r=nametag" target="_brank">
-                                        <img src="images/instagram.png" width="24px">
+                                        <img src="{{asset('images/instagram.png')}}" width="24px">
                                         Instagram
                                         </a>
                                     </li>
