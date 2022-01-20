@@ -26,13 +26,17 @@ a {
 
 /*ページトップの画像　開始*/
 
-.menu_page_head {
+.menu-page-head{
   opacity: 0.5;
   position: relative;
+  
+}
+.menu-page-head-img{
+  opacity: 0.6;
   margin-bottom: 0;
 }
 
-.menu_page_head h2 {
+.menu-page-head h2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,10 +46,25 @@ a {
   color: #2b0000;
   text-align: center;
   white-space: nowrap;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .menu-page-head h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    color: #2b0000;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+  }
 }
 
-.menu_page_head span {
+.menu-page-head span {
   display: block;
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-size: 50px;
@@ -53,25 +72,34 @@ a {
   letter-spacing: 0.125em;
   padding-top: 70px;
 }
+@media screen and (max-width: 768px) {
+  .menu-page-head span {
+  display: block;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.125em;
+  padding-top: 70px;
+}
+}
 
-.menu_page_head h2 smal {
+.menu-page-head h2 smal {
   font-family: "Noto Sans CJK JP Regular", sans-serif;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.075em;
 }
 
-@media screen and (max-width: 640px) {
-  .menu_page_head span {
+@media screen and (max-width: 768px) {
+  .menu-page-head span {
     font-size: 26px;
     padding-top: 50px;
   }
 }
 
-@media screen and (max-width: 640px) {
-  .menu_page_head small {
-    font-size: 20px;
-    padding-top: 50px;
+@media screen and (max-width: 768px) {
+  .menu-page-head small {
+    font-size: 22px;
   }
 }
 
@@ -137,7 +165,7 @@ a {
 /*メニューのタイトル部分　終了*/
 
 /*メニューのコメント部分　開始*/
-.recommend_ttl {
+.recommend-ttl {
   font-size: 25px;
   margin-top: 3em;
   margin-bottom: 2em;
@@ -145,7 +173,7 @@ a {
   text-align: center;
 }
 @media screen and (max-width: 640px) {
-  .recommend_ttl {
+  .recommend-ttl {
     font-size: 18px;
     margin-top: 1em;
     font-weight: 500;
@@ -153,7 +181,7 @@ a {
   }
 }
 /*メニューのコメント部分　終了*/
-.recommend_ttl_2 {
+.recommend-ttl-2 {
   font-size: 15px;
   margin-top: 1em;
   margin-bottom: 2em;
@@ -186,24 +214,24 @@ a {
   }
 }
 
-.c_flex_column_half {
+.c-flex-column-half {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
 }
 
 @media screen and (max-width: 768px) {
-  .c_flex_column_half {
+  .c-flex-column-half {
     display: block;
     width: 100%;
   }
 }
 
-.c_flex_column__item.left {
+.c-flex-column--item.left {
   flex: 1;
 }
 
-.item_name {
+.item-name {
   margin: 0;
   font-size: 20px;
   font-size: 1.5rem;
@@ -212,13 +240,13 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .item_name {
+  .item-name {
     font-size: 10px;
     font-size: 1rem;
   }
 }
 
-.item_detail {
+.item-detail {
   display: inline-block;
   margin: 0;
   vertical-align: middle;
@@ -229,23 +257,23 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .item_detail {
+  .item-detail {
     font-size: 10px;
     font-size: 0.9rem;
   }
 }
 
-.c_flex_column__item.right {
+.c-flex-column--item.right {
   flex-basis: 200px;
   text-align: right;
 }
 
-.right.c_flex_column__item {
+.right.c-flex-column--item {
   flex-basis: 200px;
   text-align: right;
 }
 
-.item_price {
+.item-price {
   margin: 0;
   line-height: 1;
   font-size: 24px;
@@ -254,7 +282,7 @@ a {
   color: #2b0000;
 }
 @media screen and (max-width: 768px) {
-  .item_price {
+  .item-price {
     margin: 0;
     line-height: 1;
     font-size: 18px;
@@ -284,7 +312,7 @@ i {
 
 @media screen and (max-width: 768px) {
   .menu-price-item-recommend {
-    margin: 30px 20px;
+    margin: 20px 10px;
     padding: 10px 4px;
   }
 }
@@ -297,9 +325,18 @@ i {
   text-align: left;
 }
 
+
 .recommend-point li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .recommend-point li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 14px;
+}
 }
 /*おすすめポイント*/
 
