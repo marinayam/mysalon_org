@@ -7,7 +7,7 @@
 <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
 <div class="container">
     <div class="menu-page-head">
-        <img src="images/perm.png" class="d-block w-100 menu-page-head-img">
+        <img src="images/eyebrow.png" class="d-block w-100 menu-page-head-img">
         <h2>
             <span>MENU & PRICE</span>
             <small>美眉スタイリング</small>
@@ -81,6 +81,8 @@
                 </l>
             </ul>
         </div>
+    </section>
+    <section class="menu">
         <div class="inner inner--sm inner-padding--lg">
             <h3>ブロウラミネーション（眉毛パーマ）</h3>
             <p class="recommend-ttl-2">
