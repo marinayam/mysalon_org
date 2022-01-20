@@ -44,32 +44,32 @@ Route::get('/eyebrow', function(){
 // おすすめメニュー診断
 // 質問：自まつ毛が多い
 Route::get('/match', function(){
-  return view('salon.match');
+  return view('salon.match.match');
 })->name('match');
 // 質問：まつ毛が下がっている
 Route::get('/match2', function(){
-  return view('salon.match2');
+  return view('salon.match.match2');
 })->name('match2');
 // 質問：汗をかきやすい
 Route::get('/match3', function(){
-  return view('salon.match3');
+  return view('salon.match.match3');
 })->name('match3');
 // 4択問題
 Route::get('/match4', function(){
-  return view('salon.match4');
+  return view('salon.match.match4');
 })->name('match4');
 
 // 答え：ナチュラル
 Route::get('/answer1', function(){
-  return view('salon.answer1');
+  return view('salon.match.answer1');
 })->name('answer1');
 // 答え：ぱっちり
 Route::get('/answer2', function(){
-  return view('salon.answer2');
+  return view('salon.match.answer2');
 })->name('answer2');
 // 答え：ゴージャス&エレガント
 Route::get('/answer3', function(){
-  return view('salon.answer3');
+  return view('salon.match.answer3');
 })->name('answer3');
 // おすすめメニュー診断
 
