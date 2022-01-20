@@ -4,6 +4,10 @@ body {
   color: #8e7757;
   background-color: #fff;
 }
+a {
+    color: inherit;
+    background-color: transparent;
+}
 
 .container {
   max-width: 1220px;
@@ -20,7 +24,7 @@ body {
   }
 }
 
-/*ページ画像*/
+/*ページトップの画像　開始*/
 
 .menu_page_head {
   opacity: 0.5;
@@ -71,7 +75,7 @@ body {
   }
 }
 
-/*ページ画像*/
+/*ページトップの画像　終了*/
 
 /*パーマメニュー*/
 
@@ -106,6 +110,7 @@ body {
   margin-right: auto;
 }
 
+/*メニューのタイトル部分　開始*/
 .inner.inner--sm.inner-padding--lg h3 {
   text-align: center;
   margin-top: 2em;
@@ -129,7 +134,9 @@ body {
     padding: 0 30px;
   }
 }
+/*メニューのタイトル部分　終了*/
 
+/*メニューのコメント部分　開始*/
 .recommend_ttl {
   font-size: 25px;
   margin-top: 3em;
@@ -137,7 +144,15 @@ body {
   font-weight: 500;
   text-align: center;
 }
-
+@media screen and (max-width: 640px) {
+  .recommend_ttl {
+    font-size: 18px;
+    margin-top: 1em;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+/*メニューのコメント部分　終了*/
 .recommend_ttl_2 {
   font-size: 15px;
   margin-top: 1em;
@@ -238,6 +253,16 @@ body {
   font-weight: 200;
   color: #2b0000;
 }
+@media screen and (max-width: 768px) {
+  .item_price {
+    margin: 0;
+    line-height: 1;
+    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #2b0000;
+  }
+}
 
 i {
   display: inline-block;
@@ -247,7 +272,7 @@ i {
   color: #2b0000;
 }
 
-/*パーマメニュー*/
+/*パーマ金額テーブル　終了*/
 
 /*おすすめポイント*/
 
@@ -255,6 +280,13 @@ i {
   margin-top: 40px;
   border: 1px solid #4d4c4a;
   padding: 12px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-price-item-recommend {
+    margin: 30px 20px;
+    padding: 10px 4px;
+  }
 }
 
 .recommend-point {
@@ -269,12 +301,5 @@ i {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-
-@media screen and (max-width: 768px) {
-  .menu-price-item-recommend {
-    margin: 0 20px;
-  }
-}
-
 /*おすすめポイント*/
 

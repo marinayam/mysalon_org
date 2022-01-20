@@ -25,19 +25,19 @@ Route::get('/service', function(){
 
 // パーマメニュー
 Route::get('/perm', function(){
-  return view('salon.perm');
+  return view('salon.menu.perm');
 })->name('perm');
 // パーマメニュー
 
 // マツエクメニュー
 Route::get('/extension', function(){
-  return view('salon.extension');
+  return view('salon.menu.extension');
 })->name('extension');
 // マツエクメニュー
 
 // 眉メニュー
 Route::get('/eyebrow', function(){
-  return view('salon.eyebrow');
+  return view('salon.menu.eyebrow');
 })->name('eyebrow');
 // 眉メニュー
 
