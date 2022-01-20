@@ -20,7 +20,7 @@ class ChartController extends Controller
     
     public function confirm(Request $request)
     {
-            
+        $this->validate($request, Chart::$rules);
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
             'name01' => 'required',
@@ -37,12 +37,11 @@ class ChartController extends Controller
             'allergy' => 'required',
             'record' => 'required',
             'body_concern' => 'required',
-        ]);
+            ]);
         
         //フォームから受け取ったすべてのinputの値を取得
         $inputs = $request->all();
         $triggers = Trigger::whereIn('id', $inputs['trigger'])->get();
-        // dd($triggers);
 
         //入力内容確認ページのviewに変数を渡して表示
         return view('chart.confirm', [

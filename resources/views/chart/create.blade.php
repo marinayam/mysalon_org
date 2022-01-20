@@ -6,9 +6,19 @@
 <div class ="container">
     <div class="row">
         <div class ="col-md-8 mx-auto chart">
-            <h2>カルテ記入</h2>
+            <div class="chart-ttl">
+                <h2>カルテ記入</h2>
+                <p>※質問項目で該当がない場合は、「なし」と記入お願い致します。</p>
+            </div>
             <form method="POST" action="{{ route('chart.confirm') }}">
-            
+                @if (count($errors) > 0)
+                    <ul class="chart-validation">
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+                @csrf
                 {{-- カルテ項目開始 --}}
                 <div class="form-group row">
                     <label class="col-md-5">
@@ -16,8 +26,8 @@
                         お名前（漢字）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name01" value="{{ old('name01') }}">
+                        <label class="example col-md-5">例:山田花子</label>
                     </div>
-                    <label class="example col-md-5">例:山田花子</label>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
@@ -25,17 +35,17 @@
                         お名前（ふりがな）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name02" value="{{ old('name02') }}">
+                        <label class="example col-md-5">例:やまだはなこ</label>
                     </div>
-                    <label class="example col-md-5">例:やまだはなこ</label>
-                </div>
+                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
                         <span class="badge badge-danger">必須</span>
                         お電話番号</label>
                     <div class="col-md-10">
                         <input type="tel" class="form-control"  name="tel"  value="{{ old('tel') }}">
+                        <label class="example col-md-5">例：090-0000-0000</label>
                     </div>
-                    <label class="example col-md-5">例：090-0000-0000</label>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
@@ -43,8 +53,8 @@
                         メールアドレス</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="email" value="{{ old('email') }}">
+                        <label class="example col-md-5">例：example@example.com</label>
                     </div>
-                    <label class="example col-md-5">例：example@example.com</label>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-5">
@@ -106,9 +116,10 @@
                 <div class="form-group row">
                     <label class="col-md-8">
                         <span class="badge badge-danger">必須</span>
-                        過去に化粧品が合わなかった等、施術トラブル</label>
+                        過去の施術トラブル（化粧品が合わなかった等）</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="trouble"  value="{{ old('trouble') }}">
+                        <label class="example col-md-12">例：肌荒れ</label>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -117,6 +128,7 @@
                         お目元・眉周りのお悩み</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="concern"  value="{{ old('concern') }}">
+                        <label class="example col-md-12">例：まつ毛の量</label>
                     </div>
                 </div>
                  <div class="form-group row">
@@ -125,6 +137,7 @@
                         アレルギー</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="allergy"  value="{{ old('allergy') }}">
+                        <label class="example col-md-12">例：花粉</label>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -142,7 +155,7 @@
                         気になる身体の疲れ</label>
                     <div class="col-md-10">
                         <input type="text" class="form-control"  name="body_concern"  value="{{ old('body_concern') }}">
-                        <label class="example col-md-12">例：肩こり 目の疲れ 疲れやすい 睡眠不足 頭痛 ストレス むくみ等</label>
+                        <label class="example col-md-12">例：肩こり、目の疲れ、疲れやすい、睡眠不足、頭痛、ストレス、むくみ等</label>
                     </div>
                 </div>
                 <!---注意事項　開始-->

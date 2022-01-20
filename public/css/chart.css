@@ -7,10 +7,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
-
+/*ご来店きっかけのタイトル*/
+.chart-ttl{
+  padding:30px 0;
+}
+/*項目への記入の注意*/
 .chart h2{
   font-size:24px;
-  padding:30px 0;
   font-weight: 550;
 }
 
@@ -51,4 +54,9 @@ body {
     padding:0 50px;
     
 }
+}
+/*バリデーション欄の設定*/
+.chart-validation{
+  color: red;
+  padding:0 0 40px 0;
 }
