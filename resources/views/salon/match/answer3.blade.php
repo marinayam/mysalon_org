@@ -18,6 +18,9 @@
                         <p class="card-text"><small class="text-muted">8,800円(税込)</small></p>
                     </div>
                 </div>
+                <div class="answer-option">
+                    <p>or</p>
+                </div>
                 <div class="card">
                     <img src="images/perm.png" class="card-img-top">
                     <div class="card-body">
@@ -27,6 +30,9 @@
                         おすすめ</p>
                         <p class="card-text"><small class="text-muted">13,200円(税込)</small></p>
                     </div>
+                </div>
+                <div class="answer-option">
+                    <p>or</p>
                 </div>
                 <div class="card">
                     <img src="images/perm.png" class="card-img-top">
