@@ -187,20 +187,13 @@
 </div>
 <!----Menu------------------------------------->
 <!----おすすめメニュー診断------------------------------------->
-<div class="container-fluid">
-    <div id="matching" class="matching-contents">
-        <div class="match-box">
-            <div class="match-top">
-            <h1>
-                あなたにぴったりのメニューを
-                <br>
-                CHECK
-            </h1>
-            <p class="match-logo">
-                <a href={{ route('match') }} class="btn-circle">START</a>
-            </p>
-            </div>        
-        </div>
+<div class="container match-in">
+    <div class="text-center w-md-50 mx-auto py-5">
+        <h1>メニューCHECK</h1>
+        <p class="lead font-weight-normal mb-5">
+            あなたにぴったりのメニューを診断する
+        </p>
+        <a class="btn btn--red btn--cubic btn--shadow" href={{ route('match') }}>START</a>
     </div>
 </div>
 <!----おすすめメニュー診断------------------------------------->

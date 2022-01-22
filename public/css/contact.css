@@ -6,7 +6,75 @@ body {
   color: black;
 }
 
+/*ページトップのタイトル　開始*/
 
+.contact-content {
+  text-align: center;
+  padding: 80px 0;
+  width: 100%;
+  margin: 0 0 80px 0;
+  max-width: 900px;
+  background-color: #f5faf9;
+  color: #977119;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-content {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin: 0 0 30px 0;
+    max-width: 900px;
+    background-color: #f5faf9;
+    color: #977119;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin: 0px;
+  font-size: 2em;
+}
+
+.contact-ttl {
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-family: "BebasNeue";
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-ttl {
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+.contact-subttl {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  font-weight: 500;
+  margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-subttl {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 0px;
+  }
+}
+
+/*ページタイトル　終了*/
 
 /*予約の場合　注意事項開始*/
 
