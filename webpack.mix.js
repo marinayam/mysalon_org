@@ -18,5 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/chart.scss', 'public/css')
     .sass('resources/sass/contact.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
-    .sass('resources/sass/perm.scss', 'public/css')
-    .sass('resources/sass/menu.scss', 'public/css');
+    .sass('resources/sass/menu.scss', 'public/css')
+    .sass('resources/sass/match.scss', 'public/css')
+    .sass('resources/sass/service.scss', 'public/css')
+    .sass('resources/sass/staff.scss', 'public/css');

@@ -4,9 +4,10 @@ body {
   color: #8e7757;
   background-color: #fff;
 }
+
 a {
-    color: inherit;
-    background-color: transparent;
+  color: inherit;
+  background-color: transparent;
 }
 
 .container {
@@ -26,12 +27,12 @@ a {
 
 /*ページトップの画像　開始*/
 
-.menu-page-head{
+.menu-page-head {
   opacity: 0.5;
   position: relative;
-  
 }
-.menu-page-head-img{
+
+.menu-page-head-img {
   opacity: 0.6;
   margin-bottom: 0;
 }
@@ -49,6 +50,7 @@ a {
   font-weight: 600;
   font-size: 3rem;
 }
+
 @media screen and (max-width: 768px) {
   .menu-page-head h2 {
     position: absolute;
@@ -72,15 +74,16 @@ a {
   letter-spacing: 0.125em;
   padding-top: 70px;
 }
+
 @media screen and (max-width: 768px) {
   .menu-page-head span {
-  display: block;
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-size: 50px;
-  font-weight: 500;
-  letter-spacing: 0.125em;
-  padding-top: 70px;
-}
+    display: block;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0.125em;
+    padding-top: 70px;
+  }
 }
 
 .menu-page-head h2 smal {
@@ -139,6 +142,7 @@ a {
 }
 
 /*メニューのタイトル部分　開始*/
+
 .inner.inner--sm.inner-padding--lg h3 {
   text-align: center;
   margin-top: 2em;
@@ -162,9 +166,11 @@ a {
     padding: 0 30px;
   }
 }
+
 /*メニューのタイトル部分　終了*/
 
 /*メニューのコメント部分　開始*/
+
 .recommend-ttl {
   font-size: 25px;
   margin-top: 3em;
@@ -172,6 +178,7 @@ a {
   font-weight: 500;
   text-align: center;
 }
+
 @media screen and (max-width: 640px) {
   .recommend-ttl {
     font-size: 18px;
@@ -180,7 +187,9 @@ a {
     text-align: center;
   }
 }
+
 /*メニューのコメント部分　終了*/
+
 .recommend-ttl-2 {
   font-size: 20px;
   margin-top: 1em;
@@ -281,6 +290,7 @@ a {
   font-weight: 200;
   color: #2b0000;
 }
+
 @media screen and (max-width: 768px) {
   .item-price {
     margin: 0;
@@ -325,7 +335,6 @@ i {
   text-align: left;
 }
 
-
 .recommend-point li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -336,7 +345,8 @@ i {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-size: 14px;
+  }
 }
-}
+
 /*おすすめポイント*/
 

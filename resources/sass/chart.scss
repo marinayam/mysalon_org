@@ -1,80 +1,62 @@
+@charset "UTF-8";
+
 body {
-    font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3","ヒラギノ角ゴ Pro W6", "Noto Sans JP", "メイリオ","Meiryo",Arial, sans-serif;
-    /* font-family: "Yu Mincho", "游明朝", "游明朝体", " Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", "MS Mincho", "ＭＳ 明朝", " MS PMincho", "ＭＳ Ｐ明朝", "Sawarabi Mincho"; */
-    /* font-family: 'Roboto', sans-serif; */
-    background-color: #fff;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
 }
-.sticky-top{
-    background-color:#fff;
+/*ご来店きっかけのタイトル*/
+.chart-ttl{
+  padding:30px 0;
 }
-
-/*フッター*/
-footer {
-    margin-bottom: 0;
-    background-color: #e1dad4;
-    color: #333;
-    padding: 50px 0;
+/*項目への記入の注意*/
+.chart h2{
+  font-size:24px;
+  font-weight: 550;
 }
 
-/*フッター余白*/
-.fixedcontainer {
-    max-width: 1280px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0px;
+
+.example {
+  font-size: 12px;
 }
-/*フッター*/
-.footer_in1 {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
+.chart-notice{
+  padding: 5px; 
+  border: solid 1px;
+  margin:30px 0;
 }
-/*フッターABOUT部分*/
-.footer-menu{
-    width: 30%;
-    padding: 0;
-    margin: 0;
+.form-check{
+  margin: 15px 0; 
 }
-/*フッターのタイトル設定*/
-.footer-title {
-    font-weight: normal;
-    letter-spacing: 2px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #333;
-    margin-bottom: 10px;
-    margin: 0px;
+.chart-notice h1{
+  font-size:24px;
+  text-align: center;
 }
-/*フッター項目*/
-.footer-list {
-    font-size: 14px;
-    line-height: 2;
-    list-style: none;
+/*カルテ送信完了ページ*/
+.chart-send{
+  text-align: center;
+  padding: 30px 0; 
 }
-a {
-    color: inherit;
-    background-color: transparent;
+.check-button{
+  padding: 30px 0; 
 }
-ul li {
-    list-style: none;
+.border-dark{
+  padding: 0.5em 1em;
 }
-/*お問い合わせフォーム*/
-.footer_contact_btn {
-    margin-top: 20px;
+@media screen and (max-width: 768px) {
+  .chart-answer{
+    margin-bottom: 2rem;
 }
-ul {
-    font-size: 14px;
-    line-height: 2;
 }
-/*フッター著作権*/
-.footer_in2 {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
+@media screen and (max-width: 768px) {
+  .chart-answer u{
+    padding:0 50px;
+    
 }
-.example{
-    font-size: 12px;
+}
+/*バリデーション欄の設定*/
+.chart-validation{
+  color: red;
+  padding:20px 0;
 }

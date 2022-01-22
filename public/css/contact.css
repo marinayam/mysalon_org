@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
   background-color: #fff;
 }
+
 /*ページトップのタイトル　開始*/
+
 .contact-content {
   text-align: center;
   padding: 80px 0;
@@ -14,6 +16,7 @@ body {
   background-color: #f5faf9;
   color: #977119;
 }
+
 @media screen and (max-width: 768px) {
   .contact-content {
     text-align: center;
@@ -23,9 +26,8 @@ body {
     max-width: 900px;
     background-color: #f5faf9;
     color: #977119;
+  }
 }
-}
-
 
 h1 {
   margin-bottom: 20px;
@@ -41,17 +43,17 @@ h1 {
   line-height: 1;
   text-align: center;
 }
+
 @media screen and (max-width: 768px) {
   .contact-ttl {
-  font-size: 22px;
-  letter-spacing: 4px;
-  font-family: "BebasNeue";
-  font-weight: normal;
-  line-height: 1;
-  text-align: center;
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+  }
 }
-}
-
 
 .contact-subttl {
   font-size: 20px;
@@ -60,32 +62,40 @@ h1 {
   font-weight: 500;
   margin: 0px;
 }
+
 @media screen and (max-width: 768px) {
   .contact-subttl {
-  font-size: 18px;
-  letter-spacing: 2px;
-  line-height: 1.8;
-  font-weight: 500;
-  margin: 0px;
-}
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 0px;
+  }
 }
 
 /*ページタイトル　終了*/
+
 /*予約の場合　注意事項開始*/
-.contact-caution p{
-  padding:5px 0 20px 0;
+
+.contact-caution p {
+  padding: 5px 0 20px 0;
 }
+
 /*予約の場合　注意事項　終了*/
-.check-button{
-  padding:20px;
+
+.check-button {
+  padding: 20px;
 }
-.contact-validation{
+
+.contact-validation {
   color: red;
-  padding:0 0 40px 0;
+  padding: 0 0 40px 0;
 }
+
 /*確認画面*/
-.contact-question{
-  font-size:18px;
+
+.contact-question {
+  font-size: 18px;
   font-weight: 550;
 }
 

@@ -29,7 +29,7 @@
                             <tr>
                                 <th width="1%">ID</th>
                                 <th width="2%">名前（漢字）</th>
-                                <th width="3%">名前（ふりがな）</th>
+                                <th width="3%">名前</th>
                                 <th width="4%">電話番号</th>
                                 <th width="5%">メールアドレス</th>
                                 <th width="5%">生年月日</th>
@@ -37,8 +37,8 @@
                                 <th width="5%">都道府県</th>
                                 <th width="5%">市区町村・番地</th>
                                 <th width="5%">建物名</th>
-                                <th width="5%">過去に化粧品が合わなかった等、施術トラブル</th>
-                                <th width="5%">お目元・眉周りのお悩み</th>
+                                <th width="5%">施術トラブル経験</th>
+                                <th width="5%">お目元周りのお悩み</th>
                                 <th width="5%">アレルギー</th>
                                 <th width="5%">過去の施術経験</th>
                                 <th width="5%">気になる身体の疲れ</th>
