@@ -3,6 +3,7 @@
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
   background-color: #fff;
+  color:black;
 }
 /*ページトップのタイトル　開始*/
 .contact-content {
@@ -87,4 +88,17 @@ h1 {
 .contact-question{
   font-size:18px;
   font-weight: 550;
+}
+.form-select{
+  display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 2px);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

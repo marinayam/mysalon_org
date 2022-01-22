@@ -22,7 +22,7 @@
                 @csrf
                 <div class="form-group row">
                     <label for="Name" class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         名前
                     </label>
                     <div class="col-md-10">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         メールアドレス
                     </label>
                     <div class="col-md-10">
@@ -49,15 +49,15 @@
                 </div>
                 <div class="form-group row">
                     <label for="contact_body" class="col-md-5">
-                        <span class="badge bg-danger">必須</span>
+                        <span class="badge badge-danger">必須</span>
                         お問い合わせ内容
                     </label>
                     <div class="col-md-10">
-                        <select class="form-select" aria-label="Default select example" value="{{ old('select') }}" name"select">
-                            <option selected>選択してください</option>
-                            <option value="1">予約について</option>
-                            <option value="2">サロンについて</option>
-                            <option value="3">その他</option>
+                        <select class="form-select" aria-label="Default select example" name="select">
+                            <option>選択してください</option>
+                            <option value="1" {{ old('select')==1 ? 'selected' : '' }}>予約について</option>
+                            <option value="2" {{ old('select')==2 ? 'selected' : '' }}>サロンについて</option>
+                            <option value="3" {{ old('select')==3 ? 'selected' : '' }}>その他</option>
                         </select>
                         <div class="contact-caution">
                             <p>※ご予約の際は、第3希望までご連絡頂けますとスムーズです。</p>
@@ -72,6 +72,7 @@
         </div>
     </div>
 </div>
+{{--
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -96,4 +97,5 @@
       }, false);
     })();
 </script>
+--}}
 @endsection

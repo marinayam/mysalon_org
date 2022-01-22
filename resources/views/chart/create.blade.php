@@ -1,4 +1,3 @@
-
 @extends('layouts.chart')
 @section('title','カルテ記入')
 @section('content')
@@ -6,10 +5,12 @@
 <div class ="container">
     <div class="row">
         <div class ="col-md-8 mx-auto chart">
-            <div class="chart-ttl">
-                <h2>カルテ記入</h2>
-                <p>※質問項目で該当がない場合は、「なし」と記入お願い致します。</p>
-            </div>
+            <div class="chart-content">
+                <h1 class>
+                    <span class="chart-ttl">カルテ記入</span>
+                </h1>
+            </div>            
+            <p>※質問項目で該当がない場合は、「なし」と記入お願い致します。</p>
             <form method="POST" action="{{ route('chart.confirm') }}">
                 @if (count($errors) > 0)
                     <ul class="chart-validation">

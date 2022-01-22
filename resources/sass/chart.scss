@@ -7,6 +7,82 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+/*ページトップのタイトル　開始*/
+
+.chart-content {
+  text-align: center;
+  padding: 80px 0;
+  width: 100%;
+  margin: 0 0 80px 0;
+  max-width: 900px;
+  background-color: #f5faf9;
+  color: #977119;
+}
+
+@media screen and (max-width: 768px) {
+  .chart-content {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin: 0 0 30px 0;
+    max-width: 900px;
+    background-color: #f5faf9;
+    color: #977119;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin: 0px;
+  font-size: 2em;
+}
+
+.chart-ttl {
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-family: "BebasNeue";
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .chart-ttl {
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+.chart-subttl {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  font-weight: 500;
+  margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .chart-subttl {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 0px;
+  }
+}
+
+/*ページタイトル　終了*/
+
+/*確認画面での質問の文字*/
+.chart-question{
+  font-weight:600;
+}
+/*確認画面での質問の文字*/
+
 /*ご来店きっかけのタイトル*/
 .chart-ttl{
   padding:30px 0;

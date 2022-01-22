@@ -15,29 +15,36 @@
                     @csrf
                     <div class="form-group row chart-answer">
                         <label for="Name" class="col-md-5 contact-question">名前</label>
-                        <u class="col-md-5">{{ $inputs['name'] }}</u>
+                        <p class="col-md-5">{{ $inputs['name'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['name'] }}" type="hidden" name="name" >
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
                         <label for="email" class="col-md-5 contact-question">メールアドレス</label>
-                        <u class="col-md-5">{{ $inputs['email'] }}</u>
+                        <p class="col-md-5">{{ $inputs['email'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['email'] }}" type="hidden" name="email">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
                         <label for="tel" class="col-md-5 contact-question">電話番号</label>
-                        <u class="col-md-5">{{ $inputs['tel'] }}</u>
+                        <p class="col-md-5">{{ $inputs['tel'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['tel'] }}" type="hidden" name="tel">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
-                        <label for="contact_body" class="col-md-5 contact-question">お問い合わせ内容</label>
-                        {{-- <u>{!! nl2br(e($inputs['select'])) !!}</u> --}}
-                        <u class="col-md-5">{!! nl2br(e($inputs['contact_body'])) !!}</u>
+                        <label for="contact_body" class="col-md-12 contact-question">お問い合わせ内容</label>
+                        @if($inputs['select']==1)
+                        <p class="col-md-5">件名：予約について</p>
+                        @elseif($inputs['select']==2)
+                        <p class="col-md-5">件名：サロンについて</p>
+                        @elseif($inputs['select']==3)
+                        <p class="col-md-5">件名：その他</p>
+                        @endif
+                        <input name="select" value="{{ $inputs['select'] }}" type="hidden">
+                        <p class="col-md-12">{!! nl2br(e($inputs['contact_body'])) !!}</p>
                         <div class="col-md-10">
                             <input name="contact_body" value="{{ $inputs['contact_body'] }}" type="hidden">
                         </div>

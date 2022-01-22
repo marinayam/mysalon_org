@@ -3,77 +3,10 @@
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
   background-color: #fff;
+  color: black;
 }
 
-/*ページトップのタイトル　開始*/
 
-.contact-content {
-  text-align: center;
-  padding: 80px 0;
-  width: 100%;
-  margin: 0 0 80px 0;
-  max-width: 900px;
-  background-color: #f5faf9;
-  color: #977119;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-content {
-    text-align: center;
-    padding: 30px 0;
-    width: 100%;
-    margin: 0 0 30px 0;
-    max-width: 900px;
-    background-color: #f5faf9;
-    color: #977119;
-  }
-}
-
-h1 {
-  margin-bottom: 20px;
-  margin: 0px;
-  font-size: 2em;
-}
-
-.contact-ttl {
-  font-size: 30px;
-  letter-spacing: 4px;
-  font-family: "BebasNeue";
-  font-weight: normal;
-  line-height: 1;
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-ttl {
-    font-size: 22px;
-    letter-spacing: 4px;
-    font-family: "BebasNeue";
-    font-weight: normal;
-    line-height: 1;
-    text-align: center;
-  }
-}
-
-.contact-subttl {
-  font-size: 20px;
-  letter-spacing: 2px;
-  line-height: 1.8;
-  font-weight: 500;
-  margin: 0px;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-subttl {
-    font-size: 18px;
-    letter-spacing: 2px;
-    line-height: 1.8;
-    font-weight: 500;
-    margin: 0px;
-  }
-}
-
-/*ページタイトル　終了*/
 
 /*予約の場合　注意事項開始*/
 
@@ -97,5 +30,19 @@ h1 {
 .contact-question {
   font-size: 18px;
   font-weight: 550;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 

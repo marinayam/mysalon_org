@@ -8,8 +8,13 @@
         <!--認証済みのユーザーがリクエストを送信しているのかを確認-->
         <meta name = "csrf-token" content="{{ csrf_token() }}">
         
-        <!--各ページごとにtitleタグを入れる-->
+        {{--各ページごとにtitleタグを入れる--}}
         <title>@yield('title')</title>
+        
+        {{--お問い合わせフォームの設定--}}
+        
+        
+        {{--お問い合わせフォームの設定--}}
         
         <!--Javascriptを読み込みます-->
         <script src ="{{ secure_asset('js/app.js') }}" defer></script>
