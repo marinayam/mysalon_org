@@ -165,6 +165,7 @@ return [
         'name' => '「名前」',
         'body' => '「自己紹介」',
         'image_path' => '「画像」',
+        'contact_body' => '「お問い合わせ内容」',
         ],
 
 ];

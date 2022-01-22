@@ -19,7 +19,7 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'body'  => 'required',
+            'contact_body'  => 'required',
         ]);
         
         //フォームから受け取ったすべてのinputの値を取得
@@ -37,7 +37,7 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'body'  => 'required'
+            'contact_body'  => 'required'
         ]);
 
         //フォームから受け取ったactionの値を取得

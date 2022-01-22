@@ -14,7 +14,7 @@ class ContactSendmail extends Mailable
     private $name;
     private $email;
     private $tel;
-    private $body;
+    private $contact_body;
 
     /**
      * Create a new message instance.
@@ -26,7 +26,7 @@ class ContactSendmail extends Mailable
         $this->name = $inputs['name'];
         $this->email = $inputs['email'];
         $this->tel = $inputs['tel'];
-        $this->body  = $inputs['body'];
+        $this->contact_body  = $inputs['contact_body'];
     }
 
     /**
@@ -46,7 +46,7 @@ class ContactSendmail extends Mailable
                 'name' => $this->name,
                 'email' => $this->email,
                 'tel' => $this->tel,
-                'body'  => $this->body,
+                'contact_body'  => $this->contact_body,
             ]);
     }
 }

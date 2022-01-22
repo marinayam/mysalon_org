@@ -28,6 +28,7 @@
         <link href="{{ asset('css/match.css') }}" rel="stylesheet">
         <link href="{{ asset('css/service.css') }}" rel="stylesheet">
         <link href="{{ asset('css/staff.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="app">
@@ -35,7 +36,7 @@
                 <!-- ナビゲーション開始 -->
                 <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
                     <!-- ヘッダーのロゴ -->
-                    <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="images/logo.png" width="180px"></a>
+                    <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="{{asset('images/logo.png')}}" width="180px"></a>
                     <!-- メニューバーアイコン -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -138,7 +139,7 @@
                                 <ul>
                                     <li>
                                         <a href="https://www.instagram.com/lys.kichijoji/?r=nametag" target="_brank">
-                                        <img src="images/instagram.png" width="24px">
+                                        <img src="{{asset('images/instagram.png')}}" width="24px">
                                         Instagram
                                         </a>
                                     </li>

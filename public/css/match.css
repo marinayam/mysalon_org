@@ -72,7 +72,28 @@
     flex-direction:row-reverse;
 }
 }
+/*orの位置*/
 .card{
   padding: 10px 10px;
   margin: 10px 10px;
+}
+/*メニューのタイトル　開始*/
+.answer-ttl{
+  font-weight: 600;
+}
+/*メニューのタイトル　終了*/
+/*メニューの値段　開始*/
+.answer-price{
+  text-align: right;
+}
+/*メニューの値段　終了*/
+/*予約ボタン　開始*/
+.match-appoint-btn{
+  padding:20px;
+  text-align: center;
+}
+/*予約ボタン　終了*/
+/*戻るボタン　開始*/
+.match-return-btn{
+  text-align: left;
 }

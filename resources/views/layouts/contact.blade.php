@@ -44,10 +44,10 @@
                         <!-- 左に表示させるメニュー -->
                         <ul class="navbar-nav mr-auto">　
                             <li class="nav-item">
-                                <a class="nav-link-appoint" href="#">ご予約</a>
+                                <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link-karte" href={{ route('chart/create') }}>カルテ記入</a>
+                                <a class="nav-link-karte" href={{ route('chart.create') }}>カルテ記入</a>
                             </li>
                         </ul>
                         
@@ -60,22 +60,21 @@
                                 <!-- ドロップメニュー -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
-                                    <a class="dropdown-item" href="#">マツエク</a>
-                                    <a class="dropdown-item" href="#">眉毛</a>
+                                    <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
+                                    <a class="dropdown-item" href={{ route('eyebrow') }}>眉毛</a>
                                 </div>
                             <!-- ナビゲーション -->
+                            <li class="nav-item">
+                              <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">About Us</a>
+                              <a class="nav-link" href="https://www.instagram.com/lys.kichijoji/?r=nametag">Instagram</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Instagram</a>
+                              <a class="nav-link" href="https://beauty.hotpepper.jp/kr/slnH000540479/blog/">Blog</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Staff</a>
+                              <a class="nav-link" href={{ route('staff') }}>Staff</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
