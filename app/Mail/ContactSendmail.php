@@ -37,9 +37,8 @@ class ContactSendmail extends Mailable
     public function build()
     {
         return $this
-            ->from('marina5197216@gmail.com')
-            // ->bcc('smclyolo@gmail.com')
-            ->bcc('marina5197216@gmail.com')
+            ->from(config('mail.from.address'),'Lys.')
+            ->bcc(config('mail.from.address'))
             ->subject('【リース 吉祥寺】お問い合わせありがとうございます')
             ->view('contact.mail')
             ->with([
