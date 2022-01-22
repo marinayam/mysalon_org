@@ -9,7 +9,7 @@
         <!-- 答え1 -->
         <div class="card-group">
                 <div class="card">
-                    <img src="images/perm.png" class="card-img-top">
+                    <img src="images/match-flat.png" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title answer-ttl">フラットラッシュ140本</h5>
                         <p class="card-text">まつ毛1本1本の存在感で
@@ -22,7 +22,7 @@
                     <p>or</p>
                 </div>
                 <div class="card">
-                    <img src="images/perm.png" class="card-img-top">
+                    <img src="images/match-bind.png" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title answer-ttl">バインドロック120本</h5>
                         <p class="card-text">アイライン効果が欲しい方に

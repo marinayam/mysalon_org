@@ -9,7 +9,7 @@
         <!-- 答え1 -->
         <div class="card-group">
                 <div class="card">
-                    <img src="images/perm.png" class="card-img-top">
+                    <img src="images/match-color.png" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title answer-ttl">フラットラッシュ・カラー140本</h5>
                         <p class="card-text">よりナチュラルで
@@ -22,7 +22,7 @@
                     <p>or</p>
                 </div>
                 <div class="card">
-                    <img src="images/perm.png" class="card-img-top">
+                    <img src="images/match-flat.png" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title answer-ttl">フラットラッシュ140本</h5>
                         <p class="card-text">自然に生える目元へ</p>
