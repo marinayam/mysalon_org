@@ -107,8 +107,7 @@
                         <span class="badge badge-danger">必須</span>
                         ご来店きっかけ</label>
                     @foreach($triggers as $trigger)
-                    <label class="col-md-6 form-check-label" >
-                        {{-- <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger') ? 'checked' : ''}}> --}}
+                    <label class="col-md-6 form-check-label">
                         <input class="form-check-input" type="checkbox" name="trigger[{{ $trigger->id}}]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger.'.$trigger->id) ? 'checked' : ''}}>
                         {{$trigger->trigger}}
                     </label>

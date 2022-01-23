@@ -104,7 +104,8 @@ Auth::routes([
 ]);
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     // カルテ顧客情報
-    Route::get('salon/index', 'Admin\SalonController@index')->name('salon.index');;
+    Route::get('salon/index', 'Admin\SalonController@index')->name('salon.index');
+    Route::get('salon/detail', 'Admin\SalonController@detail');
     Route::get('salon/edit', 'Admin\SalonController@edit');
     Route::post('salon/edit', 'Admin\SalonController@update');
     // カルテのご来店きっかけ編集

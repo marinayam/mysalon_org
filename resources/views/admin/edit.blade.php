@@ -99,12 +99,14 @@
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="trigger">来店きっかけ</label>
-                        @foreach($triggers as $trigger)
-                    <label class="col-md-6 form-check-label" >
-                        <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ in_array($trigger->id,$selected_triggers)? 'checked' : ''}}>
-                        {{$trigger->trigger}}
-                    </label>
-                   @endforeach
+                        <div class="col-md-10">
+                            @foreach($triggers as $trigger)
+                            <label class="col-md-12 form-check-label">
+                                <input class="form-check-input" type="checkbox" name="trigger[]" value="{{ $trigger->id}}"  {{ in_array($trigger->id,$selected_triggers)? 'checked' : ''}}>
+                                {{$trigger->trigger}}
+                            </label>
+                            @endforeach                            
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="comment">コメント</label>

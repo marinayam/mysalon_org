@@ -28,23 +28,12 @@
                         <thead>
                             <tr>
                                 <th width="1%">ID</th>
-                                <th width="2%">名前（漢字）</th>
-                                <th width="3%">名前</th>
-                                <th width="4%">電話番号</th>
-                                <th width="5%">メールアドレス</th>
-                                <th width="5%">生年月日</th>
-                                <th width="5%">郵便番号</th>
-                                <th width="5%">都道府県</th>
-                                <th width="5%">市区町村・番地</th>
-                                <th width="5%">建物名</th>
-                                <th width="5%">施術トラブル経験</th>
-                                <th width="5%">お目元周りのお悩み</th>
-                                <th width="5%">アレルギー</th>
-                                <th width="5%">過去の施術経験</th>
-                                <th width="5%">気になる身体の疲れ</th>
-                                <th width="5%">来店きっかけ</th>
-                                <th width="30%">コメント</th>
-                                
+                                <th width="10%">名前</th>
+                                <th width="12%">なまえ</th>
+                                <th width="10%">tel</th>
+                                <th width="10%">email</th>
+                                <th width="10%">きっかけ</th>
+                                <th width="50%">コメント</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,16 +44,6 @@
                                     <td>{{ \Str::limit($chart->name02, 100) }}</td>
                                     <td>{{ \Str::limit($chart->tel, 100) }}</td>
                                     <td>{{ \Str::limit($chart->email, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->birthday, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->zip, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->pref, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->addr01, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->addr02, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->trouble, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->concern, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->allergy, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->record, 100) }}</td>
-                                    <td>{{ \Str::limit($chart->body_concern, 100) }}</td>
                                     <td>
                                       @foreach($chart->triggers as $trigger)
                                         <div>{{$trigger->trigger}}</div>
@@ -73,7 +52,11 @@
                                     <td>{{ \Str::limit($chart->comment, 500) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\SalonController@edit', ['id' => $chart->id]) }}">編集</a>
+                                            <a class="btn btn-primary" href="{{ action('Admin\SalonController@edit', ['id' => $chart->id]) }}">編集</a>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <a class="btn btn-secondary" href="{{ action('Admin\SalonController@detail', ['id' => $chart->id]) }}">詳細</a>
                                         </div>
                                     </td>
                                 </tr>

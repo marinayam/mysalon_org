@@ -10,7 +10,7 @@ use App\ChartTrigger;
 
 class SalonController extends Controller
 {
-    //クライエント情報の一覧を表示させる
+    //クライアント情報の一覧を表示させる
     public function index(Request $request)
     {
         $cond_name = $request->cond_name;
@@ -19,10 +19,21 @@ class SalonController extends Controller
           $posts = Chart::where('name02', $cond_name)->get();
           
       } else {
-          // それ以外はすべてのニュースを取得する
+          // それ以外はすべてを取得する
           $posts = Chart::all();
       }
       return view('admin.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+    }
+    
+    //クライエント情報の詳細を表示させる
+    public function detail(Request $request)
+    {
+        // Chart Modelからデータを取得する
+        $chart= Chart::find($request->id);
+        if (empty($chart)) {
+            abort(404);    
+        }
+        return view('admin.detail', ['chart_form' => $chart]);
     }
     //クライエント情報の編集画面
     public function edit(Request $request)
@@ -40,9 +51,7 @@ class SalonController extends Controller
     //編集画面から送信されたフォームデータを処理
     public function update(Request $request)
         {
-            // // Validationをかける
-            // $this->validate($request, Chart::$rules);
-            // News Modelからデータを取得する
+            //  Modelからデータを取得する
             $chart = Chart::find($request->id);
             // 送信されてきたフォームデータを格納する
             $chart_form = $request->all();
