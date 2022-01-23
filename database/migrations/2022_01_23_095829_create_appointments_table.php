@@ -13,7 +13,7 @@ class CreateAppointmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('charts', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name01');//名前（漢字）を保存するカラム
             $table->string('name02');//名前（ふりがな）を保存するカラム

@@ -10,7 +10,7 @@
                 </h1>
                 <p class="content-theme-ttl">ご予約</p>
             </div>
-            {{--<form method="POST" action="{{ route('appointment.confirm') }}">--}}
+            <form method="POST" action="{{ route('appointment.confirm')}}">
                  @if (count($errors) > 0)
                     <ul class="contact-validation">
                         @foreach($errors->all() as $e)
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    {{--<button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>--}}
+                    <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>
             </form>   
         </div>
