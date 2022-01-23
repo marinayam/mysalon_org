@@ -5,10 +5,8 @@
 <div class ="container">
     <div class="row">
         <div class ="col-md-8 mx-auto chart">
-            <div class="chart-content">
-                <h1 class>
-                    <span class="chart-ttl">カルテ記入</span>
-                </h1>
+            <div class="content-theme">
+                <span class="content-theme-ttl">カルテ記入</span>
             </div>            
             <p>※質問項目で該当がない場合は、「なし」と記入お願い致します。</p>
             <form method="POST" action="{{ route('chart.confirm') }}">

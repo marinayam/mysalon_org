@@ -50,7 +50,7 @@
                         <!-- 左に表示させるメニュー -->
                         <ul class="navbar-nav mr-auto">　
                             <li class="nav-item">
-                                <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
+                                <a class="nav-link-appoint" href={{ route('appointment.create') }}>ご予約</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link-karte" href={{ route('chart.create') }}>カルテ記入</a>
@@ -83,7 +83,7 @@
                               <a class="nav-link" href={{ route('staff') }}>Staff</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
+                              <a class="nav-link" href={{ route('contact.create') }}>Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -151,8 +151,9 @@
                                     <li>
                                         <a href="https://beauty.hotpepper.jp/kr/slnH000540479/blog/">ブログへ</a>
                                     </li>
-                                    <button type="button" class="btn btn-outline-dark">お問い合わせはこちら
-                                    </button>
+                                    <a class="nav-link" href={{ route('contact.create') }}>
+                                        <button type="button" class="btn btn-outline-dark">お問い合わせはこちら</button>
+                                    </a>
                                 </ul>
                             </div>
                         </div>

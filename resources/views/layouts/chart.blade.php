@@ -75,7 +75,7 @@
                               <a class="nav-link" href={{ route('staff') }}>Staff</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href={{ route('contact.index') }}>Contact</a>
+                              <a class="nav-link" href={{ route('contact.create') }}>Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -143,8 +143,9 @@
                                     <li>
                                         <a href="https://beauty.hotpepper.jp/kr/slnH000540479/blog/">ブログへ</a>
                                     </li>
-                                    <button type="button" class="btn btn-outline-dark">お問い合わせはこちら
-                                    </button>
+                                    <a class="nav-link" href={{ route('contact.create') }}>
+                                        <button type="button" class="btn btn-outline-dark">お問い合わせはこちら</button>
+                                    </a>
                                 </ul>
                             </div>
                         </div>

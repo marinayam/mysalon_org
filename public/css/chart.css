@@ -10,7 +10,7 @@ body {
 
 /*ページトップのタイトル　開始*/
 
-.chart-content {
+.content-theme {
   text-align: center;
   padding: 80px 0;
   width: 100%;
@@ -21,7 +21,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .chart-content {
+  .content-theme {
     text-align: center;
     padding: 30px 0;
     width: 100%;
@@ -38,7 +38,7 @@ h1 {
   font-size: 2em;
 }
 
-.chart-ttl {
+.content-theme-ttl {
   font-size: 30px;
   letter-spacing: 4px;
   font-family: "BebasNeue";
@@ -48,7 +48,7 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-  .chart-ttl {
+  .content-theme-ttl {
     font-size: 22px;
     letter-spacing: 4px;
     font-family: "BebasNeue";
@@ -88,7 +88,7 @@ h1 {
 
 /*ご来店きっかけのタイトル*/
 
-.chart-ttl {
+.content-theme-ttl {
   padding: 30px 0;
 }
 

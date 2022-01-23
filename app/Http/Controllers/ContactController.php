@@ -7,10 +7,10 @@ use App\Mail\ContactSendmail;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function create()
     {
         //フォーム入力画ページのviewを表示
-        return view('contact.index');
+        return view('contact.create');
     }
 
     public function confirm(Request $request)
@@ -49,7 +49,7 @@ class ContactController extends Controller
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
-                ->route('contact.index')
+                ->route('contact.create')
                 ->withInput($inputs);
 
         } else {

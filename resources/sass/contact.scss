@@ -6,7 +6,7 @@ body {
   color:black;
 }
 /*ページトップのタイトル　開始*/
-.contact-content {
+.content-theme {
   text-align: center;
   padding: 80px 0;
   width: 100%;
@@ -16,7 +16,7 @@ body {
   color: #977119;
 }
 @media screen and (max-width: 768px) {
-  .contact-content {
+  .content-theme {
     text-align: center;
     padding: 30px 0;
     width: 100%;
@@ -27,34 +27,12 @@ body {
 }
 }
 
-
 h1 {
   margin-bottom: 20px;
   margin: 0px;
   font-size: 2em;
 }
-
-.contact-ttl {
-  font-size: 30px;
-  letter-spacing: 4px;
-  font-family: "BebasNeue";
-  font-weight: normal;
-  line-height: 1;
-  text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .contact-ttl {
-  font-size: 22px;
-  letter-spacing: 4px;
-  font-family: "BebasNeue";
-  font-weight: normal;
-  line-height: 1;
-  text-align: center;
-}
-}
-
-
-.contact-subttl {
+.content-theme-subttl {
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 1.8;
@@ -62,7 +40,7 @@ h1 {
   margin: 0px;
 }
 @media screen and (max-width: 768px) {
-  .contact-subttl {
+  .content-theme-subttl {
   font-size: 18px;
   letter-spacing: 2px;
   line-height: 1.8;

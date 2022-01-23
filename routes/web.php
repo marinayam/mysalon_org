@@ -79,7 +79,7 @@ Route::get('/staff', 'SalonController@index')->name('staff');
 
 // お問い合わせフォーム
 //入力ページ
-Route::get('/contact', 'ContactController@index')->name('contact.index');
+Route::get('/contact', 'ContactController@create')->name('contact.create');
 //確認ページ
 Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
 //送信完了ページ
@@ -94,8 +94,15 @@ Route::post('chart/create', 'ChartController@create')->name('chart.create');
 Route::post('chart/confirm', 'ChartController@confirm')->name('chart.confirm');
 //送信完了ページ
 Route::post('chart/send', 'ChartController@send')->name('chart.send');
-// Route::get('chart/send', 'ChartController@index');
 // カルテ画面
+
+// 予約画面
+//入力ページ
+Route::get('appointment/create', 'AppointmentController@add')->name('appointment.create');
+Route::post('appointment/create', 'AppointmentController@create')->name('appointment.create');
+//確認ページ
+Route::post('appointment/confirm', 'AppointmentController@confirm')->name('appointment.confirm');
+// 予約画面
 
 // // 管理者画面
 Auth::routes([
