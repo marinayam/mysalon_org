@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Appointment;
+use App\Menu;
+use App\Option;
+
 
 class AppointmentController extends Controller
 {
     public function add()
     {
-        //フォーム入力画ページのviewを表示
-        return view('appointment.create');
+        $appointments=Appointment::all();
+        $menus=Menu::all();
+        $options=Option::all();
+        return view ('appointment.create', ['appointments'=>$appointments,'menus'=>$menus,'options'=>$options]);
     }
-    
-    //  public function add()
-    // {
-    //     $charts=Chart::all();
-    //     $triggers=Trigger::all();
-    //     return view ('appointment.create', ['charts'=>$charts,'triggers'=>$triggers]);
-    // }
     
     public function confirm(Request $request)
     {
@@ -28,26 +27,20 @@ class AppointmentController extends Controller
             'name02' => 'required',
             'tel' => 'required',
             'email' => 'required',
-            'birthday' => 'required',
-            'zip' => 'required',
-            'pref' => 'required',
-            'addr01' => 'required',
-            'trigger' => 'required',
-            'trouble' => 'required',
-            'concern' => 'required',
-            'allergy' => 'required',
-            'record' => 'required',
-            'body_concern' => 'required',
+            'date' => 'required',
+            'time' => 'required',
             ]);
         
         //フォームから受け取ったすべてのinputの値を取得
         $inputs = $request->all();
-        // $triggers = Trigger::whereIn('id', $inputs['trigger'])->get();
+        // $menus = Menu::whereIn('id', $inputs['menu'])->get();
+        // $options = Option::whereIn('id', $inputs['option'])->get();
 
         //入力内容確認ページのviewに変数を渡して表示
         return view('appointment.confirm', [
             'inputs' => $inputs,
-            // 'triggers' => $triggers,
+            // 'menus' => $menus,
+            // 'options' => $options,
         ]);
     }
 }

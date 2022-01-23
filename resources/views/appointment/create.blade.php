@@ -62,24 +62,28 @@
                     <label class="col-md-6">
                         <span class="badge badge-danger">必須</span>
                         メニュー</label>
-                    @foreach($triggers as $trigger)
+                    @foreach($options as $option)
                     <label class="col-md-6 form-check-label">
-                        <input class="form-check-input" type="checkbox" name="trigger[{{ $trigger->id}}]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger.'.$trigger->id) ? 'checked' : ''}}>
-                        {{$trigger->trigger}}
-                    </label>
-                   @endforeach
-                </div>
-                <div class="form-group check">
-                    <label class="col-md-6">
-                        <span class="badge badge-danger">必須</span>
-                        オプション</label>
-                    @foreach($triggers as $trigger)
-                    <label class="col-md-6 form-check-label">
-                        <input class="form-check-input" type="checkbox" name="trigger[{{ $trigger->id}}]" value="{{ $trigger->id}}"  {{ $trigger->id===(int)old('trigger.'.$trigger->id) ? 'checked' : ''}}>
-                        {{$trigger->trigger}}
+                        <input class="form-check-input" type="checkbox" name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'checked' : ''}}>
+                        {{$option->option}}
                     </label>
                    @endforeach
                 </div>--}}
+                <div class="form-group row">
+                    <label class="col-md-5">
+                        <span class="badge badge-danger">必須</span>
+                        オプション</label>
+                        <div class="col-md-10">
+                    @foreach($options as $option)
+                    {{$option->option}}
+                    <label class="col-md-10 form-check-label">
+                        <select class="form-select"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
+                            <option></option>
+                        </selected>
+                        
+                    </label>
+                   @endforeach
+                </div>
                 <div class="form-group row">
                     <label class="col-md-5">
                         <span class="badge badge-danger">必須</span>
