@@ -58,32 +58,60 @@
                         <label class="example col-md-5">例:090-0000-0000</label>
                     </div>
                 </div>
-                {{--<div class="form-group check">
-                    <label class="col-md-6">
-                        <span class="badge badge-danger">必須</span>
-                        メニュー</label>
-                    @foreach($options as $option)
-                    <label class="col-md-6 form-check-label">
-                        <input class="form-check-input" type="checkbox" name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'checked' : ''}}>
-                        {{$option->option}}
-                    </label>
-                   @endforeach
-                </div>--}}
+                {{-- メニュー選択--}}
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div id="accordion" class="accordion-container">
+                            <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($perms as $perm)
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}"  {{ $perm->id===(int)old('perm.'.$perm->id) ? 'checked' : ''}}>
+                                        {{$perm->perm}}
+                                    </label>
+                                   @endforeach
+                                </div>
+                            </div>
+                            <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($extensions as $extension)
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="extension[{{ $extension->id}}]" value="{{ $extension->id}}"  {{ $extension->id===(int)old('extension.'.$extension->id) ? 'checked' : ''}}>
+                                        {{$extension->extension}}
+                                    </label>
+                                   @endforeach
+                                </div>
+                            </div>
+                            <h4 class="accordion-title js-accordion-title">眉スタイリング</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($eyebrows as $eyebrow)
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="eyebrow[{{ $eyebrow->id}}]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id===(int)old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
+                                        {{$eyebrow->eyebrow}}
+                                    </label>
+                                   @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
                 <div class="form-group row">
                     <label class="col-md-5">
-                        <span class="badge badge-danger">必須</span>
                         オプション</label>
-                        <div class="col-md-10">
                     @foreach($options as $option)
-                    {{$option->option}}
                     <label class="col-md-10 form-check-label">
-                        <select class="form-select"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
-                            <option></option>
-                        </selected>
-                        
+                        <input class="form-check-input" type="checkbox"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
+                        {{$option->option}}
                     </label>
-                   @endforeach
+                    @endforeach
                 </div>
+                {{-- メニュー選択--}}
                 <div class="form-group row">
                     <label class="col-md-5">
                         <span class="badge badge-danger">必須</span>
@@ -134,11 +162,36 @@
                     </label>
                     <div class="col-md-10">
                         <div class="contact-caution">
-                            <p>※ご質問等がございましたらご記入お願い致します</p>
+                            <p>※ご質問等がございましたらご記入ください。</p>
                         </div>
                         <textarea class="form-control" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
                     </div>
                 </div>
+                <!---注意事項　開始-->
+                <div class="appointment-notice">
+                    <h1>注意事項</h1>
+                    <ul>
+                        <li>
+                            ・はじめての方は、ご予約時間の10分前にご来店下さい。<br>
+                            初回ご来店の際、施術前にカウンセリングを行っておりますので、<br>
+                            施術時間の他に約10分お時間を頂きますので余裕を持ってご来店ください。<br>
+                            <br>
+                        </li>
+                        <li>
+                            ・ご予約変更について<br>
+                            日時変更は予約日前日までにご連絡をお願い致します。<br>
+                            直前のキャンセル、もしくはキャンセルを頂けなかった場合については、<br>
+                            キャンセル料を頂戴致しますので、あらかじめご了承ください。<br>
+                        </li>
+                    </ul>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            同意します
+                         </label>
+                    </div>
+                </div>
+                <!---注意事項　終了-->
                 <div class="text-right">
                     <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>

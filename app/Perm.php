@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Option extends Model
+class Perm extends Model
 {
     protected $guarded = array ('id');
     
     // public static $rules = array(
-    //     'option' => 'required',
+    //     'perm' => 'required',
     // );
     
     

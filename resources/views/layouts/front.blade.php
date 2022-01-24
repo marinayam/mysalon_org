@@ -18,6 +18,7 @@
         
         <!--Javascriptを読み込みます-->
         <script src ="{{ secure_asset('js/app.js') }}" defer></script>
+        <script src ="{{asset('js/appointment.js') }}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
         {{--Fontsを読み込みます--}}
@@ -34,6 +35,7 @@
         <link href="{{ asset('css/service.css') }}" rel="stylesheet">
         <link href="{{ asset('css/staff.css') }}" rel="stylesheet">
         <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/appointment.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="app">

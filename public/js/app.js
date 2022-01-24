@@ -49695,6 +49695,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/jquery.js":
+/*!********************************!*\
+  !*** ./resources/js/jquery.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+jQuery(function ($) {
+  $('.js-accordion-title').on('click', function () {
+    /*クリックでコンテンツを開閉*/
+    $(this).next().slideToggle(200);
+    /*矢印の向きを変更*/
+
+    $(this).toggleClass('open', 200);
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/sass/admin.scss":
 /*!***********************************!*\
   !*** ./resources/sass/admin.scss ***!
@@ -49710,6 +49729,17 @@ __webpack_require__.r(__webpack_exports__);
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/appointment.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/appointment.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49806,13 +49836,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/front.scss ./resources/sass/chart.scss ./resources/sass/contact.scss ./resources/sass/index.scss ./resources/sass/menu.scss ./resources/sass/match.scss ./resources/sass/service.scss ./resources/sass/staff.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/jquery.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/front.scss ./resources/sass/chart.scss ./resources/sass/contact.scss ./resources/sass/index.scss ./resources/sass/menu.scss ./resources/sass/match.scss ./resources/sass/service.scss ./resources/sass/staff.scss ./resources/sass/appointment.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/js/jquery.js */"./resources/js/jquery.js");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/admin.scss */"./resources/sass/admin.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/front.scss */"./resources/sass/front.scss");
@@ -49822,7 +49853,8 @@ __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/index.
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/menu.scss */"./resources/sass/menu.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/match.scss */"./resources/sass/match.scss");
 __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/service.scss */"./resources/sass/service.scss");
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/staff.scss */"./resources/sass/staff.scss");
+__webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/staff.scss */"./resources/sass/staff.scss");
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/mysalon/resources/sass/appointment.scss */"./resources/sass/appointment.scss");
 
 
 /***/ })

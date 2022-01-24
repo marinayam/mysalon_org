@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js(['resources/js/app.js', 'resources/js/jquery.js'],'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin.scss', 'public/css')
     .sass('resources/sass/front.scss', 'public/css')
@@ -21,4 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/menu.scss', 'public/css')
     .sass('resources/sass/match.scss', 'public/css')
     .sass('resources/sass/service.scss', 'public/css')
-    .sass('resources/sass/staff.scss', 'public/css');
+    .sass('resources/sass/staff.scss', 'public/css')
+    .sass('resources/sass/appointment.scss', 'public/css');

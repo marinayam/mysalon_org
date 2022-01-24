@@ -11,7 +11,7 @@ class OptionTableSeeder extends Seeder
      */
     public function run()
     {
-        $options = ['選択しない','シヤンプー＆トリートメントケア 1,100円'];
+        $options = ['シヤンプー＆トリートメントケア ¥1,100（税込）'];
         foreach ($options as $option) {
             DB::table('options')->insert(['option' => $option]);
             

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Appointment;
-use App\Menu;
+use App\Perm;
+use App\Extension;
+use App\Eyebrow;
 use App\Option;
 
 
@@ -13,9 +15,11 @@ class AppointmentController extends Controller
     public function add()
     {
         $appointments=Appointment::all();
-        $menus=Menu::all();
+        $perms=Perm::all();
+        $extensions=Extension::all();
+        $eyebrows=Eyebrow::all();
         $options=Option::all();
-        return view ('appointment.create', ['appointments'=>$appointments,'menus'=>$menus,'options'=>$options]);
+        return view ('appointment.create', ['appointments'=>$appointments,'perms'=>$perms,'extensions'=>$extensions,'eyebrows'=>$eyebrows,'options'=>$options]);
     }
     
     public function confirm(Request $request)

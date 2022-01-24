@@ -16,10 +16,18 @@ class Appointment extends Model
         'time' => 'required',
        
     );
-    // Menu Modelに関連付けを行う
-    public function menus()
+    // Modelに関連付けを行う
+    public function perms()
   {
-    return $this->belongsToMany('App\Menu');
+    return $this->belongsToMany('App\Perm');
+  }
+  public function extensions()
+  {
+    return $this->belongsToMany('App\Extension');
+  }
+  public function eyebrows()
+  {
+    return $this->belongsToMany('App\Eyebrow');
   }
   // Option Modelに関連付けを行う
   public function options()
