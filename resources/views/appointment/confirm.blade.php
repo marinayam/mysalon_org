@@ -49,85 +49,81 @@
                             <input type="hidden" class="form-control" name="email" value="{{ $inputs['email'] }}">
                         </div>
                     </div>
-                    <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">生年月日</label>
-                        <p class="col-md-5">{{ $inputs['birthday'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" class="form-control" name="birthday" value="{{ $inputs['birthday'] }}">
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label for="inputAddress01" class="col-md-5 chart-question">郵便番号(7桁)</label>
-                        <p class="col-md-5">{{ $inputs['zip'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" name="zip" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','addr01');" class="form-control" id="inputAddress01" value="{{ $inputs['zip'] }}" >
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label for="inputAddress02"class="col-md-5 chart-question">都道府県</label>
-                        <p class="col-md-5">{{ $inputs['pref'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" name="pref" id="inputAddress02" class="form-control" value="{{ $inputs['pref'] }}" >
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label for="inputAddress03" class="col-md-5 chart-question">市区町村・番地</label>
-                        <p class="col-md-5">{{ $inputs['addr01'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" name="addr01" class="form-control" id="inputAddress03"  value="{{ $inputs['addr01'] }}" >
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label for="inputAddress03" class="col-md-5 chart-question">建物名・その他</label>
-                        <p class="col-md-5">{{ $inputs['addr02'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" name="addr02" class="form-control" id="inputAddress04" value="{{ $inputs['addr02'] }}" >
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">ご来店きっかけ</label>
-                        <p class="col-md-5">
-                            @foreach($triggers as $trigger)
-                            {{$trigger->trigger}}
-                            <div class="col-md-10">
-                                <input type="hidden" class="form-check-input"  name="trigger[{{ $trigger->id }}]" value="{{ $trigger->id }}">
+                    {{-- メニュー選択--}}
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div id="accordion" class="accordion-container">
+                            <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($perms as $perm)
+                                    {{$perm->perm}}
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="hidden" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}" >
+                                        
+                                    </label>
+                                   @endforeach
+                                </div>
                             </div>
-                            @endforeach
-                        </p>
+                            <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($extensions as $extension)
+                                    {{$extension->extension}}
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="hidden" name="extension[{{ $extension->id}}]" value="{{ $extension->id}}">
+                                    </label>
+                                   @endforeach
+                                </div>
+                            </div>
+                            <h4 class="accordion-title js-accordion-title">眉スタイリング</h4>
+                            <div class="accordion-content">
+                                <div class="form-group row">
+                                    <label class="col-md-12">
+                                    @foreach($eyebrows as $eyebrow)
+                                    {{$eyebrow->eyebrow}}
+                                    <label class="col-md-10 form-check-label">
+                                        <input class="form-check-input" type="hidden" name="eyebrow[{{ $eyebrow->id}}]" value="{{ $eyebrow->id}}">
+                                    </label>
+                                   @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-md-5">
+                        オプション</label>
+                    @foreach($options as $option)
+                    {{$option->option}}
+                    <label class="col-md-10 form-check-label">
+                        <input class="form-check-input" type="hidden"  name="option[{{ $option->id}}]" value="{{ $option->id}}">
+                        
+                    </label>
+                    @endforeach
+                </div>
+                {{-- メニュー選択--}}
                     <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">施術トラブルのご経験</label>
-                        <p class="col-md-5">{{ $inputs['trouble'] }}</p>
+                        <label class="col-md-5 chart-question">ご希望のお日にち</label>
+                        <p class="col-md-5">{{ $inputs['date'] }}</p>
                         <div class="col-md-10">
-                            <input type="hidden" class="form-control"  name="trouble"  value="{{ $inputs['trouble'] }}">
+                            <input type="hidden" class="form-control" name="date" value="{{ $inputs['date'] }}">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">お目元・眉周りのお悩み</label>
-                        <p class="col-md-5">{{ $inputs['concern'] }}</p>
+                        <label class="col-md-5 chart-question">ご希望のお時間</label>
+                        <p class="col-md-5">{{ $inputs['time'] }}</p>
                         <div class="col-md-10">
-                            <input type="hidden" class="form-control"  name="concern"  value="{{ $inputs['concern'] }}">
-                        </div>
-                    </div>
-                     <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">アレルギー</label>
-                        <p class="col-md-5">{{ $inputs['allergy'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" class="form-control"  name="allergy"  value="{{ $inputs['allergy'] }}">
+                            <input type="hidden" class="form-control" name="time" value="{{ $inputs['time'] }}">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">過去の施術経験</label>
-                        <p class="col-md-5">{{ $inputs['record'] }}</p>
+                        <label for="comment" class="col-md-12 contact-question">お問い合わせ内容</label>
+                        <p class="col-md-12">{!! nl2br(e($inputs['comment'])) !!}</p>
                         <div class="col-md-10">
-                            <input type="hidden" class="form-control"  name="record"  value="{{ $inputs['record'] }}">
-                        </div>
-                    </div>
-                    <div class="form-group row chart-answer">
-                        <label class="col-md-5 chart-question">気になる身体の疲れ</label>
-                        <p class="col-md-5">{{ $inputs['body_concern'] }}</p>
-                        <div class="col-md-10">
-                            <input type="hidden" class="form-control"  name="body_concern"  value="{{ $inputs['body_concern'] }}">
+                            <input name="comment" value="{{ $inputs['comment'] }}" type="hidden">
                         </div>
                     </div>
                     <div class="check-button">

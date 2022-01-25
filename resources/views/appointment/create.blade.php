@@ -68,7 +68,7 @@
                                     <label class="col-md-12">
                                     @foreach($perms as $perm)
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}"  {{ $perm->id===(int)old('perm.'.$perm->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="perm[]" value="{{ $perm->id}}"  {{ $perm->id===(int)old('perm.'.$perm->id) ? 'checked' : ''}}>
                                         {{$perm->perm}}
                                     </label>
                                    @endforeach
@@ -80,7 +80,7 @@
                                     <label class="col-md-12">
                                     @foreach($extensions as $extension)
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="extension[{{ $extension->id}}]" value="{{ $extension->id}}"  {{ $extension->id===(int)old('extension.'.$extension->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="extension[]" value="{{ $extension->id}}"  {{ $extension->id===(int)old('extension.'.$extension->id) ? 'checked' : ''}}>
                                         {{$extension->extension}}
                                     </label>
                                    @endforeach
@@ -92,7 +92,7 @@
                                     <label class="col-md-12">
                                     @foreach($eyebrows as $eyebrow)
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="eyebrow[{{ $eyebrow->id}}]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id===(int)old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id===(int)old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
                                         {{$eyebrow->eyebrow}}
                                     </label>
                                    @endforeach
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="contact_body" class="col-md-5">
+                    <label for="comment" class="col-md-5">
                         <span class="badge badge-danger">必須</span>
                         お問い合わせ内容
                     </label>
@@ -164,7 +164,7 @@
                         <div class="contact-caution">
                             <p>※ご質問等がございましたらご記入ください。</p>
                         </div>
-                        <textarea class="form-control" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
+                        <textarea class="form-control" name="comment" rows="10" cols="30" minlength:10 maxlength:140>{{ old('comment') }}</textarea>
                     </div>
                 </div>
                 <!---注意事項　開始-->

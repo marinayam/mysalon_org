@@ -102,6 +102,8 @@ Route::get('appointment/create', 'AppointmentController@add')->name('appointment
 Route::post('appointment/create', 'AppointmentController@create')->name('appointment.create');
 //確認ページ
 Route::post('appointment/confirm', 'AppointmentController@confirm')->name('appointment.confirm');
+//送信完了ページ
+Route::post('appointment/send', 'AppointmentController@send')->name('appointment.send');
 // 予約画面
 
 // // 管理者画面

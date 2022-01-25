@@ -37,14 +37,114 @@ class AppointmentController extends Controller
         
         //フォームから受け取ったすべてのinputの値を取得
         $inputs = $request->all();
-        // $menus = Menu::whereIn('id', $inputs['menu'])->get();
-        // $options = Option::whereIn('id', $inputs['option'])->get();
+        if (isset($inputs['perm'])){
+            $perms = Perm::whereIn('id', $inputs['perm'])->get();
+        } else{
+            $perms = [];
+        }
+        
+        if (isset($inputs['extension'])){
+            $extensions = Extension::whereIn('id', $inputs['extension'])->get();
+        } else{
+            $extensions = [];
+        }
+        
+        if (isset($inputs['eyebrow'])){
+            $eyebrows = Eyebrow::whereIn('id', $inputs['eyebrow'])->get();
+        } else{
+            $eyebrows =  [];
+        }
+        
+        if (isset($inputs['option'])){
+            $options = Option::whereIn('id', $inputs['option'])->get();
+        } else{
+            $options =  [];
+        }
+        
+        
+        
+        
 
         //入力内容確認ページのviewに変数を渡して表示
         return view('appointment.confirm', [
             'inputs' => $inputs,
-            // 'menus' => $menus,
-            // 'options' => $options,
+            'perms' => $perms,
+            'extensions' => $extensions,
+            'eyebrows' => $eyebrows,
+            'options' => $options,
         ]);
     }
+    
+    public function create(Request $request)
+    {
+        //フォームから受け取ったactionの値を取得
+        $action = $request->input('action');
+        
+        
+        //actionの値で分岐
+        if($action !== 'submit'){
+            //フォームから受け取ったactionを除いたinputの値を取得
+            $inputs = $request->except('action');
+            
+            return redirect()
+                ->route('appointment.create')
+                ->withInput($inputs);
+
+        } else {
+            
+            // モデルVaridationとカルテテーブルへ保存を行う
+            $this->validate($request, Appointment::$rules);
+            $appointment = new Appointment;
+            $appointment_form = $request->all();
+            
+            if (isset($appointment_form['perm'])){
+            $perms = Perm::whereIn('id', $appointment_form['perm'])->get();
+        } else{
+            $perms = [];
+        }
+        
+        if (isset($appointment_form['extension'])){
+            $extensions = Extension::whereIn('id', $appointment_form['extension'])->get();
+        } else{
+            $extensions = [];
+        }
+        
+        if (isset($appointment_form['eyebrow'])){
+            $eyebrows = Eyebrow::whereIn('id', $appointment_form['eyebrow'])->get();
+        } else{
+            $eyebrows =  [];
+        }
+        
+        if (isset($appointment_form['option'])){
+            $options = Option::whereIn('id', $appointment_form['option'])->get();
+        } else{
+            $options =  [];
+        }
+            unset($appointment_form['_token']);
+            unset($appointment_form['perm']);
+            unset($appointment_form['extension']);
+            unset($appointment_form['eyebrow']);
+            unset($appointment_form['option']);
+            unset($appointment_form['action']);
+            $appointment->fill($appointment_form);
+            $appointment->save();
+            $appointment->perms()->attach($perms);
+            $appointment->extensions()->attach($extensions);
+            $appointment->eyebrows()->attach($eyebrows);
+            $appointment->options()->attach($options);
+            
+
+            //再送信を防ぐためにトークンを再発行
+            $request->session()->regenerateToken();
+
+            //送信完了ページのviewを表示
+            return view('appointment.send');
+            
+        }
+    }
+    
+    public function send(Request $request)
+  {
+      return view('chart.send');
+  }
 }
