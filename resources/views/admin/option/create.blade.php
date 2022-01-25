@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title','ご来店きっかけ')
+@section('title','オプションメニュー')
 @section('content')
 <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ご来店きっかけカテゴリー新規作成</h2>
-                <form action="{{ action('Admin\TriggerController@create') }}" method="post" enctype="multipart/form-data">
+                <h2>オプションメニュー新規作成</h2>
+                <form action="{{ action('Admin\OptionController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
@@ -15,9 +15,9 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">カテゴリー名</label>
+                        <label class="col-md-3">メニュー＆金額</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="trigger" value="{{ old('trigger') }}">
+                            <input type="text" class="form-control" name="option" value="{{ old('option') }}">
                         </div>
                     </div>
                     {{ csrf_field() }}

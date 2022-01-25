@@ -10,7 +10,7 @@ class StaffController extends Controller
 {
     public function add()
     {
-        return view ('admin.staff.create');
+        return view ('admin.staff.index');
     }
     public function create(Request $request)
     {

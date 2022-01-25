@@ -1,17 +1,17 @@
 @extends('layouts.admin')
-@section('title', 'ご来店きっかけ一覧')
+@section('title', 'パーマメニュー一覧')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <h2>カルテのご来店きっかけ</h2>
+            <h2>パーマメニュー一覧</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ action('Admin\TriggerController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+                <a href="{{ action('Admin\PermController@add') }}" role="button" class="btn btn-primary">新規作成</a>
             </div>
             <div class="col-md-8">
-                <form action="{{ action('Admin\TriggerController@index') }}" method="get">
+                <form action="{{ action('Admin\PermController@index') }}" method="get">
                 </form>
             </div>
         </div>
@@ -26,16 +26,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $trigger)
+                            @foreach($posts as $perm)
                                 <tr>
-                                    <th>{{ $trigger->id }}</th>
-                                    <td>{{ \Str::limit($trigger->trigger, 100) }}</td>
+                                    <th>{{ $perm->id }}</th>
+                                    <td>{{ \Str::limit($perm->perm, 100) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\TriggerController@edit', ['id' => $trigger->id]) }}">編集</a>
+                                            <a href="{{ action('Admin\PermController@edit', ['id' => $perm->id]) }}">編集</a>
                                         </div>
                                         <div>
-                                            <a href="{{ action('Admin\TriggerController@delete', ['id' => $trigger->id]) }}">削除</a>
+                                            <a href="{{ action('Admin\PermController@delete', ['id' => $perm->id]) }}">削除</a>
                                         </div>
                                         <br>
                                     </td>

@@ -46,6 +46,16 @@
                             </a>
                             <a class="dropdown-item" href={{ route('staff.index') }}>スタッフ一覧
                             </a>
+                            <a class="dropdown-item" href={{ route('appointment.index') }}>予約一覧
+                            </a>
+                            <a class="dropdown-item" href={{ route('perm.index') }}>パーマメニュー一覧
+                            </a>
+                            <a class="dropdown-item" href={{ route('extension.index') }}>マツエクメニュー一覧
+                            </a>
+                            <a class="dropdown-item" href={{ route('eyebrow.index') }}>眉メニュー一覧
+                            </a>
+                            <a class="dropdown-item" href={{ route('option.index') }}>オプションメニュー一覧
+                            </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">

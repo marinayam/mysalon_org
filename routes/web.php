@@ -131,5 +131,40 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('staff/edit', 'Admin\StaffController@edit');
     Route::post('staff/edit', 'Admin\StaffController@update');
     Route::get('staff/delete', 'Admin\StaffController@delete');
+    // ご予約情報
+    Route::get('appointment/index', 'Admin\AppointmentControllerrController@add');
+    Route::get('appointment/index', 'Admin\AppointmentController@index')->name('appointment.index');
+    Route::get('appointment/detail', 'Admin\AppointmentController@detail');
+    Route::get('appointment/edit', 'Admin\AppointmentController@edit');
+    Route::post('appointment/edit', 'Admin\AppointmentController@update');
+    // パーマメニュー編集
+    Route::get('perm/create', 'Admin\PermController@add');
+    Route::post('perm/create', 'Admin\PermController@create');
+    Route::get('perm/index', 'Admin\PermController@index')->name('perm.index');;
+    Route::get('perm/edit', 'Admin\PermController@edit');
+    Route::post('perm/edit', 'Admin\PermController@update');
+    Route::get('perm/delete', 'Admin\PermController@delete');
+    // マツエクメニュー編集
+    Route::get('extension/create', 'Admin\ExtensionController@add');
+    Route::post('extension/create', 'Admin\ExtensionController@create');
+    Route::get('extension/index', 'Admin\ExtensionController@index')->name('extension.index');;
+    Route::get('extension/edit', 'Admin\ExtensionController@edit');
+    Route::post('extension/edit', 'Admin\ExtensionController@update');
+    Route::get('extension/delete', 'Admin\ExtensionController@delete');
+    // 眉メニュー編集
+    Route::get('eyebrow/create', 'Admin\EyebrowController@add');
+    Route::post('eyebrow/create', 'Admin\EyebrowController@create');
+    Route::get('eyebrow/index', 'Admin\EyebrowController@index')->name('eyebrow.index');;
+    Route::get('eyebrow/edit', 'Admin\EyebrowController@edit');
+    Route::post('eyebrow/edit', 'Admin\EyebrowController@update');
+    Route::get('eyebrow/delete', 'Admin\EyebrowController@delete');
+    // オプションメニュー編集
+    Route::get('option/create', 'Admin\OptionController@add');
+    Route::post('option/create', 'Admin\OptionController@create');
+    Route::get('option/index', 'Admin\OptionController@index')->name('option.index');;
+    Route::get('option/edit', 'Admin\OptionController@edit');
+    Route::post('option/edit', 'Admin\OptionController@update');
+    Route::get('option/delete', 'Admin\OptionController@delete');
+    
 });
 // 管理者画面
