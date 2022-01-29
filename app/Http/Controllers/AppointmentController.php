@@ -79,25 +79,13 @@ class AppointmentController extends Controller
     {
         //フォームから受け取ったactionの値を取得
         $action = $request->input('action');
+           
+        // モデルVaridationとカルテテーブルへ保存を行う
+        $this->validate($request, Appointment::$rules);
+        $appointment = new Appointment;
+        $appointment_form = $request->all();
         
-        
-        //actionの値で分岐
-        if($action !== 'submit'){
-            //フォームから受け取ったactionを除いたinputの値を取得
-            $inputs = $request->except('action');
-            
-            return redirect()
-                ->route('appointment.create')
-                ->withInput($inputs);
-
-        } else {
-            
-            // モデルVaridationとカルテテーブルへ保存を行う
-            $this->validate($request, Appointment::$rules);
-            $appointment = new Appointment;
-            $appointment_form = $request->all();
-            
-            if (isset($appointment_form['perm'])){
+        if (isset($appointment_form['perm'])){
             $perms = Perm::whereIn('id', $appointment_form['perm'])->get();
         } else{
             $perms = [];
@@ -120,27 +108,27 @@ class AppointmentController extends Controller
         } else{
             $options =  [];
         }
-            unset($appointment_form['_token']);
-            unset($appointment_form['perm']);
-            unset($appointment_form['extension']);
-            unset($appointment_form['eyebrow']);
-            unset($appointment_form['option']);
-            unset($appointment_form['action']);
-            $appointment->fill($appointment_form);
-            $appointment->save();
-            $appointment->perms()->attach($perms);
-            $appointment->extensions()->attach($extensions);
-            $appointment->eyebrows()->attach($eyebrows);
-            $appointment->options()->attach($options);
+        unset($appointment_form['_token']);
+        unset($appointment_form['perm']);
+        unset($appointment_form['extension']);
+        unset($appointment_form['eyebrow']);
+        unset($appointment_form['option']);
+        unset($appointment_form['action']);
+        $appointment->fill($appointment_form);
+        $appointment->save();
+        $appointment->perms()->attach($perms);
+        $appointment->extensions()->attach($extensions);
+        $appointment->eyebrows()->attach($eyebrows);
+        $appointment->options()->attach($options);
             
 
-            //再送信を防ぐためにトークンを再発行
-            $request->session()->regenerateToken();
+        //再送信を防ぐためにトークンを再発行
+        $request->session()->regenerateToken();
 
-            //送信完了ページのviewを表示
-            return view('appointment.send');
+        //送信完了ページのviewを表示
+        return view('appointment.send');
             
-        }
+        
     }
     
     public function send(Request $request)
@@ -160,6 +148,14 @@ class AppointmentController extends Controller
         
         //フォームから受け取ったactionを除いたinputの値を取得
         $inputs = $request->except('action');
+        
+        if($action !== 'submit'){
+            // dd($inputs);
+            return redirect()
+                ->route('appointment.create')
+                ->withInput($inputs);
+
+        }
         
         // パーマメニュー
         $str = '';
@@ -222,21 +218,16 @@ class AppointmentController extends Controller
         // オプションメニュー
         
         //actionの値で分岐
-        if($action !== 'submit'){
-            return redirect()
-                ->route('appointment.create')
-                ->withInput($inputs);
+        
+        //入力されたメールアドレスにメールを送信
+        \Mail::to($inputs['email'])->send(new AppointmentSendmail($inputs));
 
-        } else {
-            //入力されたメールアドレスにメールを送信
-            \Mail::to($inputs['email'])->send(new AppointmentSendmail($inputs));
+        //再送信を防ぐためにトークンを再発行
+        $request->session()->regenerateToken();
 
-            //再送信を防ぐためにトークンを再発行
-            $request->session()->regenerateToken();
-
-            //送信完了ページのviewを表示
-            return view('appointment.send');
+        //送信完了ページのviewを表示
+        return view('appointment.send');
             
-        }
+        
     }
 }

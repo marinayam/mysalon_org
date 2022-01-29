@@ -74,12 +74,14 @@
                             <div class="accordion-content">
                                 <div class="form-group row">
                                     <label class="col-md-12">
-                                    @foreach($perms as $perm)
+                                    
+                                    @foreach($perms as $perm) 
+                            
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="perm[]" value="{{ $perm->id}}"  {{ $perm->id===(int)old('perm.'.$perm->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="perm[]" value="{{ $perm->id}}" {{ $perm->id==old('perm.'.$perm->id) ? 'checked' : ''}}>
                                         {{$perm->perm}}
                                     </label>
-                                   @endforeach
+                                    @endforeach
                                 </div>
                             </div>
                             <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>
@@ -88,7 +90,7 @@
                                     <label class="col-md-12">
                                     @foreach($extensions as $extension)
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="extension[]" value="{{ $extension->id}}"  {{ $extension->id===(int)old('extension.'.$extension->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="extension[]" value="{{ $extension->id}}"  {{ $extension->id==old('extension.'.$extension->id) ? 'checked' : ''}}>
                                         {{$extension->extension}}
                                     </label>
                                    @endforeach
@@ -100,7 +102,7 @@
                                     <label class="col-md-12">
                                     @foreach($eyebrows as $eyebrow)
                                     <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id===(int)old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
+                                        <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id==old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
                                         {{$eyebrow->eyebrow}}
                                     </label>
                                    @endforeach
@@ -133,34 +135,34 @@
                 <div class="form-group row">
                     <label class="col-md-5">
                         <span class="badge badge-danger">必須</span>
-                        ご希望の時刻
+                        ご希望の時間
                     </label>
                     <div class="col-md-10">
                         <select class="form-select" type="time" aria-label="Default select example" name="time">
-                            <option>選択してください</option>
-                            <option value="9:00" {{ old('time')==1 ? 'selected_time' : '' }}>9:00</option>
-                            <option value="9:30" {{ old('time')==2 ? 'selected_time' : '' }}>9:30</option>
-                            <option value="10:00" {{ old('time')==3 ? 'selected_time' : '' }}>10:00</option>
-                            <option value="10:30" {{ old('time')==4 ? 'selected_time' : '' }}>10:30</option>
-                            <option value="11:00" {{ old('time')==5 ? 'selected_time' : '' }}>11:00</option>
-                            <option value="11:30" {{ old('time')==6 ? 'selected_time' : '' }}>11:30</option>
-                            <option value="12:00" {{ old('time')==7 ? 'selected_time' : '' }}>12:00</option>
-                            <option value="12:30" {{ old('time')==8 ? 'selected_time' : '' }}>12:30</option>
-                            <option value="13:00" {{ old('time')==9 ? 'selected_time' : '' }}>13:00</option>
-                            <option value="13:30" {{ old('time')==10 ? 'selected_time' : '' }}>13:30</option>
-                            <option value="14:00" {{ old('time')==11 ? 'selected_time' : '' }}>14:00</option>
-                            <option value="14:30" {{ old('time')==12 ? 'selected_time' : '' }}>14:30</option>
-                            <option value="15:00" {{ old('time')==13 ? 'selected_time' : '' }}>15:00</option>
-                            <option value="15:30" {{ old('time')==14 ? 'selected_time' : '' }}>15:30</option>
-                            <option value="16:00" {{ old('time')==15 ? 'selected_time' : '' }}>16:00</option>
-                            <option value="16:30" {{ old('time')==16 ? 'selected_time' : '' }}>16:30</option>
-                            <option value="17:00" {{ old('time')==17 ? 'selected_time' : '' }}>17:00</option>
-                            <option value="17:30" {{ old('time')==18 ? 'selected_time' : '' }}>17:30</option>
-                            <option value="18:00" {{ old('time')==19 ? 'selected_time' : '' }}>18:00</option>
-                            <option value="18:30" {{ old('time')==20? 'selected_time' : '' }}>18:30</option>
-                            <option value="19:00" {{ old('time')==21 ? 'selected_time' : '' }}>19:00</option>
-                            <option value="19:30" {{ old('time')==22 ? 'selected_time' : '' }}>19:30</option>
-                            <option value="20:00" {{ old('time')==23 ? 'selected_time' : '' }}>20:00</option>
+                            <option></option>
+                            <option value="9:00" {{ old('time')=="9:00" ? 'selected' : '' }}>9:00</option>
+                            <option value="9:30" {{ old('time')=="9:30" ? 'selected' : '' }}>9:30</option>
+                            <option value="10:00" {{ old('time')=="10:00" ? 'selected' : '' }}>10:00</option>
+                            <option value="10:30" {{ old('time')=="10:30" ? 'selected' : '' }}>10:30</option>
+                            <option value="11:00" {{ old('time')=="11:00" ? 'selected' : '' }}>11:00</option>
+                            <option value="11:30" {{ old('time')=="11:30" ? 'selected' : '' }}>11:30</option>
+                            <option value="12:00" {{ old('time')=="12:00" ? 'selected' : '' }}>12:00</option>
+                            <option value="12:30" {{ old('time')=="12:30" ? 'selected' : '' }}>12:30</option>
+                            <option value="13:00" {{ old('time')=="13:00" ? 'selected' : '' }}>13:00</option>
+                            <option value="13:30" {{ old('time')=="13:30" ? 'selected' : '' }}>13:30</option>
+                            <option value="14:00" {{ old('time')=="14:00" ? 'selected' : '' }}>14:00</option>
+                            <option value="14:30" {{ old('time')=="14:30" ? 'selected' : '' }}>14:30</option>
+                            <option value="15:00" {{ old('time')=="15:00" ? 'selected' : '' }}>15:00</option>
+                            <option value="15:30" {{ old('time')=="15:30" ? 'selected' : '' }}>15:30</option>
+                            <option value="16:00" {{ old('time')=="16:00" ? 'selected' : '' }}>16:00</option>
+                            <option value="16:30" {{ old('time')=="16:30" ? 'selected' : '' }}>16:30</option>
+                            <option value="17:00" {{ old('time')=="17:00" ? 'selected' : '' }}>17:00</option>
+                            <option value="17:30" {{ old('time')=="17:30" ? 'selected' : '' }}>17:30</option>
+                            <option value="18:00" {{ old('time')=="18:00" ? 'selected' : '' }}>18:00</option>
+                            <option value="18:30" {{ old('time')=="18:30"? 'selected' : '' }}>18:30</option>
+                            <option value="19:00" {{ old('time')=="19:00" ? 'selected' : '' }}>19:00</option>
+                            <option value="19:30" {{ old('time')=="19:30" ? 'selected' : '' }}>19:30</option>
+                            <option value="20:00" {{ old('time')=="20:00" ? 'selected' : '' }}>20:00</option>
                         </select>
                     </div>
                 </div>
