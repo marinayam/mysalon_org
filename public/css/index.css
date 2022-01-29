@@ -70,7 +70,7 @@ body {
   color: #8e7757;
   text-align: center;
   font-weight: 500;
-  margin-bottom: 50px;
+  margin: 30px 0px 50px 0px;
 }
 
 .section-ttl span {
@@ -271,7 +271,7 @@ a.btn--shadow {
 }
 
 .location h3 {
-  font-family: DidotLTPro-Bold, YuMincho, "\6E38\660E\671D", Hiragino Mincho ProN, "\FF2D\FF33    \660E\671D", serif;
+  font-family: DidotLTPro-Bold, YuMincho, "\6E38\660E\671D", Hiragino Mincho ProN, "\FF2D\FF33     \660E\671D", serif;
   text-align: center;
   margin-bottom: 20px;
   letter-spacing: 0.1em;

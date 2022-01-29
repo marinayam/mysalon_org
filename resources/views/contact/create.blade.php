@@ -59,13 +59,10 @@
                     <div class="col-md-10">
                         <select class="form-select" aria-label="Default select example" name="select">
                             <option>選択してください</option>
-                            <option value="1" {{ old('select')==1 ? 'selected' : '' }}>予約について</option>
+                            <option value="1" {{ old('select')==1 ? 'selected' : '' }}>ご予約について</option>
                             <option value="2" {{ old('select')==2 ? 'selected' : '' }}>サロンについて</option>
                             <option value="3" {{ old('select')==3 ? 'selected' : '' }}>その他</option>
                         </select>
-                        <div class="contact-caution">
-                            <p>※ご予約の際は、第3希望までご連絡頂けますとスムーズです。</p>
-                        </div>
                         <textarea class="form-control" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
                     </div>
                 </div>
