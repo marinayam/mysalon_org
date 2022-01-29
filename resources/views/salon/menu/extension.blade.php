@@ -28,7 +28,7 @@
                                 <p class="item-name">
                                     60分つけ放題　120本まで（初回限定）
                                 </p>
-                                <p class="item-detail">所要時間：65分</p>
+                                <p class="item-detail">所要時間：60分</p>
                             </div>
                             <div class="right c-flex-column--item">
                                 <p class="item-price">5,500
@@ -43,7 +43,7 @@
                                 <p class="item-name">
                                     90分つけ放題　160本まで（初回限定）
                                 </p>
-                                <p class="item-detail">所要時間：95分</p>
+                                <p class="item-detail">所要時間：90分</p>
                             </div>
                             <div class="right c-flex-column--item">
                                 <p class="item-price">7,700
@@ -664,7 +664,7 @@
                             <p class="item-name">
                                 80本
                             </p>
-                            <p class="item-detail">所要時間：60分</p>
+                            <p class="item-detail">所要時間：90分</p>
                         </div>
                         <div class="right c-flex-column--item">
                             <p class="item-price">11,000
@@ -694,7 +694,7 @@
                             <p class="item-name">
                                 120本(人気No.1)
                             </p>
-                            <p class="item-detail">所要時間：60分</p>
+                            <p class="item-detail">所要時間：90分</p>
                         </div>
                         <div class="right c-flex-column--item">
                             <p class="item-price">13,200
@@ -709,7 +709,7 @@
                             <p class="item-name">
                                 140本
                             </p>
-                            <p class="item-detail">所要時間：90分</p>
+                            <p class="item-detail">所要時間：120分</p>
                         </div>
                         <div class="right c-flex-column--item">
                             <p class="item-price">14,300
@@ -724,7 +724,7 @@
                             <p class="item-name">
                                 160本
                             </p>
-                            <p class="item-detail">所要時間：90分</p>
+                            <p class="item-detail">所要時間：120分</p>
                         </div>
                         <div class="right c-flex-column--item">
                             <p class="item-price">15,400
@@ -739,7 +739,7 @@
                             <p class="item-name">
                                 ~200本
                             </p>
-                            <p class="item-detail">所要時間：110分</p>
+                            <p class="item-detail">所要時間：140分</p>
                         </div>
                         <div class="right c-flex-column--item">
                             <p class="item-price">16,500
@@ -790,7 +790,7 @@
                                     <br>
                                     ボリュームラッシュ100本
                                 </p>
-                                <p class="item-detail">所要時間：60分</p>
+                                <p class="item-detail">所要時間：90分</p>
                             </div>
                             <div class="right c-flex-column--item">
                                 <p class="item-price">11,000
@@ -807,7 +807,7 @@
                                     <br>
                                     ボリュームラッシュ200本
                                 </p>
-                                <p class="item-detail">所要時間：60分</p>
+                                <p class="item-detail">所要時間：90分</p>
                             </div>
                             <div class="right c-flex-column--item">
                                 <p class="item-price">12,100
@@ -824,7 +824,7 @@
                                     <br>
                                     ボリュームラッシュ300本
                                 </p>
-                                <p class="item-detail">所要時間：60分</p>
+                                <p class="item-detail">所要時間：120分</p>
                             </div>
                             <div class="right c-flex-column--item">
                                 <p class="item-price">13,200

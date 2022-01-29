@@ -1,10 +1,6 @@
 @extends('layouts.front')
 @section('title','Eyebrow')
 @section('content')
-{{-- Laravel標準で用意されているCSSを読み込みます --}}
-<link href="{{ asset('css/app.css') }}" rel ="stylesheet">
-{{-- 作成したCSSを追記 --}}
-<link href="{{ asset('css/menu.css') }}" rel="stylesheet">
 <div class="container">
     <div class="menu-page-head">
         <img src="images/eyebrow.png" class="d-block w-100 menu-page-head-img">
@@ -126,7 +122,26 @@
                 お得なおすすめセット
             </p>
             <div class="price">
-                <ul class="table">
+                <ul class="table"><li class="item">
+                        <div class="c-flex-column-half">
+                            <div class="left c-flex-column--item">
+                                <p class="item-name">
+                                    （初回限定）
+                                    <br>
+                                    眉WAX（1回）＋
+                                    <br>
+                                    ブロウラミネーション（眉毛パーマ）
+                                    <br>
+                                </p>
+                                <p class="item-detail">所要時間：90分</p>
+                            </div>
+                            <div class="right c-flex-column--item">
+                                <p class="item-price"> 6,980
+                                <i>円（税込）</i>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
                     <li class="item">
                         <div class="c-flex-column-half">
                             <div class="left c-flex-column--item">
@@ -136,10 +151,10 @@
                                     ブロウラミネーション（眉毛パーマ）
                                     <br>
                                 </p>
-                                <p class="item-detail">所要時間：120分</p>
+                                <p class="item-detail">所要時間：90分</p>
                             </div>
                             <div class="right c-flex-column--item">
-                                <p class="item-price">11,000
+                                <p class="item-price"> 9,900
                                 <i>円（税込）</i>
                                 </p>
                             </div>

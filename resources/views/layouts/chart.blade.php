@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content = "IE = edge">
         <meta name ="viewport" content="width=device-width, initial-scale=1">
         
-        <!--認証済みのユーザーがリクエストを送信しているのかを確認-->
+        {{--認証済みのユーザーがリクエストを送信しているのかを確認--}}
         <meta name = "csrf-token" content="{{ csrf_token() }}">
         
-        <!--各ページごとにtitleタグを入れる-->
+        {{--各ページごとにtitleタグを入れる--}}
         <title>@yield('title')</title>
         
-        <!--Javascriptを読み込みます-->
+        {{--Javascriptを読み込みます--}}
         <script src ="{{ secure_asset('js/app.js') }}" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
@@ -30,37 +30,37 @@
     </head>
     <body>
         <div class="app">
-            <!-- ヘッダー -->
+            {{-- ヘッダー --}}
             <header class="container-fluid">
-                <!-- ナビゲーション -->
+                {{-- ナビゲーション --}}
                 <nav class="navbar navbar-expand-lg navbar-light" style=background-color: #e3f2fd;">
-                <!-- ヘッダーのロゴ -->
+                {{-- ヘッダーのロゴ --}}
                     <a class="navbar-brand" href={{ route('/') }}><img class="img-fluid" src="{{asset('images/logo.png')}}" width="180px"></a>
-                    <!-- メニューバーアイコン -->
+                    {{-- メニューバーアイコン --}}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <!-- 左に表示させるメニュー -->
+                        {{-- 左に表示させるメニュー --}}
                         <ul class="navbar-nav mr-auto">　
                             <li class="nav-item">
                                 <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
                             </li>
                         </ul>
                         
-                        <!-- 右に表示させるメニュー -->
+                        {{-- 右に表示させるメニュー --}}
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Menu
                                 </a>
-                                <!-- ドロップメニュー -->
+                                {{-- ドロップメニュー --}}
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
                                     <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
                                     <a class="dropdown-item" href={{ route('eyebrow') }}>眉毛</a>
                                 </div>
-                            <!-- ナビゲーション -->
+                            {{-- ナビゲーション --}}
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href={{ route('service') }}>初めての方へ</a>
@@ -96,7 +96,7 @@
                                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Menu
                                         </a>
-                                        <!-- ドロップメニュー -->
+                                        {{-- ドロップメニュー --}}
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href={{ route('perm') }}>パーマ</a>
                                             <a class="dropdown-item" href={{ route('extension') }}>マツエク</a>
