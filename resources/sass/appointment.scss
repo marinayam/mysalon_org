@@ -5,7 +5,7 @@
   border-top: none;
   outline: 0;
   cursor: pointer;
-  width: 500px;
+  width: 800px;
   margin: 1.875em auto;
 }
 
@@ -15,7 +15,7 @@
     border-top: none;
     outline: 0;
     cursor: pointer;
-    width: 300px;
+    width: 350px;
     margin: 1.875em auto;
   }
 }
@@ -43,8 +43,7 @@
     background: #C88070;
     cursor: pointer;
     margin: 10px 0px;
-    padding: 0.5em 0.75em;
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -95,10 +94,16 @@
   margin: 30px 0;
 }
 
+/*各メニュー*/
+
+.appointment-menu-list {
+  padding: 10px;
+}
+
 /*オプションメニュー*/
 
 .option-menu {
-  padding: 20px 20px 20px 30px;
+  padding: 0px 0px 20px 30px;
 }
 
 /*オプションメニュー*/
@@ -111,4 +116,9 @@
   font-size: 24px;
   text-align: center;
 }
-
+@media screen and (max-width: 768px) {
+  .appointment-notice h1 {
+  font-size: 18px;
+  text-align: center;
+}
+}

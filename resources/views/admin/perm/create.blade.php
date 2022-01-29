@@ -16,12 +16,21 @@
                     @endif
                     <div class="form-group row">
                         <label class="col-md-3">メニュー＆金額</label>
-                        <div class="col-md-10">
+                        <div class="col-md-12">
                             <input type="text" class="form-control" name="perm" value="{{ old('perm') }}">
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="作成">
+                    <div class="check-button">
+                        <div class="btn-toolbar">
+                            <div class="btn-group">
+                                <a class="return" href={{ route('perm.index') }}><u>もどる</u></a>
+                            </div>
+                            <div class="btn-group ml-auto">
+                                <input type="submit" class="btn btn-primary" value="作成">
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

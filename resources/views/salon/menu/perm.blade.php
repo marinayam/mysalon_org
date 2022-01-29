@@ -5,7 +5,7 @@
 <link href="{{ asset('css/app.css') }}" rel ="stylesheet">
 {{-- 作成したCSSを追記 --}}
 <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
-<div class="container">
+<div class="menu-container">
     <div class="menu-page-head">
         <img src="images/perm.png" class="d-block w-100 menu-page-head-img">
         <h2>

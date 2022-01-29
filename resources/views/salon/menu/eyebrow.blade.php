@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('title','Eyebrow')
 @section('content')
-<div class="container">
+<div class="menu-container">
     <div class="menu-page-head">
         <img src="images/eyebrow.png" class="d-block w-100 menu-page-head-img">
         <h2>

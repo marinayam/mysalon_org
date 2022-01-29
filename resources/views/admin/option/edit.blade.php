@@ -23,7 +23,16 @@
                         <div class="col-md-10">
                             <input type="hidden" name="id" value="{{ $option_form->id }}">
                             {{ csrf_field() }}
-                            <input type="submit" class="btn btn-primary" value="更新">
+                            <div class="check-button">
+                                <div class="btn-toolbar">
+                                    <div class="btn-group">
+                                        <a class="return" href={{ route('option.index') }}><u>もどる</u></a>
+                                    </div>
+                                    <div class="btn-group ml-auto">
+                                        <input type="submit" class="btn btn-primary" value="更新">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>

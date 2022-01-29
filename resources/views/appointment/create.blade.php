@@ -2,8 +2,6 @@
 @section('title','Appointment')
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class ="col-md-8 mx-auto">
             {{-- ページタイトル --}}
             <div class="content-theme">
                 <h1>
@@ -64,20 +62,21 @@
                 </div>
                 {{-- メニュー選択--}}
                 <div class="form-group row">
-                    <label for="tel"class="col-md-5">
+                    <label for="tel"class="col-md-10">
                         <span class="badge badge-danger">必須</span>
-                        メニューを選択ください
+                        メニューを選択ください<br>
+                        <br>
+                        ※マツエクの本数・デザインは、当日カウンセリングにてお客様に合わせたメニューを提案させて頂きます。<br>
+                        ご希望の本数・デザインがございましたら、下記、お問い合わせ欄に記入お願い致します。<br>
                     </label>
                     <div class="col-md-10">
                         <div class="accordion-container">
-                            <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
+                            <h4 class="accordion-title js-accordion-title">まつ毛パーマ(ラッシュリフト)</h4>
                             <div class="accordion-content">
                                 <div class="form-group row">
                                     <label class="col-md-12">
-                                    
-                                    @foreach($perms as $perm) 
-                            
-                                    <label class="col-md-10 form-check-label">
+                                    @foreach($perms as $perm)
+                                    <label class="form-check-label appointment-menu-list flex-column col-12">
                                         <input class="form-check-input" type="checkbox" name="perm[]" value="{{ $perm->id}}" {{ $perm->id==old('perm.'.$perm->id) ? 'checked' : ''}}>
                                         {{$perm->perm}}
                                     </label>
@@ -89,7 +88,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-12">
                                     @foreach($extensions as $extension)
-                                    <label class="col-md-10 form-check-label">
+                                    <label class="col-md-12 form-check-label appointment-menu-list flex-column">
                                         <input class="form-check-input" type="checkbox" name="extension[]" value="{{ $extension->id}}"  {{ $extension->id==old('extension.'.$extension->id) ? 'checked' : ''}}>
                                         {{$extension->extension}}
                                     </label>
@@ -101,7 +100,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-12">
                                     @foreach($eyebrows as $eyebrow)
-                                    <label class="col-md-10 form-check-label">
+                                    <label class="col-md-12 form-check-label appointment-menu-list flex-column">
                                         <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id==old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
                                         {{$eyebrow->eyebrow}}
                                     </label>
@@ -115,7 +114,7 @@
                     <label class="col-md-5">オプションメニュー</label>
                     <div class="col-md-10 option-menu">
                         @foreach($options as $option)
-                        <label class="col-md-10 form-check-label">
+                        <label class="col-md-12 form-check-label appointment-menu-list flex-column">
                             <input class="form-check-input" type="checkbox"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
                             {{$option->option}}
                         </label>
@@ -173,42 +172,44 @@
                     </label>
                     <div class="col-md-10">
                         <div class="contact-caution">
-                            <p>※ご質問等がございましたらご記入ください。</p>
+                            <p>※ご質問等がございましたらご記入ください。<br>
+                            マツエクメニューでご希望の本数・デザインがある方はこちらにご記入お願い致します。</p>
                         </div>
                         <textarea class="form-control" name="comment" rows="10" cols="30" minlength:10 maxlength:140>{{ old('comment') }}</textarea>
                     </div>
                 </div>
                 {{-- 注意事項 --}}
-                <div class="appointment-notice">
-                    <h1>注意事項</h1>
-                    <ul>
-                        <li>
-                            ・はじめての方は、ご予約時間の10分前にご来店下さい。<br>
-                            初回ご来店の際、施術前にカウンセリングを行っておりますので、<br>
-                            施術時間の他に約10分お時間を頂きますので余裕を持ってご来店ください。<br>
-                            <br>
-                        </li>
-                        <li>
-                            ・ご予約変更について<br>
-                            日時変更は予約日前日までにご連絡をお願い致します。<br>
-                            直前のキャンセル、もしくはキャンセルを頂けなかった場合については、<br>
-                            キャンセル料を頂戴致しますので、あらかじめご了承ください。<br>
-                        </li>
-                    </ul>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                        <label class="form-check-label" for="flexCheckDefault">
-                            同意します
-                         </label>
+                <div class="form-group row">
+                   <div class="col-md-8 appointment-notice">
+                        <h1>注意事項</h1>
+                        <ul>
+                            <li>
+                                ・はじめての方は、ご予約時間の10分前にご来店下さい。<br>
+                                初回ご来店の際、施術前にカウンセリングを行っておりますので、<br>
+                                施術時間の他に約10分お時間を頂きますので余裕を持ってご来店ください。<br>
+                                <br>
+                            </li>
+                            <li>
+                                ・ご予約変更について<br>
+                                日時変更は予約日前日までにご連絡をお願い致します。<br>
+                                直前のキャンセル、もしくはキャンセルを頂けなかった場合については、<br>
+                                キャンセル料を頂戴致しますので、あらかじめご了承ください。<br>
+                            </li>
+                        </ul>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                同意します
+                             </label>
+                        </div>
                     </div>
                 </div>
                 {{-- 注意事項 --}}
                 {{-- 予約フォーム --}}
-                <div class="text-right">
+                <div>
                     <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>
             </form>   
-        </div>
-    </div>
+        
 </div>
 @endsection

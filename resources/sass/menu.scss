@@ -9,7 +9,7 @@ a {
     background-color: transparent;
 }
 
-.container {
+.menu-container {
   max-width: 1220px;
   padding-left: 100px;
   padding-right: 100px;
@@ -19,7 +19,7 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
+  .menu-container {
     padding: 10px 0 0;
   }
 }
