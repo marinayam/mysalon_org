@@ -1,26 +1,21 @@
 @extends('layouts.chart')
-@section('title','予約確認画面')
+@section('title','ご予約確認画面')
 @section('content')
-<!--メッセージ-->
 <div class="container">
     <div class="row">
         <div class ="col-md-8 mx-auto">
+            {{-- ページタイトル --}}
             <div class="chart-content">
                 <h1 class>
                     <span class="chart-ttl">Appointment</span>
                 </h1>
                 <p class="chart-subttl">ご予約確認</p>
             </div>
+            {{-- ページタイトル --}}
             <div class="container mt-5">
-                <form action="{{ action('AppointmentController@create') }}" method="post" enctype="multipart/form-data">
-                    @if (count($errors) > 0)
-                        <ul>
-                            @foreach($errors->all() as $e)
-                                <li>{{ $e }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
+                <form method="POST" action="{{ route('appointment.send') }}">
                     @csrf
+                    {{-- 入力内容確認 --}}
                     <div class="form-group row chart-answer">
                         <label class="col-md-5 chart-question">お名前（漢字）</label>
                         <p class="col-md-5">{{ $inputs['name01'] }}</p>
@@ -50,61 +45,58 @@
                         </div>
                     </div>
                     {{-- メニュー選択--}}
-                <div class="form-group row">
-                    <div class="col-md-12">
-                        <div id="accordion" class="accordion-container">
-                            <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
-                            <div class="accordion-content">
-                                <div class="form-group row">
-                                    <label class="col-md-12">
-                                    @foreach($perms as $perm)
-                                    {{$perm->perm}}
-                                    <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="hidden" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}" >
-                                        
-                                    </label>
-                                   @endforeach
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <div class="accordion-container">
+                                <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
+                                <div class="accordion-content">
+                                    <div class="form-group row">
+                                        <label class="col-md-12">
+                                        @foreach($perms as $perm)
+                                        {{$perm->perm}}
+                                        <label class="col-md-10 form-check-label">
+                                            <input class="form-check-input" type="hidden" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}" >
+                                        </label>
+                                       @endforeach
+                                    </div>
                                 </div>
-                            </div>
-                            <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>
-                            <div class="accordion-content">
-                                <div class="form-group row">
-                                    <label class="col-md-12">
-                                    @foreach($extensions as $extension)
-                                    {{$extension->extension}}
-                                    <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="hidden" name="extension[{{ $extension->id}}]" value="{{ $extension->id}}">
-                                    </label>
-                                   @endforeach
+                                <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>
+                                <div class="accordion-content">
+                                    <div class="form-group row">
+                                        <label class="col-md-12">
+                                        @foreach($extensions as $extension)
+                                        {{$extension->extension}}
+                                        <label class="col-md-10 form-check-label">
+                                            <input class="form-check-input" type="hidden" name="extension[{{ $extension->id}}]" value="{{ $extension->id}}">
+                                        </label>
+                                       @endforeach
+                                    </div>
                                 </div>
-                            </div>
-                            <h4 class="accordion-title js-accordion-title">眉スタイリング</h4>
-                            <div class="accordion-content">
-                                <div class="form-group row">
-                                    <label class="col-md-12">
-                                    @foreach($eyebrows as $eyebrow)
-                                    {{$eyebrow->eyebrow}}
-                                    <label class="col-md-10 form-check-label">
-                                        <input class="form-check-input" type="hidden" name="eyebrow[{{ $eyebrow->id}}]" value="{{ $eyebrow->id}}">
-                                    </label>
-                                   @endforeach
+                                <h4 class="accordion-title js-accordion-title">眉スタイリング</h4>
+                                <div class="accordion-content">
+                                    <div class="form-group row">
+                                        <label class="col-md-12">
+                                        @foreach($eyebrows as $eyebrow)
+                                        {{$eyebrow->eyebrow}}
+                                        <label class="col-md-10 form-check-label">
+                                            <input class="form-check-input" type="hidden" name="eyebrow[{{ $eyebrow->id}}]" value="{{ $eyebrow->id}}">
+                                        </label>
+                                       @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>    
+                    <div class="form-group row">
+                        <label class="col-md-5">オプション</label>
+                        @foreach($options as $option)
+                        {{$option->option}}
+                        <label class="col-md-10 form-check-label">
+                            <input class="form-check-input" type="hidden"  name="option[{{ $option->id}}]" value="{{ $option->id}}">
+                        </label>
+                        @endforeach
                     </div>
-                </div>    
-                <div class="form-group row">
-                    <label class="col-md-5">
-                        オプション</label>
-                    @foreach($options as $option)
-                    {{$option->option}}
-                    <label class="col-md-10 form-check-label">
-                        <input class="form-check-input" type="hidden"  name="option[{{ $option->id}}]" value="{{ $option->id}}">
-                        
-                    </label>
-                    @endforeach
-                </div>
-                {{-- メニュー選択--}}
+                    {{-- メニュー選択--}}
                     <div class="form-group row chart-answer">
                         <label class="col-md-5 chart-question">ご希望のお日にち</label>
                         <p class="col-md-5">{{ $inputs['date'] }}</p>
@@ -126,6 +118,7 @@
                             <input name="comment" value="{{ $inputs['comment'] }}" type="hidden">
                         </div>
                     </div>
+                    {{-- 入力内容確認 --}}
                     <div class="check-button">
                         <div class="btn-toolbar">
                             <div class="btn-group">

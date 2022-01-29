@@ -15,6 +15,23 @@ class AppointmentSendmail extends Mailable
     private $name02;
     private $tel;
     private $email;
+    if (isset($inputs['perm']))
+        {
+            private $perm;
+        }
+    if (isset($inputs['extension']))
+        {
+            private $extension;
+        }
+    if (isset($inputs['eyebrow']))
+        {
+            private $eyebrow;
+        }
+    if (isset($inputs['option']))
+        {
+            private $option;
+        }
+    
     private $date;
     private $time;
     private $comment;
@@ -60,6 +77,8 @@ class AppointmentSendmail extends Mailable
                 'extension' => $this->extension,
                 'eyebrow' => $this->eyebrow,
                 'option' => $this->option,
+                'date' => $this->date,
+                'time' => $this->time,
                 'comment'  => $this->comment,
             ]);
     }

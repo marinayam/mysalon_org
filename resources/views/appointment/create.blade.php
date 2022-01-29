@@ -4,13 +4,16 @@
 <div class="container">
     <div class="row">
         <div class ="col-md-8 mx-auto">
+            {{-- ページタイトル --}}
             <div class="content-theme">
                 <h1>
                     <span>Appointment</span>
                 </h1>
                 <p class="content-theme-ttl">ご予約</p>
             </div>
-            <form method="POST" action="{{ route('appointment.confirm')}}">
+            {{-- ページタイトル --}}
+            <form method="POST" action="{{ route('appointment.confirm') }}">
+                {{-- validation --}}
                  @if (count($errors) > 0)
                     <ul class="contact-validation">
                         @foreach($errors->all() as $e)
@@ -19,7 +22,8 @@
                     </ul>
                 @endif
                 @csrf
-                {{-- 予約フォーム開始 --}}
+                {{-- validation --}}
+                {{-- 予約フォーム --}}
                 <div class="form-group row">
                     <label class="col-md-5">
                         <span class="badge badge-danger">必須</span>
@@ -60,8 +64,12 @@
                 </div>
                 {{-- メニュー選択--}}
                 <div class="form-group row">
-                    <div class="col-md-12">
-                        <div id="accordion" class="accordion-container">
+                    <label for="tel"class="col-md-5">
+                        <span class="badge badge-danger">必須</span>
+                        メニューを選択ください
+                    </label>
+                    <div class="col-md-10">
+                        <div class="accordion-container">
                             <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
                             <div class="accordion-content">
                                 <div class="form-group row">
@@ -102,14 +110,15 @@
                     </div>
                 </div>    
                 <div class="form-group row">
-                    <label class="col-md-5">
-                        オプション</label>
-                    @foreach($options as $option)
-                    <label class="col-md-10 form-check-label">
-                        <input class="form-check-input" type="checkbox"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
-                        {{$option->option}}
-                    </label>
-                    @endforeach
+                    <label class="col-md-5">オプションメニュー</label>
+                    <div class="col-md-10 option-menu">
+                        @foreach($options as $option)
+                        <label class="col-md-10 form-check-label">
+                            <input class="form-check-input" type="checkbox"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
+                            {{$option->option}}
+                        </label>
+                        @endforeach
+                    </div>
                 </div>
                 {{-- メニュー選択--}}
                 <div class="form-group row">
@@ -167,7 +176,7 @@
                         <textarea class="form-control" name="comment" rows="10" cols="30" minlength:10 maxlength:140>{{ old('comment') }}</textarea>
                     </div>
                 </div>
-                <!---注意事項　開始-->
+                {{-- 注意事項 --}}
                 <div class="appointment-notice">
                     <h1>注意事項</h1>
                     <ul>
@@ -191,8 +200,8 @@
                          </label>
                     </div>
                 </div>
-                <!---注意事項　終了-->
-                {{ csrf_field() }}
+                {{-- 注意事項 --}}
+                {{-- 予約フォーム --}}
                 <div class="text-right">
                     <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>

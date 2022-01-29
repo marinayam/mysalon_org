@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Mail\AppointmentSendmail;
+use Carbon\Carbon;
+use Storage;
 use App\Appointment;
 use App\Perm;
 use App\Extension;
@@ -61,8 +65,6 @@ class AppointmentController extends Controller
             $options =  [];
         }
         
-        
-
         //入力内容確認ページのviewに変数を渡して表示
         return view('appointment.confirm', [
             'inputs' => $inputs,

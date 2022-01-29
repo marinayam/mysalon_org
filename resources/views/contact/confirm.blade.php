@@ -1,18 +1,21 @@
 @extends('layouts.front')
-@section('title','Contact')
+@section('title','お問い合わせ内容確認画面')
 @section('content')
 <div class="container">
     <div class="row">
         <div class ="col-md-8 mx-auto">
+            {{-- ページタイトル --}}
             <div class="contact-content">
                 <h1 class>
                     <span class="contact-ttl">CONTACT</span>
                 </h1>
                 <p class="contact-subttl">確認画面</p>
             </div>
+            {{-- ページタイトル --}}
             <div class="container mt-5">
                 <form method="POST" action="{{ route('contact.send') }}">
                     @csrf
+                    {{-- 入力内容確認 --}}
                     <div class="form-group row chart-answer">
                         <label for="Name" class="col-md-5 contact-question">名前</label>
                         <p class="col-md-5">{{ $inputs['name'] }}</p>
@@ -49,6 +52,7 @@
                             <input name="contact_body" value="{{ $inputs['contact_body'] }}" type="hidden">
                         </div>
                     </div>
+                    {{-- 入力内容確認 --}}
                     <div class="check-button">
                         <div class="btn-toolbar">
                             <div class="btn-group">

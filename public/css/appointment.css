@@ -1,10 +1,23 @@
+@charset "UTF-8";
+
 .accordion-container {
   position: relative;
-  width: 100%;
   border-top: none;
   outline: 0;
   cursor: pointer;
-  border: 1px solid #C88070;
+  width: 500px;
+  margin: 1.875em auto;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion-container {
+    position: relative;
+    border-top: none;
+    outline: 0;
+    cursor: pointer;
+    width: 300px;
+    margin: 1.875em auto;
+  }
 }
 
 .accordion-container .accordion-title {
@@ -18,6 +31,21 @@
   margin: 10px 0px;
   padding: 0.5em 0.75em;
   width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion-container .accordion-title {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    background: #C88070;
+    cursor: pointer;
+    margin: 10px 0px;
+    padding: 0.5em 0.75em;
+    width: auto;
+  }
 }
 
 .accordion-container .accordion-title:hover,
@@ -61,74 +89,19 @@
   padding-left: 2.3125em;
 }
 
-.accordion-container {
-  width: 300px;
-  margin: 1.875em auto;
-}
-
-.accordion-container .accordion-title {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0.625em 0.625em 0.625em 2em;
-  font-size: 1.25em;
-  font-weight: normal;
-  color: #fff;
-  background: #C88070;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.accordion-container .accordion-title:hover,
-.accordion-container .accordion-title:active,
-.accordion-container .content-entry.open .accordion-title {
-  background-color: #AB4A35;
-  color: white;
-}
-
-.accordion-container .accordion-title:hover i:before,
-.accordion-container .accordion-title:hover i:active,
-.accordion-container .content-entry.open i {
-  color: white;
-}
-
-.accordion-title {
-  position: relative;
-}
-
-.accordion-title:after {
-  position: absolute;
-  right: 25px;
-  top: 38%;
-  transition: all 0.2s ease-in-out;
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff;
-  transform: rotate(135deg);
-}
-
-.accordion-title.open:after {
-  transform: rotate(-45deg);
-  top: 45%;
-}
-
-.accordion-content {
-  display: none;
-  padding-left: 2.3125em;
-}
-
-.accordion-container {
-  width: 300px;
-  margin: 1.875em auto;
-}
-
 .appointment-notice {
   padding: 5px;
   border: solid 1px;
   margin: 30px 0;
 }
+
+/*オプションメニュー*/
+
+.option-menu {
+  padding: 20px 20px 20px 30px;
+}
+
+/*オプションメニュー*/
 
 .form-check {
   margin: 15px 0;

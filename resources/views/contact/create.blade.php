@@ -4,13 +4,16 @@
 <div class="container">
     <div class="row">
         <div class ="col-md-8 mx-auto">
+            {{-- ページタイトル --}}
             <div class="content-theme">
                 <h1>
                     <span>CONTACT</span>
                 </h1>
                 <p class="content-theme-subttl">お問い合わせ</p>
             </div>
+            {{-- ページタイトル --}}
             <form method="POST" action="{{ route('contact.confirm') }}">
+                {{-- validation --}}
                  @if (count($errors) > 0)
                     <ul class="contact-validation">
                         @foreach($errors->all() as $e)
@@ -19,6 +22,8 @@
                     </ul>
                 @endif
                 @csrf
+                {{-- validation --}}
+                {{-- お問い合わせフォーム --}}
                 <div class="form-group row">
                     <label for="Name" class="col-md-5">
                         <span class="badge badge-danger">必須</span>
@@ -64,6 +69,7 @@
                         <textarea class="form-control" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
                     </div>
                 </div>
+                {{-- お問い合わせフォーム --}}
                 <div class="text-right">
                     <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>
