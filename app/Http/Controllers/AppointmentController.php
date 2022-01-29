@@ -160,7 +160,67 @@ class AppointmentController extends Controller
         
         //フォームから受け取ったactionを除いたinputの値を取得
         $inputs = $request->except('action');
-
+        
+        // パーマメニュー
+        $str = '';
+        if (isset($inputs['perm'])){
+            $perms = Perm::whereIn('id', $inputs['perm'])->get();
+            $i = 0;
+            foreach($perms as $item) {
+              if($i > 0) {
+                $str .= '、';
+              }
+              $str .= $item->perm;
+              $i++;
+            }
+        } 
+        $inputs['perm'] = $str;
+        // パーマメニュー
+        // マツエクメニュー
+        $str = '';
+        if (isset($inputs['extension'])){
+            $extensions = Extension::whereIn('id', $inputs['extension'])->get();
+            $i = 0;
+            foreach($extensions as $item) {
+              if($i > 0) {
+                $str .= '、';
+              }
+              $str .= $item->extension;
+              $i++;
+            }
+        } 
+        $inputs['extension'] = $str;
+         // マツエクメニュー
+        //  眉メニュー
+        $str = '';
+        if (isset($inputs['eyebrow'])){
+            $eyebrows = Eyebrow::whereIn('id', $inputs['eyebrow'])->get();
+            $i = 0;
+            foreach($eyebrows as $item) {
+              if($i > 0) {
+                $str .= '、';
+              }
+              $str .= $item->eyebrow;
+              $i++;
+            }
+        } 
+        $inputs['eyebrow'] = $str;
+        //  眉メニュー
+        // オプションメニュー
+        $str = '';
+        if (isset($inputs['option'])){
+            $options = Option::whereIn('id', $inputs['option'])->get();
+            $i = 0;
+            foreach($options as $item) {
+              if($i > 0) {
+                $str .= '、';
+              }
+              $str .= $item->option;
+              $i++;
+            }
+        } 
+        // オプションメニュー
+        
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
@@ -175,7 +235,7 @@ class AppointmentController extends Controller
             $request->session()->regenerateToken();
 
             //送信完了ページのviewを表示
-            return view('appointment.thanks');
+            return view('appointment.send');
             
         }
     }

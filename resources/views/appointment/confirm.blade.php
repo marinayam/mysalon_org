@@ -45,19 +45,19 @@
                         </div>
                     </div>
                     {{-- メニュー選択--}}
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <div class="accordion-container">
-                                <h4 class="accordion-title js-accordion-title">まつ毛パーマ</h4>
+                    <div class="form-group row chart-answer">
+                        <div class="accordion-container">
+                                <lavel class="accordion-title js-accordion-title col-md-5 chart-question">まつ毛パーマ</lavel>
                                 <div class="accordion-content">
                                     <div class="form-group row">
-                                        <label class="col-md-12">
-                                        @foreach($perms as $perm)
-                                        {{$perm->perm}}
-                                        <label class="col-md-10 form-check-label">
-                                            <input class="form-check-input" type="hidden" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}" >
-                                        </label>
-                                       @endforeach
+                                        <label class="col-md-5">
+                                            @foreach($perms as $perm)
+                                            {{$perm->perm}}
+                                            <label class="col-md-10 form-check-label">
+                                                <input class="form-check-input" type="hidden" name="perm[{{ $perm->id}}]" value="{{ $perm->id}}" >
+                                            </label>
+                                           @endforeach
+                                       </label>
                                     </div>
                                 </div>
                                 <h4 class="accordion-title js-accordion-title">まつ毛エクステ</h4>

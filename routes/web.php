@@ -132,7 +132,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('staff/edit', 'Admin\StaffController@update');
     Route::get('staff/delete', 'Admin\StaffController@delete');
     // ご予約情報
-    Route::get('appointment/index', 'Admin\AppointmentControllerrController@add');
+    Route::get('appointment/index', 'Admin\AppointmentController@add');
     Route::get('appointment/index', 'Admin\AppointmentController@index')->name('appointment.index');
     Route::get('appointment/detail', 'Admin\AppointmentController@detail');
     Route::get('appointment/edit', 'Admin\AppointmentController@edit');

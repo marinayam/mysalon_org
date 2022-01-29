@@ -47,8 +47,23 @@
                                     <td>{{ \Str::limit($appointment->date, 100) }}</td>
                                     <td>{{ \Str::limit($appointment->time, 100) }}</td>
                                     <td>
-                                      @foreach($appointment->perm as $perm)
+                                      @foreach($appointment->perms as $perm)
                                         <div>{{$perm->perm}}</div>
+                                      @endforeach
+                                    </td>
+                                    <td>
+                                      @foreach($appointment->extensions as $extension)
+                                        <div>{{$extension->extension}}</div>
+                                      @endforeach
+                                    </td>
+                                    <td>
+                                      @foreach($appointment->eyebrows as $eyebrow)
+                                        <div>{{$eyebrow->eyebrow}}</div>
+                                      @endforeach
+                                    </td>
+                                    <td>
+                                      @foreach($appointment->options as $option)
+                                        <div>{{$option->option}}</div>
                                       @endforeach
                                     </td>
                                     <td>{{ \Str::limit($appointment->comment, 500) }}</td>

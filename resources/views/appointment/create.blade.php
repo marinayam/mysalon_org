@@ -136,7 +136,7 @@
                         ご希望の時刻
                     </label>
                     <div class="col-md-10">
-                        <select class="form-select" aria-label="Default select example" name="time">
+                        <select class="form-select" type="time" aria-label="Default select example" name="time">
                             <option>選択してください</option>
                             <option value="9:00" {{ old('time')==1 ? 'selected_time' : '' }}>9:00</option>
                             <option value="9:30" {{ old('time')==2 ? 'selected_time' : '' }}>9:30</option>
