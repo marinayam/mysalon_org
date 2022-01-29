@@ -5,11 +5,11 @@
     <div class="row">
         <div class ="col-md-8 mx-auto">
             {{-- ページタイトル --}}
-            <div class="chart-content">
+            <div class="content-theme">
                 <h1 class>
-                    <span class="chart-ttl">Appointment</span>
+                    <span>Appointment</span>
                 </h1>
-                <p class="chart-subttl">ご予約確認</p>
+                <p class="content-theme-ttl">ご予約確認</p>
             </div>
             {{-- ページタイトル --}}
             <div class="container mt-5">

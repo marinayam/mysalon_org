@@ -2,6 +2,8 @@
 @section('title','Appointment')
 @section('content')
 <div class="container">
+    <div class="row mx-auto">
+        <div class ="col-md-10 mx-auto">
             {{-- ページタイトル --}}
             <div class="content-theme">
                 <h1>
@@ -62,11 +64,12 @@
                 </div>
                 {{-- メニュー選択--}}
                 <div class="form-group row">
-                    <label for="tel"class="col-md-10">
+                    <label for="tel"class="col-md-12">
                         <span class="badge badge-danger">必須</span>
                         メニューを選択ください<br>
                         <br>
                         ※マツエクの本数・デザインは、当日カウンセリングにてお客様に合わせたメニューを提案させて頂きます。<br>
+                        <br>
                         ご希望の本数・デザインがございましたら、下記、お問い合わせ欄に記入お願い致します。<br>
                     </label>
                     <div class="col-md-10">
@@ -115,7 +118,7 @@
                     <div class="col-md-10 option-menu">
                         @foreach($options as $option)
                         <label class="col-md-12 form-check-label appointment-menu-list flex-column">
-                            <input class="form-check-input" type="checkbox"  name="option[{{ $option->id}}]" value="{{ $option->id}}"  {{ $option->id===(int)old('option.'.$option->id) ? 'selected' : ''}}>
+                            <input class="form-check-input" type="checkbox"  name="option[]" value="{{ $option->id}}"  {{ $option->id==old('option.'.$option->id) ? 'checked' : ''}}>
                             {{$option->option}}
                         </label>
                         @endforeach
@@ -179,8 +182,8 @@
                     </div>
                 </div>
                 {{-- 注意事項 --}}
-                <div class="form-group row">
-                   <div class="col-md-8 appointment-notice">
+                <div class="row mx-auto">
+                   <div class="col-md-10 appointment-notice">
                         <h1>注意事項</h1>
                         <ul>
                             <li>
@@ -210,6 +213,7 @@
                     <button type="submit" name="action" value="submit" class="btn btn-outline-primary">入力内容確認</button>
                 </div>
             </form>   
-        
+        </div>
+    </div>
 </div>
 @endsection

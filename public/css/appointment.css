@@ -15,7 +15,7 @@
     border-top: none;
     outline: 0;
     cursor: pointer;
-    width: 350px;
+    width: 100%;
     margin: 1.875em auto;
   }
 }

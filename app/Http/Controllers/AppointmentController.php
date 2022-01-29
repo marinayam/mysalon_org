@@ -214,6 +214,7 @@ class AppointmentController extends Controller
               $str .= $item->option;
               $i++;
             }
+        $inputs['option'] = $str;
         } 
         // オプションメニュー
         
