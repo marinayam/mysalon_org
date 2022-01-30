@@ -102,12 +102,13 @@
                             <div class="accordion-content">
                                 <div class="form-group row">
                                     <label class="col-md-12">
-                                    @foreach($eyebrows as $eyebrow)
-                                    <label class="col-md-12 form-check-label appointment-menu-list flex-column">
-                                        <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id==old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
-                                        {{$eyebrow->eyebrow}}
-                                    </label>
-                                   @endforeach
+                                        @foreach($eyebrows as $eyebrow)
+                                        <label class="col-md-12 form-check-label appointment-menu-list flex-column">
+                                            <input class="form-check-input" type="checkbox" name="eyebrow[]" value="{{ $eyebrow->id}}"  {{ $eyebrow->id==old('eyebrow.'.$eyebrow->id) ? 'checked' : ''}}>
+                                            {{$eyebrow->eyebrow}}
+                                        </label>
+                                        @endforeach
+                                   </label>
                                 </div>
                             </div>
                         </div>
