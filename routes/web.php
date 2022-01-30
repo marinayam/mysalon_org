@@ -113,10 +113,14 @@ Auth::routes([
 ]);
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     // カルテ顧客情報
-    Route::get('salon/index', 'Admin\SalonController@index')->name('salon.index');
-    Route::get('salon/detail', 'Admin\SalonController@detail');
-    Route::get('salon/edit', 'Admin\SalonController@edit');
-    Route::post('salon/edit', 'Admin\SalonController@update');
+    Route::get('salon/index', 'Admin\SalonController@index')->name('index');
+    
+    // カルテ顧客情報
+    Route::get('chart/index', 'Admin\ChartController@index')->name('chart.index');
+    Route::get('chart/detail', 'Admin\ChartController@detail');
+    Route::get('chart/edit', 'Admin\ChartController@edit');
+    Route::post('chart/edit', 'Admin\ChartController@update');
+    
     // カルテのご来店きっかけ編集
     Route::get('trigger/create', 'Admin\TriggerController@add');
     Route::post('trigger/create', 'Admin\TriggerController@create');
