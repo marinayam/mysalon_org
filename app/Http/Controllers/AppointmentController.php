@@ -26,6 +26,49 @@ class AppointmentController extends Controller
         return view ('appointment.create', ['appointments'=>$appointments,'perms'=>$perms,'extensions'=>$extensions,'eyebrows'=>$eyebrows,'options'=>$options]);
     }
     
+     public function create(Request $request)
+    {
+        //フォームから受け取ったactionの値を取得
+        $action = $request->input('action');
+        
+        if (isset($appointment_form['perm'])){
+            $perms = Perm::whereIn('id', $appointment_form['perm'])->get();
+        } else{
+            $perms = [];
+        }
+        
+        if (isset($appointment_form['extension'])){
+            $extensions = Extension::whereIn('id', $appointment_form['extension'])->get();
+        } else{
+            $extensions = [];
+        }
+        
+        if (isset($appointment_form['eyebrow'])){
+            $eyebrows = Eyebrow::whereIn('id', $appointment_form['eyebrow'])->get();
+        } else{
+            $eyebrows =  [];
+        }
+        
+        if (isset($appointment_form['option'])){
+            $options = Option::whereIn('id', $appointment_form['option'])->get();
+        } else{
+            $options =  [];
+        }
+        unset($appointment_form['_token']);
+        unset($appointment_form['perm']);
+        unset($appointment_form['extension']);
+        unset($appointment_form['eyebrow']);
+        unset($appointment_form['option']);
+        unset($appointment_form['action']);
+        $appointment->fill($appointment_form);
+        $appointment->save();
+        $appointment->perms()->attach($perms);
+        $appointment->extensions()->attach($extensions);
+        $appointment->eyebrows()->attach($eyebrows);
+        $appointment->options()->attach($options);
+            
+    }
+    
     public function confirm(Request $request)
     {
         $this->validate($request, Appointment::$rules);
@@ -75,61 +118,7 @@ class AppointmentController extends Controller
         ]);
     }
     
-    public function create(Request $request)
-    {
-        //フォームから受け取ったactionの値を取得
-        $action = $request->input('action');
-           
-        // モデルVaridationとカルテテーブルへ保存を行う
-        $this->validate($request, Appointment::$rules);
-        $appointment = new Appointment;
-        $appointment_form = $request->all();
-        
-        if (isset($appointment_form['perm'])){
-            $perms = Perm::whereIn('id', $appointment_form['perm'])->get();
-        } else{
-            $perms = [];
-        }
-        
-        if (isset($appointment_form['extension'])){
-            $extensions = Extension::whereIn('id', $appointment_form['extension'])->get();
-        } else{
-            $extensions = [];
-        }
-        
-        if (isset($appointment_form['eyebrow'])){
-            $eyebrows = Eyebrow::whereIn('id', $appointment_form['eyebrow'])->get();
-        } else{
-            $eyebrows =  [];
-        }
-        
-        if (isset($appointment_form['option'])){
-            $options = Option::whereIn('id', $appointment_form['option'])->get();
-        } else{
-            $options =  [];
-        }
-        unset($appointment_form['_token']);
-        unset($appointment_form['perm']);
-        unset($appointment_form['extension']);
-        unset($appointment_form['eyebrow']);
-        unset($appointment_form['option']);
-        unset($appointment_form['action']);
-        $appointment->fill($appointment_form);
-        $appointment->save();
-        $appointment->perms()->attach($perms);
-        $appointment->extensions()->attach($extensions);
-        $appointment->eyebrows()->attach($eyebrows);
-        $appointment->options()->attach($options);
-            
-
-        //再送信を防ぐためにトークンを再発行
-        $request->session()->regenerateToken();
-
-        //送信完了ページのviewを表示
-        return view('appointment.send');
-            
-        
-    }
+   
     
     public function send(Request $request)
     {
@@ -156,6 +145,46 @@ class AppointmentController extends Controller
                 ->withInput($inputs);
 
         }
+        // バリデーションとモデルに保存
+        $this->validate($request, Appointment::$rules);
+        $appointment = new Appointment;
+        $appointment_form = $request->all();
+        
+        if (isset($appointment_form['perm'])){
+            $perms = $appointment_form['perm'];
+            unset($appointment_form['perm']);
+        } else{
+            $perms = [];
+        }
+         if (isset($appointment_form['extension'])){
+            $extensions = $appointment_form['extension'];
+            unset($appointment_form['extension']);
+        } else{
+            $extensions = [];
+        }
+         if (isset($appointment_form['eyebrow'])){
+            $eyebrows = $appointment_form['eyebrow'];
+            unset($appointment_form['eyebrow']);
+        } else{
+            $eyebrows = [];
+        }
+         if (isset($appointment_form['option'])){
+            $options = $appointment_form['option'];
+            unset($appointment_form['option']);
+        } else{
+            $options= [];
+        }
+        unset($appointment_form['_token']);
+        unset($appointment_form['action']);
+        $appointment->fill($appointment_form);
+        $appointment->save();
+        $appointment->perms()->attach($perms);
+        $appointment->extensions()->attach($extensions);
+        $appointment->eyebrows()->attach($eyebrows);
+        $appointment->options()->attach($options);
+
+        //再送信を防ぐためにトークンを再発行
+        $request->session()->regenerateToken();
         
         // パーマメニュー
         $str = '';
