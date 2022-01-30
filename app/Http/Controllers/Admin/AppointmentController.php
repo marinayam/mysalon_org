@@ -16,15 +16,27 @@ class AppointmentController extends Controller
     public function index(Request $request)
     {
         $cond_name = $request->cond_name;
-        $cond_date = $request->cond_date;
+        
       if ($cond_name != '') {
           // 検索されたら検索結果を取得する
-          $appointments = Appointment::where('name02', $cond_name)->where('time', $cond_date)->get();
+          $appointments = Appointment::where('name02', $cond_name)->get();
           
       } else {
           // それ以外はすべてを取得する
           $appointments = Appointment::all();
       }
+      
+      $cond_date = $request->cond_date;
+      
+      if ($cond_date != '') {
+          // 検索されたら検索結果を取得する
+          $appointments = Appointment::where('date', $cond_date)->get();
+          
+      } else {
+          // それ以外はすべてを取得する
+          $appointments = Appointment::all();
+      }
+      
       return view('admin.appointment.index', ['appointments' => $appointments, 'cond_name' => $cond_name,'cond_date' => $cond_date]);
     }
     
@@ -36,7 +48,7 @@ class AppointmentController extends Controller
         if (empty($appointment)) {
             abort(404);    
         }
-        return view('admin.detail', ['appointment_form' => $appointment]);
+        return view('admin.appointment.detail', ['appointment_form' => $appointment]);
     }
     //クライエント情報の編集画面
     public function edit(Request $request)

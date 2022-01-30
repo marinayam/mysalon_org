@@ -38,27 +38,21 @@
                         <thead>
                             <tr>
                                 <th width="1%">ID</th>
-                                <th width="10%">名前</th>
-                                <th width="12%">なまえ</th>
-                                <th width="10%">tel</th>
-                                <th width="10%">email</th>
-                                <th width="10%">日にち</th>
-                                <th width="10%">時間</th>
-                                <th width="10%">パーマ</th>
-                                <th width="10%">マツエク</th>
-                                <th width="10%">眉</th>
-                                <th width="10%">オプション</th>
-                                <th width="10%">コメント</th>
+                                <th width="5%">なまえ</th>
+                                <th width="5%">日にち</th>
+                                <th width="5%">時間</th>
+                                <th width="20%">パーマ</th>
+                                <th width="20%">マツエク</th>
+                                <th width="20%">眉</th>
+                                <th width="20%">オプション</th>
+                                <th width="30%">コメント</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($appointments as $appointment)
                                 <tr>
                                     <th>{{ $appointment->id }}</th>
-                                    <td>{{ \Str::limit($appointment->name01, 100) }}</td>
                                     <td>{{ \Str::limit($appointment->name02, 100) }}</td>
-                                    <td>{{ \Str::limit($appointment->tel, 100) }}</td>
-                                    <td>{{ \Str::limit($appointment->email, 100) }}</td>
                                     <td>{{ \Str::limit($appointment->date, 100) }}</td>
                                     <td>{{ \Str::limit($appointment->time, 100) }}</td>
                                     <td>
