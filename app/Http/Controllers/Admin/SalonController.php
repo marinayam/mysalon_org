@@ -16,13 +16,14 @@ class SalonController extends Controller
         $cond_name = $request->cond_name;
       if ($cond_name != '') {
           // 検索されたら検索結果を取得する
-          $posts = Chart::where('name02', $cond_name)->get();
+          $charts = Chart::where('name02', $cond_name)->get();
           
       } else {
           // それ以外はすべてを取得する
-          $posts = Chart::all();
+          $charts = Chart::all();
+          
       }
-      return view('admin.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+      return view('admin.index', ['charts' => $charts, 'cond_name' => $cond_name]);
     }
     
     //クライエント情報の詳細を表示させる

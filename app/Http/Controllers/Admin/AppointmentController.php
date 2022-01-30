@@ -12,23 +12,20 @@ use App\Option;
 
 class AppointmentController extends Controller
 {
-    public function add()
-    {
-        return view ('admin.appointment.index');
-    }
     //一覧を表示させる
     public function index(Request $request)
     {
         $cond_name = $request->cond_name;
+        $cond_date = $request->cond_date;
       if ($cond_name != '') {
           // 検索されたら検索結果を取得する
-          $posts = Appointment::where('name02', $cond_name)->get();
+          $appointments = Appointment::where('name02', $cond_name)->where('time', $cond_date)->get();
           
       } else {
           // それ以外はすべてを取得する
-          $posts = Appointment::all();
+          $appointments = Appointment::all();
       }
-      return view('admin.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+      return view('admin.appointment.index', ['appointments' => $appointments, 'cond_name' => $cond_name,'cond_date' => $cond_date]);
     }
     
     //クライエント情報の詳細を表示させる
@@ -58,7 +55,7 @@ class AppointmentController extends Controller
         $eyebrows=Eyebrow::all();
         $options=Option::all();
         
-        return view('admin.edit', ['appointment_form' => $appointment,'selected_perms' => $selected_perms,'selected_extensions' => $selected_extensions,'selected_eyebrows' => $selected_eyebrows,'selected_options' => $selected_options,'perms' => $perm,'extensions' => $extension,'eyebrows' => $eyebrow,'options' => $option]);
+        return view('admin.appointment.edit', ['appointment_form' => $appointment,'selected_perms' => $selected_perms,'selected_extensions' => $selected_extensions,'selected_eyebrows' => $selected_eyebrows,'selected_options' => $selected_options,'perms' => $perm,'extensions' => $extension,'eyebrows' => $eyebrow,'options' => $option]);
     }
 
     //編集画面から送信されたフォームデータを処理

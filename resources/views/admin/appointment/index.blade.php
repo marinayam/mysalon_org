@@ -18,6 +18,16 @@
                             <input type="submit" class="btn btn-primary" value="検索">
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">日程</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="cond_date" value="{{ $cond_date }}">
+                        </div>
+                        <div class="col-md-2">
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="検索">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -33,11 +43,16 @@
                                 <th width="10%">tel</th>
                                 <th width="10%">email</th>
                                 <th width="10%">日にち</th>
-                                <th width="50%">時間</th>
+                                <th width="10%">時間</th>
+                                <th width="10%">パーマ</th>
+                                <th width="10%">マツエク</th>
+                                <th width="10%">眉</th>
+                                <th width="10%">オプション</th>
+                                <th width="10%">コメント</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $appointment)
+                            @foreach($appointments as $appointment)
                                 <tr>
                                     <th>{{ $appointment->id }}</th>
                                     <td>{{ \Str::limit($appointment->name01, 100) }}</td>
@@ -47,24 +62,32 @@
                                     <td>{{ \Str::limit($appointment->date, 100) }}</td>
                                     <td>{{ \Str::limit($appointment->time, 100) }}</td>
                                     <td>
-                                      @foreach($appointment->perms as $perm)
-                                        <div>{{$perm->perm}}</div>
-                                      @endforeach
+                                    @if ($appointment->perms != null)
+                                        @foreach($appointment->perms as $perm)
+                                            <p>{{$perm->perm}}</p>
+                                         @endforeach
+                                    @endif
                                     </td>
                                     <td>
-                                      @foreach($appointment->extensions as $extension)
-                                        <div>{{$extension->extension}}</div>
-                                      @endforeach
+                                    @if ($appointment->extensions != null)
+                                        @foreach($appointment->extensions as $extension)
+                                            <p>{{$extension->extension}}</p>
+                                         @endforeach
+                                    @endif
                                     </td>
                                     <td>
-                                      @foreach($appointment->eyebrows as $eyebrow)
-                                        <div>{{$eyebrow->eyebrow}}</div>
-                                      @endforeach
+                                    @if ($appointment->eyebrows != null)
+                                        @foreach($appointment->eyebrows as $eyebrow)
+                                            <p>{{$eyebrow->eyebrow}}</p>
+                                         @endforeach
+                                    @endif
                                     </td>
                                     <td>
-                                      @foreach($appointment->options as $option)
-                                        <div>{{$option->option}}</div>
-                                      @endforeach
+                                    @if ($appointment->options != null)
+                                        @foreach($appointment->options as $option)
+                                            <p>{{$option->option}}</p>
+                                         @endforeach
+                                    @endif
                                     </td>
                                     <td>{{ \Str::limit($appointment->comment, 500) }}</td>
                                     <td>

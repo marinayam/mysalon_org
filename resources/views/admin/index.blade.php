@@ -37,7 +37,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $chart)
+                            @foreach($charts as $chart)
                                 <tr>
                                     <th>{{ $chart->id }}</th>
                                     <td>{{ \Str::limit($chart->name01, 100) }}</td>
