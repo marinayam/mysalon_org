@@ -104,7 +104,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="comment">コメント</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="comment" rows="20" value="{{ $appointment_form->comment }}"></textarea>
+                            <textarea class="form-control" name="comment" rows="20">{{ $appointment_form->comment }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
