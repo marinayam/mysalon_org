@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $staff)
+                            @foreach($staff as $staff)
                                 <tr>
                                     <th>{{ $staff->id }}</th>
                                     <td>{{ \Str::limit($staff->name, 100) }}</td>

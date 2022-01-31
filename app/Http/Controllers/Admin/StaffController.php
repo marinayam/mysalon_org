@@ -10,7 +10,7 @@ class StaffController extends Controller
 {
     public function add()
     {
-        return view ('admin.staff.index');
+        return view ('admin.staff.create');
     }
     public function create(Request $request)
     {
@@ -43,14 +43,15 @@ class StaffController extends Controller
     public function index(Request $request)
     {
         $cond_name = $request ->cond_name;
+        
         if ($cond_name !=''){
             // 検索されたら検索結果を取得する
-            $posts = Staff ::where('name', $cond_name)->get();
+            $staff = Staff::where('name', $cond_name)->get();
             } else {
                 // それ以外はすべてのスタッフを取得する
-                $posts =Staff::all();
+                $staff =Staff::all();
             }
-        return view ('admin.staff.index', ['posts' => $posts, 'cond_name' => $cond_name]);
+        return view ('admin.staff.index', ['staff' => $staff, 'cond_name' => $cond_name]);
     }
     
     public function edit(Request $request)
@@ -94,6 +95,6 @@ class StaffController extends Controller
     {
         $staff = Staff::find($request->id);
         $staff->delete();
-        return redirect('admin.staff.index');
+        return redirect('admin/staff/index');
     }
 }

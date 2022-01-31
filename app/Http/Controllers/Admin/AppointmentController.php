@@ -16,23 +16,15 @@ class AppointmentController extends Controller
     public function index(Request $request)
     {
         $cond_name = $request->cond_name;
+        $cond_date = $request->cond_date;
         
       if ($cond_name != '') {
           // 検索されたら検索結果を取得する
           $appointments = Appointment::where('name02', $cond_name)->get();
           
-      } else {
-          // それ以外はすべてを取得する
-          $appointments = Appointment::all();
-      }
-      
-      $cond_date = $request->cond_date;
-      
-      if ($cond_date != '') {
-          // 検索されたら検索結果を取得する
+      }elseif($cond_date != ''){
           $appointments = Appointment::where('date', $cond_date)->get();
-          
-      } else {
+      }else {
           // それ以外はすべてを取得する
           $appointments = Appointment::all();
       }
@@ -67,7 +59,7 @@ class AppointmentController extends Controller
         $eyebrows=Eyebrow::all();
         $options=Option::all();
         
-        return view('admin.appointment.edit', ['appointment_form' => $appointment,'selected_perms' => $selected_perms,'selected_extensions' => $selected_extensions,'selected_eyebrows' => $selected_eyebrows,'selected_options' => $selected_options,'perms' => $perm,'extensions' => $extension,'eyebrows' => $eyebrow,'options' => $option]);
+        return view('admin.appointment.edit', ['appointment_form' => $appointment,'selected_perms' => $selected_perms,'selected_extensions' => $selected_extensions,'selected_eyebrows' => $selected_eyebrows,'selected_options' => $selected_options,'perms' => $perms,'extensions' => $extensions,'eyebrows' => $eyebrows,'options' => $options]);
     }
 
     //編集画面から送信されたフォームデータを処理
@@ -77,10 +69,26 @@ class AppointmentController extends Controller
             $appointment = Appointment::find($request->id);
             // 送信されてきたフォームデータを格納する
             $appointment_form = $request->all();
-            $perms = $appointment_form['perm'];
-            $extensions = $appointment_form['extension'];
-            $eyebrows = $appointment_form['eyebrow'];
-            $options = $appointment_form['option'];
+            if(isset($appointment_form['perm'])){
+                $perms = $appointment_form['perm'];
+            }else{
+                $perms=[];
+            }
+            if(isset($appointment_form['extension'])){
+                $extensions = $appointment_form['extension'];
+            }else{
+                $extensions=[];
+            }
+            if(isset($appointment_form['eyebrow'])){
+                $eyebrows = $appointment_form['eyebrow'];
+            }else{
+                $eyebrows=[];
+            }
+            if(isset($appointment_form['option'])){
+                $options = $appointment_form['option'];
+            }else{
+                $options=[];
+            }
             unset($appointment_form['_token']);
             unset($appointment_form['perm']);
             unset($appointment_form['extension']);
