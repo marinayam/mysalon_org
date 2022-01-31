@@ -14,8 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        // 'guard' => 'user',
+        'guard' => 'user',
         'passwords' => 'users',
     ],
 
@@ -37,7 +36,7 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'user' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
@@ -47,12 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-        //  //追加
-        // 'admin' => [ 
-        //     'driver' => 'session', 
-        //     'provider' => 'admins', 
-        // ],
-        // //追加
+         //追加
+        'admin' => [ 
+            'driver' => 'session', 
+            'provider' => 'admins', 
+        ],
+        //追加
     ],
 
     /*
@@ -80,14 +79,11 @@ return [
         //追加
         'admins' => [ 
             'driver' => 'eloquent', 
-            'model' => App\Admin::class, 
+            'model' => App\Models\Admin::class, 
         ],
         //追加
         
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        
     ],
    
 
