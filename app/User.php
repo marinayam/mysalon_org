@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -36,8 +38,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    protected $guarded = array ('id');
+    
+    public function appointments(){
+        return $this->hasMany('App\Appointment');
+    }
     public function charts(){
         return $this->hasOne('App\Chart');
     }
+    
     
 }

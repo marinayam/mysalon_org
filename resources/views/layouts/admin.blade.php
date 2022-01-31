@@ -39,21 +39,21 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href={{ route('chart.index') }}>顧客一覧
+                            <a class="dropdown-item" href={{ route('admin.chart.index') }}>顧客一覧
                             </a>
-                            <a class="dropdown-item" href={{ route('appointment.index') }}>予約一覧
+                            <a class="dropdown-item" href={{ route('admin.appointment.index') }}>予約一覧
                             </a>
-                            <a class="dropdown-item" href={{ route('staff.index') }}>スタッフ情報
+                            <a class="dropdown-item" href={{ route('admin.staff.index') }}>スタッフ情報
                             </a>
-                            <a class="dropdown-item" href={{ route('trigger.index') }}>カルテの来店きっかけカテゴリー
+                            <a class="dropdown-item" href={{ route('admin.trigger.index') }}>カルテの来店きっかけカテゴリー
                             </a>
-                            <a class="dropdown-item" href={{ route('perm.index') }}>パーマ
+                            <a class="dropdown-item" href={{ route('admin.perm.index') }}>パーマ
                             </a>
-                            <a class="dropdown-item" href={{ route('extension.index') }}>マツエク
+                            <a class="dropdown-item" href={{ route('admin.extension.index') }}>マツエク
                             </a>
-                            <a class="dropdown-item" href={{ route('eyebrow.index') }}>アイブロウ
+                            <a class="dropdown-item" href={{ route('admin.eyebrow.index') }}>アイブロウ
                             </a>
-                            <a class="dropdown-item" href={{ route('option.index') }}>オプション
+                            <a class="dropdown-item" href={{ route('admin.option.index') }}>オプション
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

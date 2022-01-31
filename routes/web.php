@@ -88,7 +88,7 @@ Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
 
 
 // ユーザー認証
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth:user'], function() {
   
 // カルテ画面
 Route::get('chart/create', 'ChartController@add')->name('chart.create');
@@ -104,19 +104,17 @@ Route::post('appointment/send', 'AppointmentController@send')->name('appointment
 // 予約画面
 });
 // ユーザー認証
-
-
-// // 管理者画面
 Auth::routes();
 
-Route::group(['prefix' => 'admin'], function(){
+// // 管理者画面
+
+Route::group(['middleware' => 'auth:admin','prefix' => 'admin'], function(){
   // 管理者画面
-    Route::get('home', 'AdminHomeController@index')->name('admin.auth.home');
-    Route::get('login', 'AdminAuth\LoginController@showLoginForm')->name('admin.auth.login');
-    Route::post('login', 'AdminAuth\LoginController@login')->name('admin.auth.login');
-    Route::post('logout', 'AdminAuth\LoginController@logout')->name('admin.auth.logout');
-    Route::get('register', 'AdminAuth\RegisterController@showRegisterForm')->name('admin.auth.register');
-    Route::post('register', 'AdminAuth\RegisterController@register')->name('admin.auth.register');
+    Route::get('home', 'AdminHomeController@index')->name('admin.home');
+    Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
+    Route::post('login', 'Admin\LoginController@login');
+    Route::post('logout', 'Admin\LoginController@logout')->name('admin.logout');
+   
     
     // 最初のページ
     Route::get('salon/index', 'Admin\SalonController@index')->name('index');
@@ -186,6 +184,7 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 

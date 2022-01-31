@@ -79,7 +79,7 @@ return [
         //追加
         'admins' => [ 
             'driver' => 'eloquent', 
-            'model' => App\Models\Admin::class, 
+            'model' => App\Admin::class, 
         ],
         //追加
         
