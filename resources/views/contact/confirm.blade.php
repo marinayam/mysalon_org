@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group row chart-answer">
                         <label for="contact_body" class="col-md-12 contact-question">お問い合わせ内容</label>
-                        <span class="col-md-10 border border-dark contact-form-body rows="10" cols="30" rounded">
+                        <span class="col-md-12 border border-dark contact-form-body rows="10" cols="30" rounded">
                         @if($inputs['select']==1)
                         <p class="col-md-6">件名：予約について</p>
                         @elseif($inputs['select']==2)
