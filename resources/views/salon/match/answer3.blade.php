@@ -46,10 +46,10 @@
                 </div>
             </div>
             <div class="match-appoint-btn">
-                <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
+                <a class="nav-link-appoint" href={{ route('appointment.create') }}>ご予約</a>
             </div>
             <div class="match-return-btn">
-                <a class="return" href={{ route('match4') }}><u>もどる</u></a>
+                <a class="return" href={{ route('match') }}><u>もう一度試す</u></a>
             </div>
         </div>
     </div>

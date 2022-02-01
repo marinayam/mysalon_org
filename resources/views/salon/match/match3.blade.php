@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="return-btn">
-                <a class="return" href={{ route('match') }}><u>もどる</u></a>
+                <a class="return" href={{ route('match2') }}><u>もどる</u></a>
         </div>
     </div>
 </div>
