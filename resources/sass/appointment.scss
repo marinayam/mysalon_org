@@ -124,27 +124,36 @@
   }
 }
 
-.appointment-menu-confirm{
-  padding:15px 10px 0px 30px;
+.appointment-menu-confirm {
+  padding: 15px 10px 0px 30px;
 }
+
 .appointment-question {
   font-weight: 600;
 }
+
 @media screen and (max-width: 768px) {
   .appointment-answer {
     margin-bottom: 2rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .appointment-answer u {
     padding: 0 50px;
   }
 }
-.appointment-question-menu{
+
+.appointment-question-menu {
   padding: 0px 10px;
   position: relative;
   background-color: #C88070;
   color: #fff;
   display: inline-block;
   border-radius: 5px;
+}
+
+.appointment-comment{
+  margin-top: 20px;
+  padding:10px;
 }

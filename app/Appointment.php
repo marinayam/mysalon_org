@@ -10,8 +10,8 @@ class Appointment extends Model
     public static $rules = array(
         'name01' => 'required',
         'name02' => 'required',
-        'tel' => 'required',
         'email' => 'required',
+        'tel' => 'required',
         'date' => 'required',
         'time' => 'required',
        

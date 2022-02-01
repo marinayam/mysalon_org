@@ -117,7 +117,7 @@
                     </div>
                     <div class="form-group row appointment-answer">
                         <label for="comment" class="col-md-12 contact-question">お問い合わせ内容</label>
-                        <p class="col-md-12">{!! nl2br(e($inputs['comment'])) !!}</p>
+                        <span class="col-md-12 border border-dark appointment-comment rows="10" cols="30" rounded">{!! nl2br(e($inputs['comment'])) !!}</span>
                         <div class="col-md-10">
                             <input name="comment" value="{{ $inputs['comment'] }}" type="hidden">
                         </div>
@@ -129,7 +129,7 @@
                                 <button type="submit" name="action" value="back" class="btn btn-outline-secondary">入力内容修正</button>
                             </div>
                             <div class="btn-group ml-auto">
-                                <button type="submit" name="action" value="submit" class="btn btn-outline-primary">登録する</button>
+                                <button type="submit" name="action" value="submit" class="btn btn-outline-primary">送信する</button>
                             </div>
                         </div>
                     </div>
