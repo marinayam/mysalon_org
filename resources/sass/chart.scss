@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
   background-color: #fff;
   color: #333;
   font-size: 16px;
   line-height: 1.6;
 }
+
 /*ページトップのタイトル　開始*/
 
 .content-theme {
@@ -78,61 +79,75 @@ h1 {
 /*ページタイトル　終了*/
 
 /*確認画面での質問の文字*/
-.chart-question{
-  font-weight:600;
+
+.chart-question {
+  font-weight: 600;
 }
+
 /*確認画面での質問の文字*/
 
 /*ご来店きっかけのタイトル*/
-.content-theme-ttl{
-  padding:30px 0;
-}
-/*項目への記入の注意*/
-.chart h2{
-  font-size:24px;
-  font-weight: 550;
+
+.content-theme-ttl {
+  padding: 30px 0;
 }
 
+/*項目への記入の注意*/
+
+.chart h2 {
+  font-size: 24px;
+  font-weight: 550;
+}
 
 .example {
   font-size: 12px;
 }
-.chart-notice{
-  padding: 5px; 
+
+.chart-notice {
+  padding: 5px;
   border: solid 1px;
-  margin:30px 0;
+  margin: 30px 0;
 }
-.form-check{
-  margin: 15px 0; 
+
+.form-check {
+  margin: 15px 0;
 }
-.chart-notice h1{
-  font-size:24px;
+
+.chart-notice h1 {
+  font-size: 24px;
   text-align: center;
 }
+
 /*カルテ送信完了ページ*/
-.chart-send{
+
+.chart-send {
   text-align: center;
-  padding: 30px 0; 
+  padding: 30px 0;
 }
-.check-button{
-  padding: 30px 0; 
+
+.check-button {
+  padding: 30px 0;
 }
-.border-dark{
+
+.border-dark {
   padding: 0.5em 1em;
 }
+
 @media screen and (max-width: 768px) {
-  .chart-answer{
+  .chart-answer {
     margin-bottom: 2rem;
+  }
 }
-}
+
 @media screen and (max-width: 768px) {
-  .chart-answer u{
-    padding:0 50px;
-    
+  .chart-answer u {
+    padding: 0 50px;
+  }
 }
-}
+
 /*バリデーション欄の設定*/
-.chart-validation{
+
+.chart-validation {
   color: red;
-  padding:20px 0;
+  padding: 20px 0;
 }
