@@ -44,7 +44,7 @@
                         {{-- 左に表示させるメニュー --}}
                         <ul class="navbar-nav mr-auto">　
                             <li class="nav-item">
-                                <a class="nav-link-appoint" href="https://beauty.hotpepper.jp/kr/slnH000540479/">ご予約</a>
+                                <a class="nav-link-appoint" href={{ route('appointment.create') }}>ご予約</a>
                             </li>
                         </ul>
                         

@@ -108,7 +108,7 @@ Auth::routes();
 
 // // 管理者画面
 
-Route::group(['middleware' => 'auth:admin','prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin'], function(){
   // 管理者画面
     Route::get('home', 'AdminHomeController@index')->name('admin.home');
     Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
