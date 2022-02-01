@@ -63,7 +63,7 @@
                             <option value="2" {{ old('select')==2 ? 'selected' : '' }}>サロンについて</option>
                             <option value="3" {{ old('select')==3 ? 'selected' : '' }}>その他</option>
                         </select>
-                        <textarea class="form-control" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
+                        <textarea class="form-control contact-form-body" name="contact_body" rows="10" cols="30" minlength:10 maxlength:140>{{ old('contact_body') }}</textarea>
                     </div>
                 </div>
                 {{-- お問い合わせフォーム --}}

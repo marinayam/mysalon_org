@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4    Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4     Pro W3", "\30D2\30E9\30AE\30CE\89D2\30B4     Pro W6", "Noto Sans JP", "\30E1\30A4\30EA\30AA", "Meiryo", Arial, sans-serif;
   background-color: #fff;
   color: black;
 }
@@ -92,5 +92,9 @@ h1 {
   background-clip: padding-box;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.contact-form-body {
+  margin-top: 20px;
 }
 

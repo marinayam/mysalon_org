@@ -5,11 +5,11 @@
     <div class="row">
         <div class ="col-md-8 mx-auto">
             {{-- ページタイトル --}}
-            <div class="contact-content">
+            <div class="content-theme">
                 <h1 class>
                     <span class="contact-ttl">CONTACT</span>
                 </h1>
-                <p class="contact-subttl">確認画面</p>
+                <p class="content-theme-subttl">確認画面</p>
             </div>
             {{-- ページタイトル --}}
             <div class="container mt-5">
@@ -17,37 +17,38 @@
                     @csrf
                     {{-- 入力内容確認 --}}
                     <div class="form-group row chart-answer">
-                        <label for="Name" class="col-md-5 contact-question">名前</label>
-                        <p class="col-md-5">{{ $inputs['name'] }}</p>
+                        <label for="Name" class="col-md-6 contact-question">名前</label>
+                        <p class="col-md-6">{{ $inputs['name'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['name'] }}" type="hidden" name="name" >
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
-                        <label for="email" class="col-md-5 contact-question">メールアドレス</label>
-                        <p class="col-md-5">{{ $inputs['email'] }}</p>
+                        <label for="email" class="col-md-6 contact-question">メールアドレス</label>
+                        <p class="col-md-6">{{ $inputs['email'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['email'] }}" type="hidden" name="email">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
-                        <label for="tel" class="col-md-5 contact-question">電話番号</label>
-                        <p class="col-md-5">{{ $inputs['tel'] }}</p>
+                        <label for="tel" class="col-md-6 contact-question">電話番号</label>
+                        <p class="col-md-6">{{ $inputs['tel'] }}</p>
                         <div class="col-md-10">
                             <input class="form-control" value="{{ $inputs['tel'] }}" type="hidden" name="tel">
                         </div>
                     </div>
                     <div class="form-group row chart-answer">
                         <label for="contact_body" class="col-md-12 contact-question">お問い合わせ内容</label>
+                        <span class="col-md-10 border border-dark contact-form-body rows="10" cols="30" rounded">
                         @if($inputs['select']==1)
-                        <p class="col-md-5">件名：予約について</p>
+                        <p class="col-md-6">件名：予約について</p>
                         @elseif($inputs['select']==2)
-                        <p class="col-md-5">件名：サロンについて</p>
+                        <p class="col-md-6">件名：サロンについて</p>
                         @elseif($inputs['select']==3)
-                        <p class="col-md-5">件名：その他</p>
+                        <p class="col-md-6">件名：その他</p>
                         @endif
-                        <input name="select" value="{{ $inputs['select'] }}" type="hidden">
-                        <p class="col-md-12">{!! nl2br(e($inputs['contact_body'])) !!}</p>
+                        <input class="col-md-6" name="select" value="{{ $inputs['select'] }}" type="hidden">
+                        {!! nl2br(e($inputs['contact_body'])) !!}</span>
                         <div class="col-md-10">
                             <input name="contact_body" value="{{ $inputs['contact_body'] }}" type="hidden">
                         </div>
