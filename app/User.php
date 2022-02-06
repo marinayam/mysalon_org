@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'names01','names02', 'email', 'password',
     ];
 
     /**
@@ -41,10 +41,12 @@ class User extends Authenticatable
     
     protected $guarded = array ('id');
     
+    protected $table = 'create_users';
+    
     public function appointments(){
         return $this->hasMany('App\Appointment');
     }
-    public function charts(){
+    public function chart(){
         return $this->hasOne('App\Chart');
     }
     

@@ -29,6 +29,9 @@ class Chart extends Model
   {
     return $this->belongsToMany('App\Trigger');
   }
-          
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     
 }

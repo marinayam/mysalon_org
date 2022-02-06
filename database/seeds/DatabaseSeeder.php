@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ExtensionTableSeeder::class);
         $this->call(EyebrowTableSeeder::class);
         $this->call(OptionTableSeeder::class);
+        $this->call(UserTableSeeder::class);
     }
+    
 }
