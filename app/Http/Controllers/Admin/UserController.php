@@ -15,7 +15,7 @@ class UserController extends Controller
         $cond_name = $request->cond_name;
       if ($cond_name != '') {
           // 検索されたら検索結果を取得する
-          $users = User::where('name02', $cond_name)->get();
+          $users = User::where('hira_name', $cond_name)->get();
           
       } else {
           // それ以外はすべてを取得する

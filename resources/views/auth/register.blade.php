@@ -13,12 +13,12 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="names01" class="col-md-4 col-form-label text-md-right">{{ __('お名前（漢字）') }}</label>
+                            <label for="kanji_name" class="col-md-4 col-form-label text-md-right">{{ __('お名前（漢字）') }}</label>
 
                             <div class="col-md-6">
-                                <input id="names01" type="text" class="form-control @error('names01') is-invalid @enderror" name="names01" value="{{ old('names01') }}" required autocomplete="names01" autofocus>
+                                <input id="kanji_name" type="text" class="form-control @error('kanji_name') is-invalid @enderror" name="kanji_name" value="{{ old('kanji_name') }}" required autocomplete="kanji_name" autofocus>
 
-                                @error('names01')
+                                @error('kanji_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -26,12 +26,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="names02" class="col-md-4 col-form-label text-md-right">{{ __('お名前（ひらがな）') }}</label>
+                            <label for="hira_name" class="col-md-4 col-form-label text-md-right">{{ __('お名前（ひらがな）') }}</label>
 
                             <div class="col-md-6">
-                                <input id="names02" type="text" class="form-control @error('names02') is-invalid @enderror" name="names02" value="{{ old('names02') }}" required autocomplete="names02" autofocus>
+                                <input id="hira_name" type="text" class="form-control @error('hira_name') is-invalid @enderror" name="hira_name" value="{{ old('hira_name') }}" required autocomplete="hira_name" autofocus>
 
-                                @error('names02')
+                                @error('hira_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

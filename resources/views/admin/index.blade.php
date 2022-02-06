@@ -37,8 +37,8 @@
                             @foreach($users as $user)
                                 <tr>
                                     <th>{{ $user->id }}</th>
-                                    <td>{{ \Str::limit($user->name01, 100) }}</td>
-                                    <td>{{ \Str::limit($user->name02, 100) }}</td>
+                                    <td>{{ \Str::limit($user->kanji_name, 100) }}</td>
+                                    <td>{{ \Str::limit($user->hira_name, 100) }}</td>
                                     <td>{{ \Str::limit($user->tel, 100) }}</td>
                                     <td>{{ \Str::limit($user->email, 100) }}</td>
                                     <td>

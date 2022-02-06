@@ -11,16 +11,16 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $names01 = ['山田花子','佐藤花子','田中花子'];
-        $names02 = ['やまだはなこ','さとうはなこ','たなかはなこ'];
+        $kanji_names = ['山田花子','佐藤花子','田中花子'];
+        $hira_names = ['やまだはなこ','さとうはなこ','たなかはなこ'];
         $emails = ['aaa@bbb.com','ccc@ddd.com','eee@fff.com'];
         $passwords = ['aaa','ccc','eee'];
         
-        foreach ($names01 as $name01) {
-            DB::table('names01')->insert(['name01' => $name01]);
+        foreach ($kanji_names as $kanji_name) {
+            DB::table('kanji_names')->insert(['kanji_name' => $kanji_name]);
         }
-        foreach ($names02 as $name02) {
-            DB::table('names02')->insert(['name02' => $name02]);
+        foreach ($$hira_names as $hira_name) {
+            DB::table('hira_names')->insert(['hira_name' => $hira_name]);
         }
         foreach ($emails as $email) {
             DB::table('email')->insert('email');
